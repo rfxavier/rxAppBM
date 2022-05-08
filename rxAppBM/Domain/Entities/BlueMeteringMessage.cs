@@ -46,9 +46,7 @@ namespace rxAppBM.Domain.Entities
         public string MetaPacketId { get; set; }
         public string MetaGateway { get; set; }
         public string Type { get; set; }
-
-
-
-
+        public DateTime? trackLastWriteTime { get; set; }
+        public DateTime? trackCreationTime { get; set; }
     }
 }
