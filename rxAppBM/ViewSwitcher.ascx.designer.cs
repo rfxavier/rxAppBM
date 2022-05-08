@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace rxApp {
+namespace rxAppBM {
     
     
     public partial class ViewSwitcher {

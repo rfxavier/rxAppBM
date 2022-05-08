@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace rxApp.Account {
+namespace rxAppBM.Account {
     
     
     public partial class ResetPasswordConfirmation {

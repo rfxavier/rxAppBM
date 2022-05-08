@@ -1,8 +1,8 @@
-﻿using rxApp.Models;
+﻿using rxAppBM.Models;
 using System;
 using System.Collections.Generic;
 
-namespace rxApp.Domain.Entities
+namespace rxAppBM.Domain.Entities
 {
     public class Company
     {

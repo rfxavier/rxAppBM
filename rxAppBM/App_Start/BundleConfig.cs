@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Optimization;
 using System.Web.UI;
 
-namespace rxApp
+namespace rxAppBM
 {
     public class BundleConfig
     {

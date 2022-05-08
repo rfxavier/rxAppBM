@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace rxApp.Domain
+namespace rxAppBM.Domain
 {
     public abstract class Entity
     {

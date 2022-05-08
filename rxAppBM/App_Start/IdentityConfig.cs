@@ -6,9 +6,9 @@ using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Microsoft.Owin.Security;
-using rxApp.Models;
+using rxAppBM.Models;
 
-namespace rxApp
+namespace rxAppBM
 {
     public class EmailService : IIdentityMessageService
     {

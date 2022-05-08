@@ -1,7 +1,7 @@
 ﻿using System.Data.Entity.ModelConfiguration;
-using rxApp.Models;
+using rxAppBM.Models;
 
-namespace rxApp.Domain.Entities
+namespace rxAppBM.Domain.Entities
 {
     public class ApplicationUserConfig : EntityTypeConfiguration<ApplicationUser>
     {
@@ -10,10 +10,6 @@ namespace rxApp.Domain.Entities
             HasOptional(u => u.Company)
                 .WithMany(c => c.ApplicationUsers)
                 .HasForeignKey(u => u.CompanyId);
-
-            HasOptional(u => u.GetLockLoja)
-                .WithMany(l => l.ApplicationUsers)
-                .HasForeignKey(u => u.GetLockLojaId);
         }        
     }
 }

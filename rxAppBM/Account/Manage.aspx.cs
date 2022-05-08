@@ -8,9 +8,9 @@ using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using Owin;
-using rxApp.Models;
+using rxAppBM.Models;
 
-namespace rxApp.Account
+namespace rxAppBM.Account
 {
     public partial class Manage : System.Web.UI.Page
     {

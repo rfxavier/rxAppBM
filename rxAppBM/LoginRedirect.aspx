@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="LoginRedirect.aspx.cs" Inherits="rxApp.LoginRedirect" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="LoginRedirect.aspx.cs" Inherits="rxAppBM.LoginRedirect" %>
 
 <!DOCTYPE html>
 

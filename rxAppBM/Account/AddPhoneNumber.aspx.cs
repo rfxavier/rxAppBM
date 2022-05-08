@@ -7,9 +7,9 @@ using System.Web.UI.WebControls;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using System.Threading.Tasks;
-using rxApp.Models;
+using rxAppBM.Models;
 
-namespace rxApp.Account
+namespace rxAppBM.Account
 {
     public partial class AddPhoneNumber : System.Web.UI.Page
     {

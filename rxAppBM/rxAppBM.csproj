@@ -255,18 +255,7 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="frmAgyliti\Cliente001\DevExtreme\cnRxApp\app01JS\cnRxAppApp01JS.aspx" />
-    <Content Include="frmAgyliti\GetLock\cnCadastros\cnGridCliente.aspx" />
-    <Content Include="frmAgyliti\GetLock\cnCadastros\cnGridCofre.aspx" />
-    <Content Include="frmAgyliti\GetLock\cnCadastros\cnGridCofreUser.aspx" />
-    <Content Include="frmAgyliti\GetLock\cnCadastros\cnGridLoja.aspx" />
-    <Content Include="frmAgyliti\GetLock\cnCadastros\cnGridMovimento.aspx" />
-    <Content Include="frmAgyliti\GetLock\cnCadastros\cnGridRede.aspx" />
-    <Content Include="frmAgyliti\GetLock\cnGridMain\cnGridMain.aspx" />
-    <Content Include="frmAgyliti\GetLock\cnMovimentos\cnGridColetas.aspx" />
-    <Content Include="frmAgyliti\GetLock\cnMovimentos\cnGridCortes.aspx" />
-    <Content Include="frmAgyliti\GetLock\cnMovimentos\cnGridDepositos.aspx" />
-    <Content Include="frmAgyliti\GetLock\cnUsuarios\cnUsuarios.aspx" />
+    <Content Include="frmAgyliti\BlueMetering\cnUsuarios\cnUsuarios.aspx" />
     <Content Include="Global.asax" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -279,7 +268,6 @@
     <Content Include="Account\Web.config" />
     <Content Include="LoginAux.aspx" />
     <Content Include="LoginRedirect.aspx" />
-    <Content Include="Models\GetLockDatabaseDDLs.sql" />
     <Content Include="Root.Master" />
     <Content Include="fonts\FontAwesome.otf" />
     <Content Include="fonts\fontawesome-webfont.woff2" />
@@ -322,9 +310,8 @@
     <Content Include="Content\fonts\Roboto-300.ttf" />
     <Content Include="Scripts\angular.min.js.map" />
     <Content Include="Scripts\angular-sanitize.min.js.map" />
-    <Content Include="frmAgyliti\GetLock\cnCadastros\Web.config" />
-    <Content Include="frmAgyliti\GetLock\cnGridMain\Web.config" />
-    <Content Include="frmAgyliti\GetLock\cnMovimentos\Web.config" />
+    <Content Include="frmAgyliti\BlueMetering\cnCadastros\Web.config" />
+    <Content Include="frmAgyliti\BlueMetering\cnGridMain\Web.config" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -536,110 +523,15 @@
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="Domain\Entities\ApplicationUserConfig.cs" />
-    <Compile Include="Domain\Entities\GetLockCliente.cs" />
-    <Compile Include="Domain\Entities\GetLockClienteConfig.cs" />
-    <Compile Include="Domain\Entities\GetLockCofreUser.cs" />
-    <Compile Include="Domain\Entities\GetLockCofreUserConfig.cs" />
-    <Compile Include="Domain\Entities\GetLockCofre.cs" />
-    <Compile Include="Domain\Entities\GetLockCofreConfig.cs" />
+    <Compile Include="Domain\Entities\BlueMeteringMessage.cs" />
+    <Compile Include="Domain\Entities\BlueMeteringMessageConfig.cs" />
     <Compile Include="Domain\Entities\Company.cs" />
-    <Compile Include="Domain\Entities\GetLockMessage.cs" />
-    <Compile Include="Domain\Entities\GetLockMessageConfig.cs" />
-    <Compile Include="Domain\Entities\GetLockLoja.cs" />
-    <Compile Include="Domain\Entities\GetLockLojaConfig.cs" />
-    <Compile Include="Domain\Entities\GetLockLojaClienteRedeView.cs" />
-    <Compile Include="Domain\Entities\GetLockMessageView.cs" />
-    <Compile Include="Domain\Entities\GetLockLojaClienteRedeViewConfig.cs" />
-    <Compile Include="Domain\Entities\GetLockMessageViewConfig.cs" />
-    <Compile Include="Domain\Entities\GetLockMovimento.cs" />
-    <Compile Include="Domain\Entities\GetLockMovimentoConfig.cs" />
-    <Compile Include="Domain\Entities\GetLockRede.cs" />
-    <Compile Include="Domain\Entities\GetLockRedeConfig.cs" />
-    <Compile Include="Domain\Entities\RsData.cs" />
-    <Compile Include="Domain\Entities\RsDataConfig.cs" />
     <Compile Include="Domain\Entity.cs" />
-    <Compile Include="frmAgyliti\Cliente001\DevExtreme\cnRxApp\app01JS\cnRxAppApp01JS.aspx.cs">
-      <DependentUpon>cnRxAppApp01JS.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="frmAgyliti\Cliente001\DevExtreme\cnRxApp\app01JS\cnRxAppApp01JS.aspx.designer.cs">
-      <DependentUpon>cnRxAppApp01JS.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="frmAgyliti\GetLock\cnCadastros\cnGridCliente.aspx.cs">
-      <DependentUpon>cnGridCliente.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="frmAgyliti\GetLock\cnCadastros\cnGridCliente.aspx.designer.cs">
-      <DependentUpon>cnGridCliente.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="frmAgyliti\GetLock\cnCadastros\cnGridCofre.aspx.cs">
-      <DependentUpon>cnGridCofre.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="frmAgyliti\GetLock\cnCadastros\cnGridCofre.aspx.designer.cs">
-      <DependentUpon>cnGridCofre.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="frmAgyliti\GetLock\cnCadastros\cnGridCofreUser.aspx.cs">
-      <DependentUpon>cnGridCofreUser.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="frmAgyliti\GetLock\cnCadastros\cnGridCofreUser.aspx.designer.cs">
-      <DependentUpon>cnGridCofreUser.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="frmAgyliti\GetLock\cnCadastros\cnGridLoja.aspx.cs">
-      <DependentUpon>cnGridLoja.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="frmAgyliti\GetLock\cnCadastros\cnGridLoja.aspx.designer.cs">
-      <DependentUpon>cnGridLoja.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="frmAgyliti\GetLock\cnCadastros\cnGridMovimento.aspx.cs">
-      <DependentUpon>cnGridMovimento.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="frmAgyliti\GetLock\cnCadastros\cnGridMovimento.aspx.designer.cs">
-      <DependentUpon>cnGridMovimento.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="frmAgyliti\GetLock\cnCadastros\cnGridRede.aspx.cs">
-      <DependentUpon>cnGridRede.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="frmAgyliti\GetLock\cnCadastros\cnGridRede.aspx.designer.cs">
-      <DependentUpon>cnGridRede.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="frmAgyliti\GetLock\cnGridMain\cnGridMain.aspx.cs">
-      <DependentUpon>cnGridMain.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="frmAgyliti\GetLock\cnGridMain\cnGridMain.aspx.designer.cs">
-      <DependentUpon>cnGridMain.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="frmAgyliti\GetLock\cnMovimentos\cnGridColetas.aspx.cs">
-      <DependentUpon>cnGridColetas.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="frmAgyliti\GetLock\cnMovimentos\cnGridColetas.aspx.designer.cs">
-      <DependentUpon>cnGridColetas.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="frmAgyliti\GetLock\cnMovimentos\cnGridCortes.aspx.cs">
-      <DependentUpon>cnGridCortes.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="frmAgyliti\GetLock\cnMovimentos\cnGridCortes.aspx.designer.cs">
-      <DependentUpon>cnGridCortes.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="frmAgyliti\GetLock\cnMovimentos\cnGridDepositos.aspx.cs">
-      <DependentUpon>cnGridDepositos.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="frmAgyliti\GetLock\cnMovimentos\cnGridDepositos.aspx.designer.cs">
-      <DependentUpon>cnGridDepositos.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="frmAgyliti\GetLock\cnUsuarios\cnUsuarios.aspx.cs">
+    <Compile Include="frmAgyliti\BlueMetering\cnUsuarios\cnUsuarios.aspx.cs">
       <DependentUpon>cnUsuarios.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="frmAgyliti\GetLock\cnUsuarios\cnUsuarios.aspx.designer.cs">
+    <Compile Include="frmAgyliti\BlueMetering\cnUsuarios\cnUsuarios.aspx.designer.cs">
       <DependentUpon>cnUsuarios.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
@@ -673,49 +565,9 @@
     <Compile Include="Main.master.designer.cs">
       <DependentUpon>Main.master</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202004051244386_InitialCreate.cs" />
-    <Compile Include="Migrations\202004051244386_InitialCreate.Designer.cs">
-      <DependentUpon>202004051244386_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202004051308526_v1.cs" />
-    <Compile Include="Migrations\202004051308526_v1.Designer.cs">
-      <DependentUpon>202004051308526_v1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202004051332401_v2.cs" />
-    <Compile Include="Migrations\202004051332401_v2.Designer.cs">
-      <DependentUpon>202004051332401_v2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202101261158575_v3.cs" />
-    <Compile Include="Migrations\202101261158575_v3.Designer.cs">
-      <DependentUpon>202101261158575_v3.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202202062229512_v4.cs" />
-    <Compile Include="Migrations\202202062229512_v4.Designer.cs">
-      <DependentUpon>202202062229512_v4.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202202070006126_v5.cs" />
-    <Compile Include="Migrations\202202070006126_v5.Designer.cs">
-      <DependentUpon>202202070006126_v5.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202202070051203_v6.cs" />
-    <Compile Include="Migrations\202202070051203_v6.Designer.cs">
-      <DependentUpon>202202070051203_v6.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202202100140430_v7.cs" />
-    <Compile Include="Migrations\202202100140430_v7.Designer.cs">
-      <DependentUpon>202202100140430_v7.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202204161301255_v8.cs" />
-    <Compile Include="Migrations\202204161301255_v8.Designer.cs">
-      <DependentUpon>202204161301255_v8.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202204161436598_v9.cs" />
-    <Compile Include="Migrations\202204161436598_v9.Designer.cs">
-      <DependentUpon>202204161436598_v9.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202204212002106_v10.cs" />
-    <Compile Include="Migrations\202204212002106_v10.Designer.cs">
-      <DependentUpon>202204212002106_v10.cs</DependentUpon>
+    <Compile Include="Migrations\202205082345067_InitialCreate.cs" />
+    <Compile Include="Migrations\202205082345067_InitialCreate.Designer.cs">
+      <DependentUpon>202205082345067_InitialCreate.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -758,12 +610,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Controllers\" />
-    <Folder Include="frmAgyliti\Cliente001\Dashboard\" />
-    <Folder Include="frmAgyliti\Cliente001\DevExtreme\cnRxApp\app01JS\angularAppServices\" />
-    <Folder Include="frmAgyliti\Cliente001\DevExtreme\cnRxApp\app01JS\css\" />
-    <Folder Include="frmAgyliti\Cliente001\DevExtreme\cnRxApp\app01JS\js\" />
-    <Folder Include="frmAgyliti\Cliente001\DevExtreme\cnRxApp\app01JS\webapiControllers\" />
-    <Folder Include="frmAgyliti\Cliente001\Report\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -777,38 +623,8 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202004051244386_InitialCreate.resx">
-      <DependentUpon>202004051244386_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202004051308526_v1.resx">
-      <DependentUpon>202004051308526_v1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202004051332401_v2.resx">
-      <DependentUpon>202004051332401_v2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202101261158575_v3.resx">
-      <DependentUpon>202101261158575_v3.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202202062229512_v4.resx">
-      <DependentUpon>202202062229512_v4.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202202070006126_v5.resx">
-      <DependentUpon>202202070006126_v5.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202202070051203_v6.resx">
-      <DependentUpon>202202070051203_v6.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202202100140430_v7.resx">
-      <DependentUpon>202202100140430_v7.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202204161301255_v8.resx">
-      <DependentUpon>202204161301255_v8.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202204161436598_v9.resx">
-      <DependentUpon>202204161436598_v9.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202204212002106_v10.resx">
-      <DependentUpon>202204212002106_v10.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202205082345067_InitialCreate.resx">
+      <DependentUpon>202205082345067_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
   </ItemGroup>

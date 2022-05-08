@@ -1,6 +1,6 @@
 ﻿using System.Web.UI;
 
-namespace rxApp
+namespace rxAppBM
 {
     static class AppUtils
     {

@@ -4,9 +4,9 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using Owin;
-using rxApp.Models;
+using rxAppBM.Models;
 
-namespace rxApp.Account
+namespace rxAppBM.Account
 {
     public partial class RegisterExternalLogin : System.Web.UI.Page
     {

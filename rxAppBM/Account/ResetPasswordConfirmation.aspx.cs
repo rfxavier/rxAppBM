@@ -1,6 +1,6 @@
 ﻿using System.Web.UI;
 
-namespace rxApp.Account
+namespace rxAppBM.Account
 {
     public partial class ResetPasswordConfirmation : Page
     {

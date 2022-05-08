@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
-using rxApp.Domain.Entities;
+using rxAppBM.Domain.Entities;
 using System;
 using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
@@ -8,7 +8,7 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using System.Web;
 
-namespace rxApp.Models
+namespace rxAppBM.Models
 {
     // You can add User data for the user by adding more properties to your User class, please visit https://go.microsoft.com/fwlink/?LinkID=317594 to learn more.
     public class ApplicationUser : IdentityUser
@@ -28,24 +28,11 @@ namespace rxApp.Models
 
         public Guid? CompanyId { get; set; }
         public Company Company { get; set; }
-
-        public long? GetLockLojaId { get; set; }
-        public GetLockLoja GetLockLoja { get; set; }
     }
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
-        public DbSet<RsData> RsDatas { get; set; }
-
-        public DbSet<GetLockMessage> GetLockMessages { get; set; }
-        public DbSet<GetLockCofre> GetLockCofres { get; set; }
-        public DbSet<GetLockCofreUser> GetLockCofreUsers { get; set; }
-        public DbSet<GetLockCliente> GetLockClientes { get; set; }
-        public DbSet<GetLockLoja> GetLockLojas { get; set; }
-        public DbSet<GetLockRede> GetLockRedes { get; set; }
-        public DbSet<GetLockMovimento> GetLockMovimentos { get; set; }
-        public DbSet<GetLockMessageView> GetLockMessageViews { get; set; }
-        public DbSet<GetLockLojaClienteRedeView> GetLockLojaClienteRedeViews { get; set; }
+        public DbSet<BlueMeteringMessage> BlueMeteringMessages { get; set; }
 
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
@@ -71,30 +58,19 @@ namespace rxApp.Models
             modelBuilder.Properties<string>()
                 .Configure(p => p.HasMaxLength(250));
 
-            modelBuilder.Configurations.Add(new RsDataConfig());
-
             //modelBuilder.ComplexType<AppImageType>()
             //    .Ignore(r => r.Name);
 
             modelBuilder.Configurations.Add(new ApplicationUserConfig());
-            modelBuilder.Configurations.Add(new GetLockMessageConfig());
-            modelBuilder.Configurations.Add(new GetLockCofreConfig());
-            modelBuilder.Configurations.Add(new GetLockCofreUserConfig());
-            modelBuilder.Configurations.Add(new GetLockClienteConfig());
-            modelBuilder.Configurations.Add(new GetLockLojaConfig());
-            modelBuilder.Configurations.Add(new GetLockRedeConfig());
-            modelBuilder.Configurations.Add(new GetLockMovimentoConfig());
-            modelBuilder.Configurations.Add(new GetLockMessageViewConfig());
-            modelBuilder.Configurations.Add(new GetLockLojaClienteRedeViewConfig());
+            modelBuilder.Configurations.Add(new BlueMeteringMessageConfig());
 
             base.OnModelCreating(modelBuilder);
         }
-
     }
 }
 
 #region Helpers
-namespace rxApp
+namespace rxAppBM
 {
     public static class IdentityHelper
     {

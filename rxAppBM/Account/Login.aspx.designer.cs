@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace rxApp.Account {
+namespace rxAppBM.Account {
     
     
     public partial class Login {
@@ -73,6 +73,6 @@ namespace rxApp.Account {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::rxApp.Account.OpenAuthProviders OpenAuthLogin;
+        protected global::rxAppBM.Account.OpenAuthProviders OpenAuthLogin;
     }
 }

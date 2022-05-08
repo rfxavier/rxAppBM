@@ -4,7 +4,7 @@ using System.Web.Http;
 using System.Web.Optimization;
 using System.Web.Routing;
 
-namespace rxApp
+namespace rxAppBM
 {
     public class Global : HttpApplication
     {

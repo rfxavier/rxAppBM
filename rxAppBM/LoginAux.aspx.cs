@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace rxApp
+namespace rxAppBM
 {
     public partial class LoginAux : System.Web.UI.Page
     {

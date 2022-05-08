@@ -8,7 +8,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using Microsoft.AspNet.Identity;
 
-namespace rxApp
+namespace rxAppBM
 {
     public partial class SiteMaster : MasterPage
     {

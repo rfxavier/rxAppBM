@@ -1,19 +1,15 @@
-namespace rxApp.Migrations
+namespace rxAppBM.Migrations
 {
-    using System;
-    using System.Data.Entity;
     using System.Data.Entity.Migrations;
-    using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<rxApp.Models.ApplicationDbContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<rxAppBM.Models.ApplicationDbContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
-            ContextKey = "rxApp.Models.ApplicationDbContext";
         }
 
-        protected override void Seed(rxApp.Models.ApplicationDbContext context)
+        protected override void Seed(rxAppBM.Models.ApplicationDbContext context)
         {
             //  This method will be called after migrating to the latest version.
 

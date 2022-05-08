@@ -7,9 +7,9 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
-using rxApp.Models;
+using rxAppBM.Models;
 
-namespace rxApp.Account
+namespace rxAppBM.Account
 {
     public partial class TwoFactorAuthenticationSignIn : System.Web.UI.Page
     {
