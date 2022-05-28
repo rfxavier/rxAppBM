@@ -22,14 +22,11 @@ namespace rxAppBM.frmAgyliti.GetLock.cnUsuarios
         {
             db = new ApplicationDbContext();
 
-            var comboColumn = ((GridViewDataComboBoxColumn)GridUsers.Columns["GetLockLojaId"]);
+            //var comboColumn = ((GridViewDataComboBoxColumn)GridUsers.Columns["GetLockLojaId"]);
 
-            //var dsCombo = db.GetLockLojas.ToList();
-
-            //comboColumn.PropertiesComboBox.DataSource = dsCombo;
-            comboColumn.PropertiesComboBox.TextField = "nome";
-            comboColumn.PropertiesComboBox.ValueField = "id";
-            comboColumn.PropertiesComboBox.ValueType = typeof(string);
+            //comboColumn.PropertiesComboBox.TextField = "nome";
+            //comboColumn.PropertiesComboBox.ValueField = "id";
+            //comboColumn.PropertiesComboBox.ValueType = typeof(string);
 
             GridUsers.DataBind();
         }

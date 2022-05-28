@@ -255,6 +255,7 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="frmAgyliti\BlueMetering\cnGridMain\cnGridMain.aspx" />
     <Content Include="frmAgyliti\BlueMetering\cnUsuarios\cnUsuarios.aspx" />
     <Content Include="Global.asax" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -523,10 +524,19 @@
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="Domain\Entities\ApplicationUserConfig.cs" />
+    <Compile Include="Domain\Entities\BlueMeteringMessageView.cs" />
     <Compile Include="Domain\Entities\BlueMeteringMessage.cs" />
+    <Compile Include="Domain\Entities\BlueMeteringMessageViewConfig.cs" />
     <Compile Include="Domain\Entities\BlueMeteringMessageConfig.cs" />
     <Compile Include="Domain\Entities\Company.cs" />
     <Compile Include="Domain\Entity.cs" />
+    <Compile Include="frmAgyliti\BlueMetering\cnGridMain\cnGridMain.aspx.cs">
+      <DependentUpon>cnGridMain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmAgyliti\BlueMetering\cnGridMain\cnGridMain.aspx.designer.cs">
+      <DependentUpon>cnGridMain.aspx</DependentUpon>
+    </Compile>
     <Compile Include="frmAgyliti\BlueMetering\cnUsuarios\cnUsuarios.aspx.cs">
       <DependentUpon>cnUsuarios.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -576,6 +586,14 @@
     <Compile Include="Migrations\202205221339279_v1.cs" />
     <Compile Include="Migrations\202205221339279_v1.Designer.cs">
       <DependentUpon>202205221339279_v1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202205281242206_v2.cs" />
+    <Compile Include="Migrations\202205281242206_v2.Designer.cs">
+      <DependentUpon>202205281242206_v2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202205281533327_v3.cs" />
+    <Compile Include="Migrations\202205281533327_v3.Designer.cs">
+      <DependentUpon>202205281533327_v3.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -639,6 +657,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202205221339279_v1.resx">
       <DependentUpon>202205221339279_v1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202205281242206_v2.resx">
+      <DependentUpon>202205281242206_v2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202205281533327_v3.resx">
+      <DependentUpon>202205281533327_v3.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
   </ItemGroup>

@@ -33,6 +33,7 @@ namespace rxAppBM.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public DbSet<BlueMeteringMessage> BlueMeteringMessages { get; set; }
+        public DbSet<BlueMeteringMessageView> BlueMeteringMessageViews { get; set; }
 
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
@@ -63,6 +64,7 @@ namespace rxAppBM.Models
 
             modelBuilder.Configurations.Add(new ApplicationUserConfig());
             modelBuilder.Configurations.Add(new BlueMeteringMessageConfig());
+            modelBuilder.Configurations.Add(new BlueMeteringMessageViewConfig());
 
             base.OnModelCreating(modelBuilder);
         }

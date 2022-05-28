@@ -24,9 +24,9 @@
                     <asp:LinkButton ID="LinkButton1" runat="server" OnClientClick="popup.ShowAtElement(this); return false;" Visible='<%#!GridUsers.IsNewRowEditing%>'>Editar senha</asp:LinkButton>
                 </EditItemTemplate>
             </dx:GridViewDataTextColumn>
-            <dx:GridViewDataComboBoxColumn FieldName="GetLockLojaId" Caption="Loja" VisibleIndex="4">
+<%--            <dx:GridViewDataComboBoxColumn FieldName="GetLockLojaId" Caption="Loja" VisibleIndex="4">
                 <PropertiesComboBox TextField="nome" IncrementalFilteringMode="Contains" ValueField="GetLockLojaId"></PropertiesComboBox>
-            </dx:GridViewDataComboBoxColumn>
+            </dx:GridViewDataComboBoxColumn>--%>
         </Columns>
     </dx:ASPxGridView>
     <dx:ASPxPopupControl ID="ASPxPopupControl1" runat="server" HeaderText="Editar senha" Width="307px" ClientInstanceName="popup">

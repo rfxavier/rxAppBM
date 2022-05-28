@@ -21,5 +21,6 @@ namespace rxAppBM
         {
 
         }
+        public event EventHandler contentCallEvent;
     }
 }
