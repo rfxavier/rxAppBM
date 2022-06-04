@@ -595,6 +595,10 @@
     <Compile Include="Migrations\202205281533327_v3.Designer.cs">
       <DependentUpon>202205281533327_v3.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202206041939147_v4.cs" />
+    <Compile Include="Migrations\202206041939147_v4.Designer.cs">
+      <DependentUpon>202206041939147_v4.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -663,6 +667,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202205281533327_v3.resx">
       <DependentUpon>202205281533327_v3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206041939147_v4.resx">
+      <DependentUpon>202206041939147_v4.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
   </ItemGroup>
