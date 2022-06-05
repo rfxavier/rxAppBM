@@ -524,6 +524,8 @@
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="Domain\Entities\ApplicationUserConfig.cs" />
+    <Compile Include="Domain\Entities\BlueMeteringAlarm.cs" />
+    <Compile Include="Domain\Entities\BlueMeteringAlarmConfig.cs" />
     <Compile Include="Domain\Entities\BlueMeteringMessageView.cs" />
     <Compile Include="Domain\Entities\BlueMeteringMessage.cs" />
     <Compile Include="Domain\Entities\BlueMeteringMessageViewConfig.cs" />
@@ -599,6 +601,18 @@
     <Compile Include="Migrations\202206041939147_v4.Designer.cs">
       <DependentUpon>202206041939147_v4.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202206041949482_v5.cs" />
+    <Compile Include="Migrations\202206041949482_v5.Designer.cs">
+      <DependentUpon>202206041949482_v5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206050001135_v6.cs" />
+    <Compile Include="Migrations\202206050001135_v6.Designer.cs">
+      <DependentUpon>202206050001135_v6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206050003082_v7.cs" />
+    <Compile Include="Migrations\202206050003082_v7.Designer.cs">
+      <DependentUpon>202206050003082_v7.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -670,6 +684,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202206041939147_v4.resx">
       <DependentUpon>202206041939147_v4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206041949482_v5.resx">
+      <DependentUpon>202206041949482_v5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206050001135_v6.resx">
+      <DependentUpon>202206050001135_v6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206050003082_v7.resx">
+      <DependentUpon>202206050003082_v7.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
   </ItemGroup>

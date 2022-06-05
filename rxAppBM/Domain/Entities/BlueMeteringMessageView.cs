@@ -53,5 +53,12 @@ namespace rxAppBM.Domain.Entities
         public string Type { get; set; }
         public DateTime? trackLastWriteTime { get; set; }
         public DateTime? trackCreationTime { get; set; }
+        public string PayloadId { get; set; }
+        public long? PayloadVolLiters { get; set; }
+        public long? PayloadVolM3 { get; set; }
+        public int? PayloadTemp { get; set; }
+        public int? PayloadBatt { get; set; }
+        public int? PayloadAlarm { get; set; }
+        public int? PayloadAlarmDescription { get; set; }
     }
 }
