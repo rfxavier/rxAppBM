@@ -27,9 +27,12 @@
                         </PropertiesDateEdit>
                     </dx:GridViewDataDateColumn>
                     <dx:GridViewDataTextColumn FieldName="ParamsRxTime" Caption="Rx Time" VisibleIndex="1"></dx:GridViewDataTextColumn>
-                    <dx:GridViewDataTextColumn FieldName="ParamsPort" Caption="Port" VisibleIndex="2"></dx:GridViewDataTextColumn>
-                    <dx:GridViewDataTextColumn FieldName="MetaDevice" Caption="Device" VisibleIndex="3"></dx:GridViewDataTextColumn>
-                    <dx:GridViewDataTextColumn FieldName="ParamsPayload" Caption="Payload" VisibleIndex="4"></dx:GridViewDataTextColumn>
+                    <dx:GridViewDataTextColumn FieldName="PayloadId" Caption="Id" VisibleIndex="2"></dx:GridViewDataTextColumn>
+                    <dx:GridViewDataTextColumn FieldName="PayloadVolLiters" Caption="Volume" VisibleIndex="3"></dx:GridViewDataTextColumn>
+                    <dx:GridViewDataTextColumn FieldName="PayloadTemp" Caption="Temperatura" VisibleIndex="4"></dx:GridViewDataTextColumn>
+                    <dx:GridViewDataTextColumn FieldName="PayloadBatt" Caption="Bateria" VisibleIndex="5"></dx:GridViewDataTextColumn>
+                    <dx:GridViewDataTextColumn FieldName="PayloadAlarm" Caption="Cód.Alarme" VisibleIndex="6"></dx:GridViewDataTextColumn>
+                    <dx:GridViewDataTextColumn FieldName="PayloadAlarmDescription" Caption="Alarme" VisibleIndex="7"></dx:GridViewDataTextColumn>
                 </Columns>
                 <Toolbars>
                     <dx:GridViewToolbar>

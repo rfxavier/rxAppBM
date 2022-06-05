@@ -59,6 +59,6 @@ namespace rxAppBM.Domain.Entities
         public int? PayloadTemp { get; set; }
         public int? PayloadBatt { get; set; }
         public int? PayloadAlarm { get; set; }
-        public int? PayloadAlarmDescription { get; set; }
+        public string PayloadAlarmDescription { get; set; }
     }
 }
