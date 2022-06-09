@@ -255,6 +255,7 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="frmAgyliti\BlueMetering\cnCadastros\cnGridLigacao.aspx" />
     <Content Include="frmAgyliti\BlueMetering\cnGridMain\cnGridMain.aspx" />
     <Content Include="frmAgyliti\BlueMetering\cnUsuarios\cnUsuarios.aspx" />
     <Content Include="Global.asax" />
@@ -526,12 +527,21 @@
     <Compile Include="Domain\Entities\ApplicationUserConfig.cs" />
     <Compile Include="Domain\Entities\BlueMeteringAlarm.cs" />
     <Compile Include="Domain\Entities\BlueMeteringAlarmConfig.cs" />
+    <Compile Include="Domain\Entities\BlueMeteringLigacao.cs" />
+    <Compile Include="Domain\Entities\BlueMeteringLigacaoConfig.cs" />
     <Compile Include="Domain\Entities\BlueMeteringMessageView.cs" />
     <Compile Include="Domain\Entities\BlueMeteringMessage.cs" />
     <Compile Include="Domain\Entities\BlueMeteringMessageViewConfig.cs" />
     <Compile Include="Domain\Entities\BlueMeteringMessageConfig.cs" />
     <Compile Include="Domain\Entities\Company.cs" />
     <Compile Include="Domain\Entity.cs" />
+    <Compile Include="frmAgyliti\BlueMetering\cnCadastros\cnGridLigacao.aspx.cs">
+      <DependentUpon>cnGridLigacao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmAgyliti\BlueMetering\cnCadastros\cnGridLigacao.aspx.designer.cs">
+      <DependentUpon>cnGridLigacao.aspx</DependentUpon>
+    </Compile>
     <Compile Include="frmAgyliti\BlueMetering\cnGridMain\cnGridMain.aspx.cs">
       <DependentUpon>cnGridMain.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -617,6 +627,38 @@
     <Compile Include="Migrations\202206050047587_v8.Designer.cs">
       <DependentUpon>202206050047587_v8.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202206080019427_v9.cs" />
+    <Compile Include="Migrations\202206080019427_v9.Designer.cs">
+      <DependentUpon>202206080019427_v9.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206080028472_v10.cs" />
+    <Compile Include="Migrations\202206080028472_v10.Designer.cs">
+      <DependentUpon>202206080028472_v10.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206080033469_v11.cs" />
+    <Compile Include="Migrations\202206080033469_v11.Designer.cs">
+      <DependentUpon>202206080033469_v11.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206080043572_v12.cs" />
+    <Compile Include="Migrations\202206080043572_v12.Designer.cs">
+      <DependentUpon>202206080043572_v12.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206080045552_v13.cs" />
+    <Compile Include="Migrations\202206080045552_v13.Designer.cs">
+      <DependentUpon>202206080045552_v13.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206080048087_v14.cs" />
+    <Compile Include="Migrations\202206080048087_v14.Designer.cs">
+      <DependentUpon>202206080048087_v14.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206080050056_v15.cs" />
+    <Compile Include="Migrations\202206080050056_v15.Designer.cs">
+      <DependentUpon>202206080050056_v15.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206080052359_v16.cs" />
+    <Compile Include="Migrations\202206080052359_v16.Designer.cs">
+      <DependentUpon>202206080052359_v16.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -700,6 +742,30 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202206050047587_v8.resx">
       <DependentUpon>202206050047587_v8.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206080019427_v9.resx">
+      <DependentUpon>202206080019427_v9.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206080028472_v10.resx">
+      <DependentUpon>202206080028472_v10.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206080033469_v11.resx">
+      <DependentUpon>202206080033469_v11.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206080043572_v12.resx">
+      <DependentUpon>202206080043572_v12.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206080045552_v13.resx">
+      <DependentUpon>202206080045552_v13.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206080048087_v14.resx">
+      <DependentUpon>202206080048087_v14.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206080050056_v15.resx">
+      <DependentUpon>202206080050056_v15.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206080052359_v16.resx">
+      <DependentUpon>202206080052359_v16.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
   </ItemGroup>

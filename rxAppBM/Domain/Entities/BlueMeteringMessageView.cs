@@ -60,5 +60,10 @@ namespace rxAppBM.Domain.Entities
         public int? PayloadBatt { get; set; }
         public int? PayloadAlarm { get; set; }
         public string PayloadAlarmDescription { get; set; }
+        public string LigacaoId { get; set; }
+        public string LigacaoRgi { get; set; }
+        public string LigacaoEndereco { get; set; }
+        public Nullable<decimal> LigacaoLatitude { get; set; }
+        public Nullable<decimal> LigacaoLongitude { get; set; }
     }
 }

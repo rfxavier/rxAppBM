@@ -33,6 +33,12 @@
                     <dx:GridViewDataTextColumn FieldName="PayloadBatt" Caption="Bateria" VisibleIndex="5"></dx:GridViewDataTextColumn>
                     <dx:GridViewDataTextColumn FieldName="PayloadAlarm" Caption="Cód.Alarme" VisibleIndex="6"></dx:GridViewDataTextColumn>
                     <dx:GridViewDataTextColumn FieldName="PayloadAlarmDescription" Caption="Alarme" VisibleIndex="7"></dx:GridViewDataTextColumn>
+                    <dx:GridViewDataTextColumn FieldName="MetaDevice" Caption="Device ID" VisibleIndex="8"></dx:GridViewDataTextColumn>
+                    <dx:GridViewDataTextColumn FieldName="LigacaoId" Caption="Id Ligação" VisibleIndex="9"></dx:GridViewDataTextColumn>
+                    <dx:GridViewDataTextColumn FieldName="LigacaoRgi" Caption="Rgi Ligação" VisibleIndex="10"></dx:GridViewDataTextColumn>
+                    <dx:GridViewDataTextColumn FieldName="LigacaoEndereco" Caption="Endereço Ligação" VisibleIndex="11"></dx:GridViewDataTextColumn>
+                    <dx:GridViewDataTextColumn FieldName="LigacaoLatitude" Caption="Latitude Ligação" VisibleIndex="12"></dx:GridViewDataTextColumn>
+                    <dx:GridViewDataTextColumn FieldName="LigacaoLongitude" Caption="Longitude Ligação" VisibleIndex="13"></dx:GridViewDataTextColumn>
                 </Columns>
                 <Toolbars>
                     <dx:GridViewToolbar>

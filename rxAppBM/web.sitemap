@@ -12,5 +12,9 @@
     <siteMapNode url="" title="Operações" description="Operações" roles="AdmMaster,AdmPortal,User">
       <siteMapNode url="~/frmAgyliti/BlueMetering/cnGridMain/cnGridMain.aspx" title="Ocorrências" description="Ocorrências" roles="AdmMaster,AdmPortal,User" />
     </siteMapNode>
+    <siteMapNode url="" title="Cadastros" description="Cadastros" roles="AdmMaster,AdmPortal">
+      <siteMapNode url="~/frmAgyliti/BlueMetering/cnCadastros/cnGridLigacao.aspx" title="Ligação" description="Cadastro Ligação" roles="AdmMaster,AdmPortal" />
+    </siteMapNode>
+
   </siteMapNode>
 </siteMap>
