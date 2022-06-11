@@ -26,6 +26,7 @@ namespace rxAppBM.frmAgyliti.BlueMetering.cnCadastros
         protected void ASPxGridView1_RowInserting(object sender, DevExpress.Web.Data.ASPxDataInsertingEventArgs e)
         {
             var newLigacao = new BlueMeteringLigacao();
+            newLigacao.BlueMeteringLigacaoId = Guid.NewGuid();
             newLigacao.LigacaoId = e.NewValues["LigacaoId"]?.ToString();
             newLigacao.Rgi = e.NewValues["Rgi"]?.ToString();
             newLigacao.Endereco = e.NewValues["Endereco"]?.ToString();
