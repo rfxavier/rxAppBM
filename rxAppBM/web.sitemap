@@ -14,6 +14,7 @@
     </siteMapNode>
     <siteMapNode url="" title="Cadastros" description="Cadastros" roles="AdmMaster,AdmPortal">
       <siteMapNode url="~/frmAgyliti/BlueMetering/cnCadastros/cnGridLigacao.aspx" title="Ligação" description="Cadastro Ligação" roles="AdmMaster,AdmPortal" />
+      <siteMapNode url="~/frmAgyliti/BlueMetering/cnCadastros/cnGridConsumidorTipo.aspx" title="Tipo de Consumidor" description="Tipo de Consumidor" roles="AdmMaster,AdmPortal" />
       <siteMapNode url="~/frmAgyliti/BlueMetering/cnCadastros/cnGridConsumidor.aspx" title="Consumidor" description="Cadastro Ligação" roles="AdmMaster,AdmPortal" />
     </siteMapNode>
 

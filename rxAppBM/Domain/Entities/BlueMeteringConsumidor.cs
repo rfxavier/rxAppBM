@@ -12,5 +12,6 @@ namespace rxAppBM.Domain.Entities
         public string RG { get; set; }
         public DateTime? trackLastWriteTime { get; set; }
         public DateTime? trackCreationTime { get; set; }
+        public string IdConsumidorTipo { get; set; }
     }
 }

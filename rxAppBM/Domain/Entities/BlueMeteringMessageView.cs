@@ -70,5 +70,6 @@ namespace rxAppBM.Domain.Entities
         public string ConsumidorNomeCompleto { get; set; }
         public string ConsumidorCPF { get; set; }
         public string ConsumidorRG { get; set; }
+        public string ConsumidorTipo { get; set; }
     }
 }

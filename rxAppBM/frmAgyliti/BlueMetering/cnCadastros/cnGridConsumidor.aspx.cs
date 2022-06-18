@@ -1,4 +1,5 @@
-﻿using rxAppBM.Domain.Entities;
+﻿using DevExpress.Web;
+using rxAppBM.Domain.Entities;
 using rxAppBM.Models;
 using System;
 using System.Linq;
@@ -16,6 +17,15 @@ namespace rxAppBM.frmAgyliti.BlueMetering.cnCadastros
         }
         protected void Page_Load(object sender, EventArgs e)
         {
+            var comboColumn = ((GridViewDataComboBoxColumn)ASPxGridView1.Columns["IdConsumidorTipo"]);
+
+            var dsCombo = db.BlueMeteringConsumidorTipos.ToList();
+
+            comboColumn.PropertiesComboBox.DataSource = dsCombo;
+            comboColumn.PropertiesComboBox.TextField = "Descricao";
+            comboColumn.PropertiesComboBox.ValueField = "IdConsumidorTipo";
+            comboColumn.PropertiesComboBox.ValueType = typeof(string);
+
             ASPxGridView1.DataBind();
         }
         protected void ASPxGridView1_DataBinding(object sender, EventArgs e)
@@ -31,6 +41,7 @@ namespace rxAppBM.frmAgyliti.BlueMetering.cnCadastros
             newConsumidor.NomeCompleto = e.NewValues["NomeCompleto"]?.ToString();
             newConsumidor.CPF = e.NewValues["CPF"]?.ToString();
             newConsumidor.RG = e.NewValues["RG"]?.ToString();
+            newConsumidor.IdConsumidorTipo = e.NewValues["IdConsumidorTipo"]?.ToString();
 
             db.BlueMeteringConsumidores.Add(newConsumidor);
             db.SaveChanges();
@@ -50,6 +61,7 @@ namespace rxAppBM.frmAgyliti.BlueMetering.cnCadastros
                 consumidor.NomeCompleto = e.NewValues["NomeCompleto"]?.ToString();
                 consumidor.CPF = e.NewValues["CPF"]?.ToString();
                 consumidor.RG = e.NewValues["RG"]?.ToString();
+                consumidor.IdConsumidorTipo = e.NewValues["IdConsumidorTipo"]?.ToString();
 
                 db.SaveChanges();
             }

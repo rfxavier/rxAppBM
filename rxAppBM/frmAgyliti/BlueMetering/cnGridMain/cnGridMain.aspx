@@ -44,6 +44,7 @@
                     <dx:GridViewDataTextColumn FieldName="ConsumidorNomeCompleto" Caption="Nome Completo Consumidor" VisibleIndex="16"></dx:GridViewDataTextColumn>
                     <dx:GridViewDataTextColumn FieldName="ConsumidorCPF" Caption="CPF Consumidor" VisibleIndex="17"></dx:GridViewDataTextColumn>
                     <dx:GridViewDataTextColumn FieldName="ConsumidorRG" Caption="RG Consumidor" VisibleIndex="18"></dx:GridViewDataTextColumn>
+                    <dx:GridViewDataTextColumn FieldName="ConsumidorTipo" Caption="Tipo Consumidor" VisibleIndex="19"></dx:GridViewDataTextColumn>
                 </Columns>
                 <Toolbars>
                     <dx:GridViewToolbar>
