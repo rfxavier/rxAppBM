@@ -79,6 +79,7 @@ namespace rxAppBM.frmAgyliti.BlueMetering.cnGridMain
                 //var idLoja = loja?.id;
 
                 //e.QueryableSource = db.BlueMeteringMessageViews.Where(g => g.id_loja == idLoja);
+                e.QueryableSource = db.BlueMeteringMessageViews;
             }
             else
             {

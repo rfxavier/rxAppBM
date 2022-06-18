@@ -21,6 +21,9 @@
             <dx:GridViewDataColumn FieldName="latitude" Caption="Latitude" />
             <dx:GridViewDataColumn FieldName="longitude" Caption="Longitude" />
             <dx:GridViewDataColumn FieldName="DeviceId" Caption="ID Device" />
+            <dx:GridViewDataComboBoxColumn FieldName="IdConsumidor" Caption="Consumidor">
+                <PropertiesComboBox TextField="NomeCompleto" IncrementalFilteringMode="Contains" ValueField="IdConsumidor"></PropertiesComboBox>
+            </dx:GridViewDataComboBoxColumn>
         </Columns>
         <SettingsPopup>
             <EditForm Width="600">

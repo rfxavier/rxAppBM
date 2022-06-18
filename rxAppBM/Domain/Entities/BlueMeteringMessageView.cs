@@ -65,5 +65,10 @@ namespace rxAppBM.Domain.Entities
         public string LigacaoEndereco { get; set; }
         public Nullable<decimal> LigacaoLatitude { get; set; }
         public Nullable<decimal> LigacaoLongitude { get; set; }
+        public string ConsumidorIdConsumidor { get; set; }
+        public string ConsumidorIdExternoConsumidor { get; set; }
+        public string ConsumidorNomeCompleto { get; set; }
+        public string ConsumidorCPF { get; set; }
+        public string ConsumidorRG { get; set; }
     }
 }

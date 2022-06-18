@@ -1,4 +1,5 @@
-﻿using rxAppBM.Domain.Entities;
+﻿using DevExpress.Web;
+using rxAppBM.Domain.Entities;
 using rxAppBM.Models;
 using System;
 using System.Linq;
@@ -16,6 +17,15 @@ namespace rxAppBM.frmAgyliti.BlueMetering.cnCadastros
         }
         protected void Page_Load(object sender, EventArgs e)
         {
+            var comboColumn = ((GridViewDataComboBoxColumn)ASPxGridView1.Columns["IdConsumidor"]);
+
+            var dsCombo = db.BlueMeteringConsumidores.ToList();
+
+            comboColumn.PropertiesComboBox.DataSource = dsCombo;
+            comboColumn.PropertiesComboBox.TextField = "NomeCompleto";
+            comboColumn.PropertiesComboBox.ValueField = "IdConsumidor";
+            comboColumn.PropertiesComboBox.ValueType = typeof(string);
+
             ASPxGridView1.DataBind();
         }
 
@@ -33,6 +43,7 @@ namespace rxAppBM.frmAgyliti.BlueMetering.cnCadastros
             newLigacao.latitude = e.NewValues["latitude"] == null ? 0 : Convert.ToDecimal(e.NewValues["latitude"]);
             newLigacao.longitude = e.NewValues["longitude"] == null ? 0 : Convert.ToDecimal(e.NewValues["longitude"]);
             newLigacao.DeviceId = e.NewValues["DeviceId"]?.ToString();
+            newLigacao.IdConsumidor = e.NewValues["IdConsumidor"]?.ToString();
 
             db.BlueMeteringLigacoes.Add(newLigacao);
             db.SaveChanges();
@@ -53,6 +64,7 @@ namespace rxAppBM.frmAgyliti.BlueMetering.cnCadastros
                 ligacao.latitude = e.NewValues["latitude"] == null ? 0 : Convert.ToDecimal(e.NewValues["latitude"]);
                 ligacao.longitude = e.NewValues["longitude"] == null ? 0 : Convert.ToDecimal(e.NewValues["longitude"]);
                 ligacao.DeviceId = e.NewValues["DeviceId"]?.ToString();
+                ligacao.IdConsumidor = e.NewValues["IdConsumidor"]?.ToString();
 
                 db.SaveChanges();
             }

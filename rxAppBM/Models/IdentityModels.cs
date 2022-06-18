@@ -35,6 +35,7 @@ namespace rxAppBM.Models
         public DbSet<BlueMeteringMessage> BlueMeteringMessages { get; set; }
         public DbSet<BlueMeteringAlarm> BlueMeteringAlarms { get; set; }
         public DbSet<BlueMeteringLigacao> BlueMeteringLigacoes { get; set; }
+        public DbSet<BlueMeteringConsumidor> BlueMeteringConsumidores { get; set; }
         public DbSet<BlueMeteringMessageView> BlueMeteringMessageViews { get; set; }
 
         public ApplicationDbContext()
@@ -68,6 +69,7 @@ namespace rxAppBM.Models
             modelBuilder.Configurations.Add(new BlueMeteringMessageConfig());
             modelBuilder.Configurations.Add(new BlueMeteringAlarmConfig());
             modelBuilder.Configurations.Add(new BlueMeteringLigacaoConfig());
+            modelBuilder.Configurations.Add(new BlueMeteringConsumidorConfig());
             modelBuilder.Configurations.Add(new BlueMeteringMessageViewConfig());
 
             base.OnModelCreating(modelBuilder);

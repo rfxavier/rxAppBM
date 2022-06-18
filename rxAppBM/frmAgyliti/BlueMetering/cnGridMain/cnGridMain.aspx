@@ -39,6 +39,11 @@
                     <dx:GridViewDataTextColumn FieldName="LigacaoEndereco" Caption="Endereço Ligação" VisibleIndex="11"></dx:GridViewDataTextColumn>
                     <dx:GridViewDataTextColumn FieldName="LigacaoLatitude" Caption="Latitude Ligação" VisibleIndex="12"></dx:GridViewDataTextColumn>
                     <dx:GridViewDataTextColumn FieldName="LigacaoLongitude" Caption="Longitude Ligação" VisibleIndex="13"></dx:GridViewDataTextColumn>
+                    <dx:GridViewDataTextColumn FieldName="ConsumidorIdConsumidor" Caption="Id Consumidor" VisibleIndex="14"></dx:GridViewDataTextColumn>
+                    <dx:GridViewDataTextColumn FieldName="ConsumidorIdExternoConsumidor" Caption="Id Externo Consumidor" VisibleIndex="15"></dx:GridViewDataTextColumn>
+                    <dx:GridViewDataTextColumn FieldName="ConsumidorNomeCompleto" Caption="Nome Completo Consumidor" VisibleIndex="16"></dx:GridViewDataTextColumn>
+                    <dx:GridViewDataTextColumn FieldName="ConsumidorCPF" Caption="CPF Consumidor" VisibleIndex="17"></dx:GridViewDataTextColumn>
+                    <dx:GridViewDataTextColumn FieldName="ConsumidorRG" Caption="RG Consumidor" VisibleIndex="18"></dx:GridViewDataTextColumn>
                 </Columns>
                 <Toolbars>
                     <dx:GridViewToolbar>
