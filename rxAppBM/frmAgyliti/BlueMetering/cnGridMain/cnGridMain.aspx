@@ -45,6 +45,14 @@
                     <dx:GridViewDataTextColumn FieldName="ConsumidorCPF" Caption="CPF Consumidor" VisibleIndex="17"></dx:GridViewDataTextColumn>
                     <dx:GridViewDataTextColumn FieldName="ConsumidorRG" Caption="RG Consumidor" VisibleIndex="18"></dx:GridViewDataTextColumn>
                     <dx:GridViewDataTextColumn FieldName="ConsumidorTipo" Caption="Tipo Consumidor" VisibleIndex="19"></dx:GridViewDataTextColumn>
+                    <dx:GridViewDataTextColumn FieldName="HidrometroIdHidrometro" Caption="Id Hidrômetro" VisibleIndex="20"></dx:GridViewDataTextColumn>
+                    <dx:GridViewDataTextColumn FieldName="HidrometroRedeIotId" Caption="Rede Iot Hidrômetro" VisibleIndex="21"></dx:GridViewDataTextColumn>
+                    <dx:GridViewDataTextColumn FieldName="HidrometroNumeroSerie" Caption="Número Série Hidrômetro" VisibleIndex="22"></dx:GridViewDataTextColumn>
+                    <dx:GridViewDataTextColumn FieldName="HidrometroTipoDescricao" Caption="Tipo Hidrômetro" VisibleIndex="23"></dx:GridViewDataTextColumn>
+                    <dx:GridViewDataTextColumn FieldName="HidrometroNumeroSerieRelojoaria" Caption="Número Série Relojoaria Hidrômetro" VisibleIndex="24"></dx:GridViewDataTextColumn>
+                    <dx:GridViewDataTextColumn FieldName="HidrometroMarcacaoInicial" Caption="Marcação Inicial Hidrômetro" VisibleIndex="25"></dx:GridViewDataTextColumn>
+                    <dx:GridViewDataTextColumn FieldName="ValvulaCorteIdValvulaCorte" Caption="Id Válvula Corte" VisibleIndex="26"></dx:GridViewDataTextColumn>
+                    <dx:GridViewDataTextColumn FieldName="ValvulaCorteNumeroSerie" Caption="Número Série Válvula Corte" VisibleIndex="27"></dx:GridViewDataTextColumn>
                 </Columns>
                 <Toolbars>
                     <dx:GridViewToolbar>

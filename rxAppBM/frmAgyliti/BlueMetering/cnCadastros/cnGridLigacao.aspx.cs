@@ -26,6 +26,26 @@ namespace rxAppBM.frmAgyliti.BlueMetering.cnCadastros
             comboColumn.PropertiesComboBox.ValueField = "IdConsumidor";
             comboColumn.PropertiesComboBox.ValueType = typeof(string);
 
+
+            var comboColumn2 = ((GridViewDataComboBoxColumn)ASPxGridView1.Columns["IdHidrometro"]);
+
+            var dsCombo2 = db.BlueMeteringHidrometros.ToList();
+
+            comboColumn2.PropertiesComboBox.DataSource = dsCombo2;
+            comboColumn2.PropertiesComboBox.TextField = "NumeroSerie";
+            comboColumn2.PropertiesComboBox.ValueField = "IdHidrometro";
+            comboColumn2.PropertiesComboBox.ValueType = typeof(string);
+
+
+            var comboColumn3 = ((GridViewDataComboBoxColumn)ASPxGridView1.Columns["IdValvulaCorte"]);
+
+            var dsCombo3 = db.BlueMeteringValvulasCorte.ToList();
+
+            comboColumn3.PropertiesComboBox.DataSource = dsCombo3;
+            comboColumn3.PropertiesComboBox.TextField = "NumeroSerie";
+            comboColumn3.PropertiesComboBox.ValueField = "IdValvulaCorte";
+            comboColumn3.PropertiesComboBox.ValueType = typeof(string);
+
             ASPxGridView1.DataBind();
         }
 
@@ -44,6 +64,8 @@ namespace rxAppBM.frmAgyliti.BlueMetering.cnCadastros
             newLigacao.longitude = e.NewValues["longitude"] == null ? 0 : Convert.ToDecimal(e.NewValues["longitude"]);
             newLigacao.DeviceId = e.NewValues["DeviceId"]?.ToString();
             newLigacao.IdConsumidor = e.NewValues["IdConsumidor"]?.ToString();
+            newLigacao.IdHidrometro = e.NewValues["IdHidrometro"]?.ToString();
+            newLigacao.IdValvulaCorte = e.NewValues["IdValvulaCorte"]?.ToString();
 
             db.BlueMeteringLigacoes.Add(newLigacao);
             db.SaveChanges();
@@ -65,6 +87,8 @@ namespace rxAppBM.frmAgyliti.BlueMetering.cnCadastros
                 ligacao.longitude = e.NewValues["longitude"] == null ? 0 : Convert.ToDecimal(e.NewValues["longitude"]);
                 ligacao.DeviceId = e.NewValues["DeviceId"]?.ToString();
                 ligacao.IdConsumidor = e.NewValues["IdConsumidor"]?.ToString();
+                ligacao.IdHidrometro = e.NewValues["IdHidrometro"]?.ToString();
+                ligacao.IdValvulaCorte = e.NewValues["IdValvulaCorte"]?.ToString();
 
                 db.SaveChanges();
             }

@@ -37,6 +37,9 @@ namespace rxAppBM.Models
         public DbSet<BlueMeteringLigacao> BlueMeteringLigacoes { get; set; }
         public DbSet<BlueMeteringConsumidor> BlueMeteringConsumidores { get; set; }
         public DbSet<BlueMeteringConsumidorTipo> BlueMeteringConsumidorTipos { get; set; }
+        public DbSet<BlueMeteringHidrometro> BlueMeteringHidrometros { get; set; }
+        public DbSet<BlueMeteringHidrometroTipo> BlueMeteringHidrometroTipos { get; set; }
+        public DbSet<BlueMeteringValvulaCorte> BlueMeteringValvulasCorte { get; set; }
         public DbSet<BlueMeteringMessageView> BlueMeteringMessageViews { get; set; }
 
         public ApplicationDbContext()
@@ -72,6 +75,9 @@ namespace rxAppBM.Models
             modelBuilder.Configurations.Add(new BlueMeteringLigacaoConfig());
             modelBuilder.Configurations.Add(new BlueMeteringConsumidorConfig());
             modelBuilder.Configurations.Add(new BlueMeteringConsumidorTipoConfig());
+            modelBuilder.Configurations.Add(new BlueMeteringHidrometroConfig());
+            modelBuilder.Configurations.Add(new BlueMeteringHidrometroTipoConfig());
+            modelBuilder.Configurations.Add(new BlueMeteringValvulaCorteConfig());
             modelBuilder.Configurations.Add(new BlueMeteringMessageViewConfig());
 
             base.OnModelCreating(modelBuilder);

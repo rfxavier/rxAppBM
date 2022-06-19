@@ -12,5 +12,7 @@ namespace rxAppBM.Domain.Entities
         public Nullable<decimal> longitude { get; set; }
         public string DeviceId { get; set; }
         public string IdConsumidor { get; set; }
+        public string IdHidrometro { get; set; }
+        public string IdValvulaCorte { get; set; }
     }
 }

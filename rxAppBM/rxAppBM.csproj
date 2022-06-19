@@ -257,7 +257,10 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="frmAgyliti\BlueMetering\cnCadastros\cnGridConsumidor.aspx" />
     <Content Include="frmAgyliti\BlueMetering\cnCadastros\cnGridConsumidorTipo.aspx" />
+    <Content Include="frmAgyliti\BlueMetering\cnCadastros\cnGridHidrometro.aspx" />
+    <Content Include="frmAgyliti\BlueMetering\cnCadastros\cnGridHidrometroTipo.aspx" />
     <Content Include="frmAgyliti\BlueMetering\cnCadastros\cnGridLigacao.aspx" />
+    <Content Include="frmAgyliti\BlueMetering\cnCadastros\cnGridValvulaCorte.aspx" />
     <Content Include="frmAgyliti\BlueMetering\cnGridMain\cnGridMain.aspx" />
     <Content Include="frmAgyliti\BlueMetering\cnUsuarios\cnUsuarios.aspx" />
     <Content Include="Global.asax" />
@@ -533,12 +536,18 @@
     <Compile Include="Domain\Entities\BlueMeteringAlarmConfig.cs" />
     <Compile Include="Domain\Entities\BlueMeteringConsumidorTipo.cs" />
     <Compile Include="Domain\Entities\BlueMeteringConsumidorTipoConfig.cs" />
+    <Compile Include="Domain\Entities\BlueMeteringHidrometro.cs" />
+    <Compile Include="Domain\Entities\BlueMeteringHidrometroConfig.cs" />
+    <Compile Include="Domain\Entities\BlueMeteringHidrometroTipo.cs" />
+    <Compile Include="Domain\Entities\BlueMeteringHidrometroTipoConfig.cs" />
     <Compile Include="Domain\Entities\BlueMeteringLigacao.cs" />
     <Compile Include="Domain\Entities\BlueMeteringLigacaoConfig.cs" />
     <Compile Include="Domain\Entities\BlueMeteringMessageView.cs" />
     <Compile Include="Domain\Entities\BlueMeteringMessage.cs" />
     <Compile Include="Domain\Entities\BlueMeteringMessageViewConfig.cs" />
     <Compile Include="Domain\Entities\BlueMeteringMessageConfig.cs" />
+    <Compile Include="Domain\Entities\BlueMeteringValvulaCorte.cs" />
+    <Compile Include="Domain\Entities\BlueMeteringValvulaCorteConfig.cs" />
     <Compile Include="Domain\Entities\Company.cs" />
     <Compile Include="Domain\Entity.cs" />
     <Compile Include="frmAgyliti\BlueMetering\cnCadastros\cnGridConsumidor.aspx.cs">
@@ -555,12 +564,33 @@
     <Compile Include="frmAgyliti\BlueMetering\cnCadastros\cnGridConsumidorTipo.aspx.designer.cs">
       <DependentUpon>cnGridConsumidorTipo.aspx</DependentUpon>
     </Compile>
+    <Compile Include="frmAgyliti\BlueMetering\cnCadastros\cnGridHidrometro.aspx.cs">
+      <DependentUpon>cnGridHidrometro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmAgyliti\BlueMetering\cnCadastros\cnGridHidrometro.aspx.designer.cs">
+      <DependentUpon>cnGridHidrometro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmAgyliti\BlueMetering\cnCadastros\cnGridHidrometroTipo.aspx.cs">
+      <DependentUpon>cnGridHidrometroTipo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmAgyliti\BlueMetering\cnCadastros\cnGridHidrometroTipo.aspx.designer.cs">
+      <DependentUpon>cnGridHidrometroTipo.aspx</DependentUpon>
+    </Compile>
     <Compile Include="frmAgyliti\BlueMetering\cnCadastros\cnGridLigacao.aspx.cs">
       <DependentUpon>cnGridLigacao.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="frmAgyliti\BlueMetering\cnCadastros\cnGridLigacao.aspx.designer.cs">
       <DependentUpon>cnGridLigacao.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmAgyliti\BlueMetering\cnCadastros\cnGridValvulaCorte.aspx.cs">
+      <DependentUpon>cnGridValvulaCorte.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmAgyliti\BlueMetering\cnCadastros\cnGridValvulaCorte.aspx.designer.cs">
+      <DependentUpon>cnGridValvulaCorte.aspx</DependentUpon>
     </Compile>
     <Compile Include="frmAgyliti\BlueMetering\cnGridMain\cnGridMain.aspx.cs">
       <DependentUpon>cnGridMain.aspx</DependentUpon>
@@ -703,6 +733,18 @@
     <Compile Include="Migrations\202206181952199_v19.Designer.cs">
       <DependentUpon>202206181952199_v19.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202206182024548_v20.cs" />
+    <Compile Include="Migrations\202206182024548_v20.Designer.cs">
+      <DependentUpon>202206182024548_v20.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206192234204_v21.cs" />
+    <Compile Include="Migrations\202206192234204_v21.Designer.cs">
+      <DependentUpon>202206192234204_v21.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206192242393_v22.cs" />
+    <Compile Include="Migrations\202206192242393_v22.Designer.cs">
+      <DependentUpon>202206192242393_v22.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -828,6 +870,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202206181952199_v19.resx">
       <DependentUpon>202206181952199_v19.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206182024548_v20.resx">
+      <DependentUpon>202206182024548_v20.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206192234204_v21.resx">
+      <DependentUpon>202206192234204_v21.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206192242393_v22.resx">
+      <DependentUpon>202206192242393_v22.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
   </ItemGroup>

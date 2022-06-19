@@ -24,6 +24,12 @@
             <dx:GridViewDataComboBoxColumn FieldName="IdConsumidor" Caption="Consumidor">
                 <PropertiesComboBox TextField="NomeCompleto" IncrementalFilteringMode="Contains" ValueField="IdConsumidor"></PropertiesComboBox>
             </dx:GridViewDataComboBoxColumn>
+            <dx:GridViewDataComboBoxColumn FieldName="IdHidrometro" Caption="Hidrômetro">
+                <PropertiesComboBox TextField="NumeroSerie" IncrementalFilteringMode="Contains" ValueField="IdHidrometro"></PropertiesComboBox>
+            </dx:GridViewDataComboBoxColumn>
+            <dx:GridViewDataComboBoxColumn FieldName="IdValvulaCorte" Caption="Válvula Corte">
+                <PropertiesComboBox TextField="NumeroSerie" IncrementalFilteringMode="Contains" ValueField="IdValvulaCorte"></PropertiesComboBox>
+            </dx:GridViewDataComboBoxColumn>
         </Columns>
         <SettingsPopup>
             <EditForm Width="600">

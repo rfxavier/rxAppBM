@@ -71,5 +71,14 @@ namespace rxAppBM.Domain.Entities
         public string ConsumidorCPF { get; set; }
         public string ConsumidorRG { get; set; }
         public string ConsumidorTipo { get; set; }
+        public string HidrometroIdHidrometro { get; set; }
+        public string HidrometroRedeIotId { get; set; }
+        public string HidrometroNumeroSerie { get; set; }
+        public string HidrometroTipoDescricao { get; set; }
+        public Nullable<decimal> HidrometroCapacidade { get; set; }
+        public string HidrometroNumeroSerieRelojoaria { get; set; }
+        public Nullable<decimal> HidrometroMarcacaoInicial { get; set; }
+        public string ValvulaCorteIdValvulaCorte { get; set; }
+        public string ValvulaCorteNumeroSerie { get; set; }
     }
 }
