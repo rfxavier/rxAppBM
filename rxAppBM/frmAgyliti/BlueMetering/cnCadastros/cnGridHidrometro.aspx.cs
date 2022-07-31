@@ -25,6 +25,16 @@ namespace rxAppBM.frmAgyliti.BlueMetering.cnCadastros
             comboColumn.PropertiesComboBox.ValueField = "IdHidrometroTipo";
             comboColumn.PropertiesComboBox.ValueType = typeof(string);
 
+            var comboColumn2 = ((GridViewDataComboBoxColumn)ASPxGridView1.Columns["IdLigacao"]);
+
+            var dsCombo2 = db.BlueMeteringLigacoes.ToList();
+
+            comboColumn2.PropertiesComboBox.DataSource = dsCombo2;
+            comboColumn2.PropertiesComboBox.TextField = "LigacaoId";
+            comboColumn2.PropertiesComboBox.ValueField = "LigacaoId";
+            comboColumn2.PropertiesComboBox.ValueType = typeof(string);
+
+
             ASPxGridView1.DataBind();
         }
         protected void ASPxGridView1_DataBinding(object sender, EventArgs e)
@@ -42,6 +52,8 @@ namespace rxAppBM.frmAgyliti.BlueMetering.cnCadastros
             newHidrometro.Capacidade = e.NewValues["Capacidade"] == null ? 0 : Convert.ToDecimal(e.NewValues["Capacidade"]);
             newHidrometro.NumeroSerieRelojoaria = e.NewValues["NumeroSerieRelojoaria"]?.ToString();
             newHidrometro.MarcacaoInicial = e.NewValues["MarcacaoInicial"] == null ? 0 : Convert.ToDecimal(e.NewValues["MarcacaoInicial"]);
+            newHidrometro.DeviceId = e.NewValues["DeviceId"]?.ToString();
+            newHidrometro.IdLigacao = e.NewValues["IdLigacao"]?.ToString();
 
             db.BlueMeteringHidrometros.Add(newHidrometro);
             db.SaveChanges();
@@ -63,6 +75,8 @@ namespace rxAppBM.frmAgyliti.BlueMetering.cnCadastros
                 hidrometro.Capacidade = e.NewValues["Capacidade"] == null ? 0 : Convert.ToDecimal(e.NewValues["Capacidade"]);
                 hidrometro.NumeroSerieRelojoaria = e.NewValues["NumeroSerieRelojoaria"]?.ToString();
                 hidrometro.MarcacaoInicial = e.NewValues["MarcacaoInicial"] == null ? 0 : Convert.ToDecimal(e.NewValues["MarcacaoInicial"]);
+                hidrometro.DeviceId = e.NewValues["DeviceId"]?.ToString();
+                hidrometro.IdLigacao = e.NewValues["IdLigacao"]?.ToString();
 
                 db.SaveChanges();
             }

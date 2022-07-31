@@ -24,6 +24,10 @@
             <dx:GridViewDataColumn FieldName="Capacidade" Caption="Capacidade" />
             <dx:GridViewDataColumn FieldName="NumeroSerieRelojoaria" Caption="Número Série Relojoaria" />
             <dx:GridViewDataColumn FieldName="MarcacaoInicial" Caption="Marcação Inicial" />
+            <dx:GridViewDataColumn FieldName="DeviceId" Caption="ID Device" />
+            <dx:GridViewDataComboBoxColumn FieldName="IdLigacao" Caption="Ligação">
+                <PropertiesComboBox TextField="IdLigacao" IncrementalFilteringMode="Contains" ValueField="IdLigacao"></PropertiesComboBox>
+            </dx:GridViewDataComboBoxColumn>
         </Columns>
         <SettingsPopup>
             <EditForm Width="600">

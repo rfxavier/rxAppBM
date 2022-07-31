@@ -20,12 +20,8 @@
             <dx:GridViewDataColumn FieldName="Endereco" Caption="Endereço" />
             <dx:GridViewDataColumn FieldName="latitude" Caption="Latitude" />
             <dx:GridViewDataColumn FieldName="longitude" Caption="Longitude" />
-            <dx:GridViewDataColumn FieldName="DeviceId" Caption="ID Device" />
             <dx:GridViewDataComboBoxColumn FieldName="IdConsumidor" Caption="Consumidor">
                 <PropertiesComboBox TextField="NomeCompleto" IncrementalFilteringMode="Contains" ValueField="IdConsumidor"></PropertiesComboBox>
-            </dx:GridViewDataComboBoxColumn>
-            <dx:GridViewDataComboBoxColumn FieldName="IdHidrometro" Caption="Hidrômetro">
-                <PropertiesComboBox TextField="NumeroSerie" IncrementalFilteringMode="Contains" ValueField="IdHidrometro"></PropertiesComboBox>
             </dx:GridViewDataComboBoxColumn>
             <dx:GridViewDataComboBoxColumn FieldName="IdValvulaCorte" Caption="Válvula Corte">
                 <PropertiesComboBox TextField="NumeroSerie" IncrementalFilteringMode="Contains" ValueField="IdValvulaCorte"></PropertiesComboBox>

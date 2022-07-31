@@ -12,5 +12,8 @@ namespace rxAppBM.Domain.Entities
         public decimal Capacidade { get; set; }
         public string NumeroSerieRelojoaria { get; set; }
         public decimal MarcacaoInicial { get; set; }
+        public string DeviceId { get; set; }
+        public string IdLigacao { get; set; }
+
     }
 }

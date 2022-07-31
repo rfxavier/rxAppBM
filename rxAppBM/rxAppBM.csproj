@@ -745,6 +745,14 @@
     <Compile Include="Migrations\202206192242393_v22.Designer.cs">
       <DependentUpon>202206192242393_v22.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202207301231077_v23.cs" />
+    <Compile Include="Migrations\202207301231077_v23.Designer.cs">
+      <DependentUpon>202207301231077_v23.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202207311218258_v24.cs" />
+    <Compile Include="Migrations\202207311218258_v24.Designer.cs">
+      <DependentUpon>202207311218258_v24.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -879,6 +887,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202206192242393_v22.resx">
       <DependentUpon>202206192242393_v22.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202207301231077_v23.resx">
+      <DependentUpon>202207301231077_v23.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202207311218258_v24.resx">
+      <DependentUpon>202207311218258_v24.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
   </ItemGroup>
