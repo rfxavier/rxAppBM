@@ -85,6 +85,7 @@ namespace rxAppBM.frmAgyliti.BlueMetering.cnGridMain
             else
             {
                 e.QueryableSource = db.BlueMeteringMessageViews;
+                //var db1 = db.BlueMeteringMessageViews.ToList();
 
                 //if (Session["selectedLojas"] != null && (Session["dateStart"] != null) && (Session["dateEnd"] != null))
                 //{

@@ -80,5 +80,15 @@ namespace rxAppBM.Domain.Entities
         public Nullable<decimal> HidrometroMarcacaoInicial { get; set; }
         public string ValvulaCorteIdValvulaCorte { get; set; }
         public string ValvulaCorteNumeroSerie { get; set; }
+        public string UnidadeNegocioIdUnidadeNegocio { get; set; }
+        public string UnidadeNegocioNome { get; set; }
+        public string UnidadeNegocioEndereco { get; set; }
+        public Nullable<decimal> UnidadeNegocioLatitude { get; set; }
+        public Nullable<decimal> UnidadeNegocioLongitude { get; set; }
+        public string UnidadeGerenciamentoRegionalIdUnidadeGerenciamentoRegional { get; set; }
+        public string UnidadeGerenciamentoRegionalNome { get; set; }
+        public string UnidadeGerenciamentoRegionalEndereco { get; set; }
+        public Nullable<decimal> UnidadeGerenciamentoRegionalLatitude { get; set; }
+        public Nullable<decimal> UnidadeGerenciamentoRegionalLongitude { get; set; }
     }
 }

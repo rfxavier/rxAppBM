@@ -28,6 +28,9 @@
             <dx:GridViewDataComboBoxColumn FieldName="IdLigacao" Caption="Ligação">
                 <PropertiesComboBox TextField="IdLigacao" IncrementalFilteringMode="Contains" ValueField="IdLigacao"></PropertiesComboBox>
             </dx:GridViewDataComboBoxColumn>
+            <dx:GridViewDataComboBoxColumn FieldName="IdValvulaCorte" Caption="Válvula Corte">
+                <PropertiesComboBox TextField="NumeroSerie" IncrementalFilteringMode="Contains" ValueField="IdValvulaCorte"></PropertiesComboBox>
+            </dx:GridViewDataComboBoxColumn>
         </Columns>
         <SettingsPopup>
             <EditForm Width="600">

@@ -11,6 +11,6 @@ namespace rxAppBM.Domain.Entities
         public Nullable<decimal> latitude { get; set; }
         public Nullable<decimal> longitude { get; set; }
         public string IdConsumidor { get; set; }
-        public string IdValvulaCorte { get; set; }
+        public string IdUnidadeNegocio { get; set; }
     }
 }

@@ -23,8 +23,8 @@
             <dx:GridViewDataComboBoxColumn FieldName="IdConsumidor" Caption="Consumidor">
                 <PropertiesComboBox TextField="NomeCompleto" IncrementalFilteringMode="Contains" ValueField="IdConsumidor"></PropertiesComboBox>
             </dx:GridViewDataComboBoxColumn>
-            <dx:GridViewDataComboBoxColumn FieldName="IdValvulaCorte" Caption="Válvula Corte">
-                <PropertiesComboBox TextField="NumeroSerie" IncrementalFilteringMode="Contains" ValueField="IdValvulaCorte"></PropertiesComboBox>
+            <dx:GridViewDataComboBoxColumn FieldName="IdUnidadeNegocio" Caption="Unidade Negócio">
+                <PropertiesComboBox TextField="Nome" IncrementalFilteringMode="Contains" ValueField="IdUnidadeNegocio"></PropertiesComboBox>
             </dx:GridViewDataComboBoxColumn>
         </Columns>
         <SettingsPopup>

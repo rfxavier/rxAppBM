@@ -34,6 +34,14 @@ namespace rxAppBM.frmAgyliti.BlueMetering.cnCadastros
             comboColumn2.PropertiesComboBox.ValueField = "LigacaoId";
             comboColumn2.PropertiesComboBox.ValueType = typeof(string);
 
+            var comboColumn3 = ((GridViewDataComboBoxColumn)ASPxGridView1.Columns["IdValvulaCorte"]);
+
+            var dsCombo3 = db.BlueMeteringValvulasCorte.ToList();
+
+            comboColumn3.PropertiesComboBox.DataSource = dsCombo3;
+            comboColumn3.PropertiesComboBox.TextField = "NumeroSerie";
+            comboColumn3.PropertiesComboBox.ValueField = "IdValvulaCorte";
+            comboColumn3.PropertiesComboBox.ValueType = typeof(string);
 
             ASPxGridView1.DataBind();
         }
@@ -54,6 +62,7 @@ namespace rxAppBM.frmAgyliti.BlueMetering.cnCadastros
             newHidrometro.MarcacaoInicial = e.NewValues["MarcacaoInicial"] == null ? 0 : Convert.ToDecimal(e.NewValues["MarcacaoInicial"]);
             newHidrometro.DeviceId = e.NewValues["DeviceId"]?.ToString();
             newHidrometro.IdLigacao = e.NewValues["IdLigacao"]?.ToString();
+            newHidrometro.IdValvulaCorte = e.NewValues["IdValvulaCorte"]?.ToString();
 
             db.BlueMeteringHidrometros.Add(newHidrometro);
             db.SaveChanges();
@@ -77,6 +86,7 @@ namespace rxAppBM.frmAgyliti.BlueMetering.cnCadastros
                 hidrometro.MarcacaoInicial = e.NewValues["MarcacaoInicial"] == null ? 0 : Convert.ToDecimal(e.NewValues["MarcacaoInicial"]);
                 hidrometro.DeviceId = e.NewValues["DeviceId"]?.ToString();
                 hidrometro.IdLigacao = e.NewValues["IdLigacao"]?.ToString();
+                hidrometro.IdValvulaCorte = e.NewValues["IdValvulaCorte"]?.ToString();
 
                 db.SaveChanges();
             }

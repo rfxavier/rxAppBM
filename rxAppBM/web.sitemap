@@ -19,6 +19,8 @@
       <siteMapNode url="~/frmAgyliti/BlueMetering/cnCadastros/cnGridHidrometroTipo.aspx" title="Tipo de Hidrômetro" description="Tipo de Hidrômetro" roles="AdmMaster,AdmPortal" />
       <siteMapNode url="~/frmAgyliti/BlueMetering/cnCadastros/cnGridHidrometro.aspx" title="Hidrômetro" description="Tipo de Hidrômetro" roles="AdmMaster,AdmPortal" />
       <siteMapNode url="~/frmAgyliti/BlueMetering/cnCadastros/cnGridValvulaCorte.aspx" title="Válvula Corte" description="Válvula Corte" roles="AdmMaster,AdmPortal" />
+      <siteMapNode url="~/frmAgyliti/BlueMetering/cnCadastros/cnGridUnidadeGerenciamentoRegional.aspx" title="UGR" description="UGR" roles="AdmMaster,AdmPortal" />
+      <siteMapNode url="~/frmAgyliti/BlueMetering/cnCadastros/cnGridUnidadeNegocio.aspx" title="Unidade Negócio" description="Unidade Negócio" roles="AdmMaster,AdmPortal" />
     </siteMapNode>
   </siteMapNode>
 </siteMap>

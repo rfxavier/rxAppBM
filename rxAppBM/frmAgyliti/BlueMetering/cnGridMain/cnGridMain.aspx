@@ -53,6 +53,16 @@
                     <dx:GridViewDataTextColumn FieldName="HidrometroMarcacaoInicial" Caption="Marcação Inicial Hidrômetro" VisibleIndex="25"></dx:GridViewDataTextColumn>
                     <dx:GridViewDataTextColumn FieldName="ValvulaCorteIdValvulaCorte" Caption="Id Válvula Corte" VisibleIndex="26"></dx:GridViewDataTextColumn>
                     <dx:GridViewDataTextColumn FieldName="ValvulaCorteNumeroSerie" Caption="Número Série Válvula Corte" VisibleIndex="27"></dx:GridViewDataTextColumn>
+                    <dx:GridViewDataTextColumn FieldName="UnidadeNegocioIdUnidadeNegocio" Caption="Id Unidade Negócio" VisibleIndex="28"></dx:GridViewDataTextColumn>
+                    <dx:GridViewDataTextColumn FieldName="UnidadeNegocioNome" Caption="Nome Unidade Negócio" VisibleIndex="29"></dx:GridViewDataTextColumn>
+                    <dx:GridViewDataTextColumn FieldName="UnidadeNegocioEndereco" Caption="Endereço Unidade Negócio" VisibleIndex="30"></dx:GridViewDataTextColumn>
+                    <dx:GridViewDataTextColumn FieldName="UnidadeNegocioLatitude" Caption="Latitude Unidade Negócio" VisibleIndex="31"></dx:GridViewDataTextColumn>
+                    <dx:GridViewDataTextColumn FieldName="UnidadeNegocioLongitude" Caption="Longitude Unidade Negócio" VisibleIndex="32"></dx:GridViewDataTextColumn>
+                    <dx:GridViewDataTextColumn FieldName="UnidadeGerenciamentoRegionalIdUnidadeGerenciamentoRegional" Caption="Id UGR" VisibleIndex="33"></dx:GridViewDataTextColumn>
+                    <dx:GridViewDataTextColumn FieldName="UnidadeGerenciamentoRegionalNome" Caption="Nome UGR" VisibleIndex="34"></dx:GridViewDataTextColumn>
+                    <dx:GridViewDataTextColumn FieldName="UnidadeGerenciamentoRegionalEndereco" Caption="Endereço UGR" VisibleIndex="35"></dx:GridViewDataTextColumn>
+                    <dx:GridViewDataTextColumn FieldName="UnidadeGerenciamentoRegionalLatitude" Caption="Latitude UGR" VisibleIndex="36"></dx:GridViewDataTextColumn>
+                    <dx:GridViewDataTextColumn FieldName="UnidadeGerenciamentoRegionalLongitude" Caption="Longitude UGR" VisibleIndex="37"></dx:GridViewDataTextColumn>
                 </Columns>
                 <Toolbars>
                     <dx:GridViewToolbar>

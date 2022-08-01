@@ -26,14 +26,15 @@ namespace rxAppBM.frmAgyliti.BlueMetering.cnCadastros
             comboColumn.PropertiesComboBox.ValueField = "IdConsumidor";
             comboColumn.PropertiesComboBox.ValueType = typeof(string);
 
-            var comboColumn3 = ((GridViewDataComboBoxColumn)ASPxGridView1.Columns["IdValvulaCorte"]);
+            var comboColumn2 = ((GridViewDataComboBoxColumn)ASPxGridView1.Columns["IdUnidadeNegocio"]);
 
-            var dsCombo3 = db.BlueMeteringValvulasCorte.ToList();
+            var dsCombo2 = db.BlueMeteringUnidadeNegocios.ToList();
 
-            comboColumn3.PropertiesComboBox.DataSource = dsCombo3;
-            comboColumn3.PropertiesComboBox.TextField = "NumeroSerie";
-            comboColumn3.PropertiesComboBox.ValueField = "IdValvulaCorte";
-            comboColumn3.PropertiesComboBox.ValueType = typeof(string);
+            comboColumn2.PropertiesComboBox.DataSource = dsCombo2;
+            comboColumn2.PropertiesComboBox.TextField = "Nome";
+            comboColumn2.PropertiesComboBox.ValueField = "IdUnidadeNegocio";
+            comboColumn2.PropertiesComboBox.ValueType = typeof(string);
+
 
             ASPxGridView1.DataBind();
         }
@@ -52,7 +53,7 @@ namespace rxAppBM.frmAgyliti.BlueMetering.cnCadastros
             newLigacao.latitude = e.NewValues["latitude"] == null ? 0 : Convert.ToDecimal(e.NewValues["latitude"]);
             newLigacao.longitude = e.NewValues["longitude"] == null ? 0 : Convert.ToDecimal(e.NewValues["longitude"]);
             newLigacao.IdConsumidor = e.NewValues["IdConsumidor"]?.ToString();
-            newLigacao.IdValvulaCorte = e.NewValues["IdValvulaCorte"]?.ToString();
+            newLigacao.IdUnidadeNegocio = e.NewValues["IdUnidadeNegocio"]?.ToString();
 
             db.BlueMeteringLigacoes.Add(newLigacao);
             db.SaveChanges();
@@ -73,7 +74,7 @@ namespace rxAppBM.frmAgyliti.BlueMetering.cnCadastros
                 ligacao.latitude = e.NewValues["latitude"] == null ? 0 : Convert.ToDecimal(e.NewValues["latitude"]);
                 ligacao.longitude = e.NewValues["longitude"] == null ? 0 : Convert.ToDecimal(e.NewValues["longitude"]);
                 ligacao.IdConsumidor = e.NewValues["IdConsumidor"]?.ToString();
-                ligacao.IdValvulaCorte = e.NewValues["IdValvulaCorte"]?.ToString();
+                ligacao.IdUnidadeNegocio = e.NewValues["IdUnidadeNegocio"]?.ToString();
 
                 db.SaveChanges();
             }

@@ -14,6 +14,7 @@ namespace rxAppBM.Domain.Entities
         public decimal MarcacaoInicial { get; set; }
         public string DeviceId { get; set; }
         public string IdLigacao { get; set; }
+        public string IdValvulaCorte { get; set; }
 
     }
 }

@@ -260,6 +260,8 @@
     <Content Include="frmAgyliti\BlueMetering\cnCadastros\cnGridHidrometro.aspx" />
     <Content Include="frmAgyliti\BlueMetering\cnCadastros\cnGridHidrometroTipo.aspx" />
     <Content Include="frmAgyliti\BlueMetering\cnCadastros\cnGridLigacao.aspx" />
+    <Content Include="frmAgyliti\BlueMetering\cnCadastros\cnGridUnidadeGerenciamentoRegional.aspx" />
+    <Content Include="frmAgyliti\BlueMetering\cnCadastros\cnGridUnidadeNegocio.aspx" />
     <Content Include="frmAgyliti\BlueMetering\cnCadastros\cnGridValvulaCorte.aspx" />
     <Content Include="frmAgyliti\BlueMetering\cnGridMain\cnGridMain.aspx" />
     <Content Include="frmAgyliti\BlueMetering\cnUsuarios\cnUsuarios.aspx" />
@@ -546,6 +548,10 @@
     <Compile Include="Domain\Entities\BlueMeteringMessage.cs" />
     <Compile Include="Domain\Entities\BlueMeteringMessageViewConfig.cs" />
     <Compile Include="Domain\Entities\BlueMeteringMessageConfig.cs" />
+    <Compile Include="Domain\Entities\BlueMeteringUnidadeGerenciamentoRegional.cs" />
+    <Compile Include="Domain\Entities\BlueMeteringUnidadeGerenciamentoRegionalConfig.cs" />
+    <Compile Include="Domain\Entities\BlueMeteringUnidadeNegocio.cs" />
+    <Compile Include="Domain\Entities\BlueMeteringUnidadeNegocioConfig.cs" />
     <Compile Include="Domain\Entities\BlueMeteringValvulaCorte.cs" />
     <Compile Include="Domain\Entities\BlueMeteringValvulaCorteConfig.cs" />
     <Compile Include="Domain\Entities\Company.cs" />
@@ -584,6 +590,20 @@
     </Compile>
     <Compile Include="frmAgyliti\BlueMetering\cnCadastros\cnGridLigacao.aspx.designer.cs">
       <DependentUpon>cnGridLigacao.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmAgyliti\BlueMetering\cnCadastros\cnGridUnidadeGerenciamentoRegional.aspx.cs">
+      <DependentUpon>cnGridUnidadeGerenciamentoRegional.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmAgyliti\BlueMetering\cnCadastros\cnGridUnidadeGerenciamentoRegional.aspx.designer.cs">
+      <DependentUpon>cnGridUnidadeGerenciamentoRegional.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmAgyliti\BlueMetering\cnCadastros\cnGridUnidadeNegocio.aspx.cs">
+      <DependentUpon>cnGridUnidadeNegocio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmAgyliti\BlueMetering\cnCadastros\cnGridUnidadeNegocio.aspx.designer.cs">
+      <DependentUpon>cnGridUnidadeNegocio.aspx</DependentUpon>
     </Compile>
     <Compile Include="frmAgyliti\BlueMetering\cnCadastros\cnGridValvulaCorte.aspx.cs">
       <DependentUpon>cnGridValvulaCorte.aspx</DependentUpon>
@@ -753,6 +773,22 @@
     <Compile Include="Migrations\202207311218258_v24.Designer.cs">
       <DependentUpon>202207311218258_v24.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202207312333127_v25.cs" />
+    <Compile Include="Migrations\202207312333127_v25.Designer.cs">
+      <DependentUpon>202207312333127_v25.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202208010057041_v26.cs" />
+    <Compile Include="Migrations\202208010057041_v26.Designer.cs">
+      <DependentUpon>202208010057041_v26.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202208010134147_v27.cs" />
+    <Compile Include="Migrations\202208010134147_v27.Designer.cs">
+      <DependentUpon>202208010134147_v27.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202208010147178_v28.cs" />
+    <Compile Include="Migrations\202208010147178_v28.Designer.cs">
+      <DependentUpon>202208010147178_v28.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -893,6 +929,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202207311218258_v24.resx">
       <DependentUpon>202207311218258_v24.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202207312333127_v25.resx">
+      <DependentUpon>202207312333127_v25.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202208010057041_v26.resx">
+      <DependentUpon>202208010057041_v26.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202208010134147_v27.resx">
+      <DependentUpon>202208010134147_v27.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202208010147178_v28.resx">
+      <DependentUpon>202208010147178_v28.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
   </ItemGroup>
