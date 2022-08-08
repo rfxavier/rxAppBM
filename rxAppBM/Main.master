@@ -6,31 +6,7 @@
     <asp:ContentPlaceHolder ID="HeadContentPlaceHolderMain" runat="server" />
 </asp:Content>
 <asp:Content ID="ContentMain" ContentPlaceHolderID="MainContentPlaceHolderRoot" runat="server">
-    <dx:ASPxPanel ID="LeftPane" runat="server" FixedPosition="WindowLeft" ClientInstanceName="leftPane" Collapsible="True" ScrollBars="Auto" BackColor="White" Width="264px">
-        <Styles>
-            <ExpandButton BackColor="#D2D2D2">
-                <Paddings Padding="15px" />
-            </ExpandButton>
-            <Panel>
-                <Paddings Padding="0px" />
-            </Panel>
-        </Styles>
-        <SettingsAdaptivity CollapseAtWindowInnerWidth="1921" />
-        <PanelCollection>
-            <dx:PanelContent runat="server" SupportsDisabledAttribute="true">
-                <div class="leftPanel">
-                    <dx:ASPxNavBar ID="ASPxNavBar1" runat="server" Width="240px" EnableAnimation="True" DataSourceID="ASPxSiteMapDataSource1" Theme="Default" AutoCollapse="True" AllowSelectItem="True" SaveStateToCookies="True" SaveStateToCookiesID="dxNav1">
-                        <ItemStyle Wrap="True" />
-                        <Border BorderWidth="0px" />
-                        <Paddings Padding="2px" />
-                    </dx:ASPxNavBar>
-                    <dx:ASPxSiteMapDataSource ID="ASPxSiteMapDataSource1" runat="server" SiteMapFileName="~/web.sitemap" EnableRoles="True" />
-                </div>
-            </dx:PanelContent>
-        </PanelCollection>
-    </dx:ASPxPanel>
     <div class="contentPane">
         <asp:ContentPlaceHolder ID="MainContentPlaceHolderMain" runat="server" />
     </div>
-
 </asp:Content>

@@ -133,3 +133,33 @@
     vertical-align: middle;
     font-weight: bold;
 }
+
+.dxmLite .dxm-popup .dxm-hovered {
+    background-color: #027bdc;
+}
+
+.noImage {
+    background-image: none;
+}
+
+a.button {
+    font: bold 12px;
+    text-decoration: none;
+    background-color: #027bdc;
+    color: white;
+    padding: 2px 6px 2px 6px;
+    border-top: 1px solid #CCCCCC;
+    border-right: 1px solid #333333;
+    border-bottom: 1px solid #333333;
+    border-left: 1px solid #CCCCCC;
+}
+
+a.button:visited {
+    color: white;
+}
+
+.versao {
+    font-weight: bold;
+    font-size: x-small;
+    text-decoration: none;
+}

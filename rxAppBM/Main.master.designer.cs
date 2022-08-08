@@ -22,33 +22,6 @@ namespace rxAppBM {
         protected global::System.Web.UI.WebControls.ContentPlaceHolder HeadContentPlaceHolderMain;
         
         /// <summary>
-        /// LeftPane control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::DevExpress.Web.ASPxPanel LeftPane;
-        
-        /// <summary>
-        /// ASPxNavBar1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::DevExpress.Web.ASPxNavBar ASPxNavBar1;
-        
-        /// <summary>
-        /// ASPxSiteMapDataSource1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::DevExpress.Web.ASPxSiteMapDataSource ASPxSiteMapDataSource1;
-        
-        /// <summary>
         /// MainContentPlaceHolderMain control.
         /// </summary>
         /// <remarks>

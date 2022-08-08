@@ -4,7 +4,7 @@
 <asp:Content ID="HeaderContent" ContentPlaceHolderID="HeadContentPlaceHolderMain" runat="server">
 </asp:Content>
 <asp:Content ID="MainContent" ContentPlaceHolderID="MainContentPlaceHolderMain" runat="server">
-    <dx:ASPxGridView ID="GridUsers" runat="server" KeyFieldName="Id" AutoGenerateColumns="False" OnDataBinding="GridUsers_DataBinding" OnRowDeleting="GridUsers_RowDeleting" OnRowInserting="GridUsers_RowInserting" OnRowUpdating="GridUsers_RowUpdating" OnStartRowEditing="GridUsers_StartRowEditing">
+    <dx:ASPxGridView ID="GridUsers" runat="server" Width="100%" KeyFieldName="Id" AutoGenerateColumns="False" OnDataBinding="GridUsers_DataBinding" OnRowDeleting="GridUsers_RowDeleting" OnRowInserting="GridUsers_RowInserting" OnRowUpdating="GridUsers_RowUpdating" OnStartRowEditing="GridUsers_StartRowEditing">
         <Columns>
             <dx:GridViewCommandColumn ShowEditButton="true" ShowDeleteButton="true" ShowNewButtonInHeader="true" VisibleIndex="0">
             </dx:GridViewCommandColumn>

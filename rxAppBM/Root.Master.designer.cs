@@ -22,6 +22,15 @@ namespace rxAppBM {
         protected global::System.Web.UI.WebControls.ContentPlaceHolder headContentPlaceHolderRoot;
         
         /// <summary>
+        /// form1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        
+        /// <summary>
         /// HeaderPane control.
         /// </summary>
         /// <remarks>
@@ -29,15 +38,6 @@ namespace rxAppBM {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxPanel HeaderPane;
-        
-        /// <summary>
-        /// hlLogo control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::DevExpress.Web.ASPxHyperLink hlLogo;
         
         /// <summary>
         /// LoginView1 control.
@@ -49,6 +49,24 @@ namespace rxAppBM {
         protected global::System.Web.UI.WebControls.LoginView LoginView1;
         
         /// <summary>
+        /// ASPxMenu1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxMenu ASPxMenu1;
+        
+        /// <summary>
+        /// ASPxSiteMapDataSource1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxSiteMapDataSource ASPxSiteMapDataSource1;
+        
+        /// <summary>
         /// MainPane control.
         /// </summary>
         /// <remarks>
@@ -56,15 +74,6 @@ namespace rxAppBM {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.ASPxPanel MainPane;
-        
-        /// <summary>
-        /// form1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
         /// MainContentPlaceHolderRoot control.
