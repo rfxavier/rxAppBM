@@ -12,7 +12,6 @@ namespace rxAppBM.frmAgyliti.GetLock.cnUsuarios
     public partial class cnUsuarios : System.Web.UI.Page
     {
         private ApplicationUserManager userManager;
-        private ApplicationDbContext db;
 
         public cnUsuarios()
         {
@@ -20,14 +19,6 @@ namespace rxAppBM.frmAgyliti.GetLock.cnUsuarios
         }
         protected void Page_Load(object sender, EventArgs e)
         {
-            db = new ApplicationDbContext();
-
-            //var comboColumn = ((GridViewDataComboBoxColumn)GridUsers.Columns["GetLockLojaId"]);
-
-            //comboColumn.PropertiesComboBox.TextField = "nome";
-            //comboColumn.PropertiesComboBox.ValueField = "id";
-            //comboColumn.PropertiesComboBox.ValueType = typeof(string);
-
             GridUsers.DataBind();
         }
 

@@ -90,10 +90,10 @@
                                 </div>
                                 <div class="col-xs-10" style="border-top: black; border-width: thin">
                                     <dx:ASPxMenu ID="ASPxMenu1" runat="server" ItemAutoWidth="true" DataSourceID="ASPxSiteMapDataSource1" OnItemDataBound="ASPxMenu1_ItemDataBound">
-                                        <ItemStyle BackColor="#027bdc">
+                                        <ItemStyle BackColor="#027bdc" Font-Size="10pt">
                                             <HoverStyle BackColor ="#027bdc"></HoverStyle>
                                         </ItemStyle>
-                                        <SubMenuStyle GutterWidth="0px" BackColor="#DEDFDA" />
+                                        <SubMenuStyle GutterWidth="0px" BackColor="#DEDFDA" Font-Size="10pt" />
                                     </dx:ASPxMenu>
                                     <dx:ASPxSiteMapDataSource runat="server" ID="ASPxSiteMapDataSource1"  SiteMapFileName="~/web.sitemap" EnableRoles="True" />
                                 </div>

@@ -264,7 +264,9 @@
     <Content Include="frmAgyliti\BlueMetering\cnCadastros\cnGridUnidadeNegocio.aspx" />
     <Content Include="frmAgyliti\BlueMetering\cnCadastros\cnGridValvulaCorte.aspx" />
     <Content Include="frmAgyliti\BlueMetering\cnGridMain\cnGridMain.aspx" />
+    <Content Include="frmAgyliti\BlueMetering\cnUsuarios\cnPerfis.aspx" />
     <Content Include="frmAgyliti\BlueMetering\cnUsuarios\cnUsuarios.aspx" />
+    <Content Include="frmAgyliti\BlueMetering\cnUsuarios\cnUsuariosPerfis.aspx" />
     <Content Include="Global.asax" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -619,12 +621,26 @@
     <Compile Include="frmAgyliti\BlueMetering\cnGridMain\cnGridMain.aspx.designer.cs">
       <DependentUpon>cnGridMain.aspx</DependentUpon>
     </Compile>
+    <Compile Include="frmAgyliti\BlueMetering\cnUsuarios\cnPerfis.aspx.cs">
+      <DependentUpon>cnPerfis.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmAgyliti\BlueMetering\cnUsuarios\cnPerfis.aspx.designer.cs">
+      <DependentUpon>cnPerfis.aspx</DependentUpon>
+    </Compile>
     <Compile Include="frmAgyliti\BlueMetering\cnUsuarios\cnUsuarios.aspx.cs">
       <DependentUpon>cnUsuarios.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="frmAgyliti\BlueMetering\cnUsuarios\cnUsuarios.aspx.designer.cs">
       <DependentUpon>cnUsuarios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmAgyliti\BlueMetering\cnUsuarios\cnUsuariosPerfis.aspx.cs">
+      <DependentUpon>cnUsuariosPerfis.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmAgyliti\BlueMetering\cnUsuarios\cnUsuariosPerfis.aspx.designer.cs">
+      <DependentUpon>cnUsuariosPerfis.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

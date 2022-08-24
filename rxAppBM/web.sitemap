@@ -8,6 +8,8 @@
     </siteMapNode>
     <siteMapNode url="" title="Admin" description="Admin" roles="AdmMaster,AdmPortal">
       <siteMapNode url="~/frmAgyliti/BlueMetering/cnUsuarios/cnUsuarios.aspx" title="Usuários" description="AdminUsuarios" roles="AdmMaster,AdmPortal" />
+      <siteMapNode url="~/frmAgyliti/BlueMetering/cnUsuarios/cnPerfis.aspx" title="Perfis" description="AdminPerfis" roles="AdmMaster,AdmPortal" />
+      <siteMapNode url="~/frmAgyliti/BlueMetering/cnUsuarios/cnUsuariosPerfis.aspx" title="Usuários Perfis" description="UsuariosPerfis" roles="AdmMaster,AdmPortal" />
     </siteMapNode>
     <siteMapNode url="" title="Operações" description="Operações" roles="AdmMaster,AdmPortal,User">
       <siteMapNode url="~/frmAgyliti/BlueMetering/cnGridMain/cnGridMain.aspx" title="Ocorrências" description="Ocorrências" roles="AdmMaster,AdmPortal,User" />
