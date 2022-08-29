@@ -42,7 +42,9 @@ namespace rxAppBM.Models
         public DbSet<BlueMeteringValvulaCorte> BlueMeteringValvulasCorte { get; set; }
         public DbSet<BlueMeteringUnidadeGerenciamentoRegional> BlueMeteringUnidadeGerenciamentoRegionais { get; set; }
         public DbSet<BlueMeteringUnidadeNegocio> BlueMeteringUnidadeNegocios { get; set; }
+        public DbSet<BlueMeteringConsumoPorDia> BlueMeteringConsumoPorDias { get; set; }
         public DbSet<BlueMeteringMessageView> BlueMeteringMessageViews { get; set; }
+        public DbSet<BlueMeteringConsumoPorDiaView> BlueMeteringConsumoPorDiaViews { get; set; }
 
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
@@ -82,7 +84,9 @@ namespace rxAppBM.Models
             modelBuilder.Configurations.Add(new BlueMeteringValvulaCorteConfig());
             modelBuilder.Configurations.Add(new BlueMeteringUnidadeGerenciamentoRegionalConfig());
             modelBuilder.Configurations.Add(new BlueMeteringUnidadeNegocioConfig());
+            modelBuilder.Configurations.Add(new BlueMeteringConsumoPorDiaConfig());
             modelBuilder.Configurations.Add(new BlueMeteringMessageViewConfig());
+            modelBuilder.Configurations.Add(new BlueMeteringConsumoPorDiaViewConfig());
 
             base.OnModelCreating(modelBuilder);
         }

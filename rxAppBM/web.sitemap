@@ -24,5 +24,9 @@
       <siteMapNode url="~/frmAgyliti/BlueMetering/cnCadastros/cnGridUnidadeGerenciamentoRegional.aspx" title="UGR" description="UGR" roles="AdmMaster,AdmPortal" />
       <siteMapNode url="~/frmAgyliti/BlueMetering/cnCadastros/cnGridUnidadeNegocio.aspx" title="Unidade Negócio" description="Unidade Negócio" roles="AdmMaster,AdmPortal" />
     </siteMapNode>
+    <siteMapNode url="" title="Dashboards" description="Dashboards" roles="AdmMaster,AdmPortal">
+      <siteMapNode url="~/frmAgyliti/BlueMetering/cnDashboards/cnDashboardConsumoMensal.aspx" title="Consumo Mensal" description="Consumo Mensal" roles="AdmMaster,AdmPortal" />
+      <siteMapNode url="~/frmAgyliti/BlueMetering/cnDashboards/cnDashboardConsumoDiarioMedia.aspx" title="Consumo Diário Média" description="Consumo Diário Médi" roles="AdmMaster,UserClient" />
+    </siteMapNode>
   </siteMapNode>
 </siteMap>

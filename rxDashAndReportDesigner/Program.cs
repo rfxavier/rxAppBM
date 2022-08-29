@@ -1,4 +1,5 @@
-﻿using System;
+﻿using rxAppBM.dataObjClasses;
+using System;
 using System.Windows.Forms;
 
 namespace rxDashAndReportDesigner
@@ -13,6 +14,8 @@ namespace rxDashAndReportDesigner
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+
+            var dummy = new dsConsumo();
             //Application.Run(new FormReportDesigner());
             Application.Run(new FormDashboardDesigner());
         }
