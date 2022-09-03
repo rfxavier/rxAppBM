@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace rxDashAndReportDesigner
 {
-    public partial class FormReportDesigner : Form
+    public partial class FormReportDesigner : DevExpress.XtraBars.Ribbon.RibbonForm
     {
         public FormReportDesigner()
         {
