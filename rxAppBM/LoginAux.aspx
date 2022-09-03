@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Login.Master" AutoEventWireup="true" CodeBehind="LoginAux.aspx.cs" Inherits="rxAppBM.LoginAux" %>
 
-<%@ Register TagPrefix="dx" Namespace="DevExpress.Web" Assembly="DevExpress.Web.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Web" Assembly="DevExpress.Web.v21.1, Version=21.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
 <asp:Content ID="HeaderContent" ContentPlaceHolderID="HeadContentPlaceHolderRoot" runat="server">
     <link href="<%= Page.ResolveUrl("~/Content/bootstrap.min.css")%>?v=<%= DateTime.Now.Ticks %>" rel="stylesheet" />
     <link href="<%= Page.ResolveUrl("~/Content/rx/css/stylesrxmain.css")%>?v=<%= DateTime.Now.Ticks %>" rel="stylesheet" />
