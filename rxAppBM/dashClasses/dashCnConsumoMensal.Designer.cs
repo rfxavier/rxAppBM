@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             DevExpress.DashboardCommon.Dimension dimension1 = new DevExpress.DashboardCommon.Dimension();
+            DevExpress.DataAccess.ObjectBinding.Parameter parameter1 = new DevExpress.DataAccess.ObjectBinding.Parameter();
+            DevExpress.DataAccess.ObjectBinding.Parameter parameter2 = new DevExpress.DataAccess.ObjectBinding.Parameter();
             DevExpress.DashboardCommon.Dimension dimension2 = new DevExpress.DashboardCommon.Dimension();
             DevExpress.DashboardCommon.Dimension dimension3 = new DevExpress.DashboardCommon.Dimension();
             DevExpress.DashboardCommon.Dimension dimension4 = new DevExpress.DashboardCommon.Dimension();
@@ -80,6 +82,15 @@
             this.dashboardObjectDataSource1.DataMember = "GetConsumoPorDia";
             this.dashboardObjectDataSource1.DataSource = typeof(rxAppBM.dataObjClasses.dsConsumo);
             this.dashboardObjectDataSource1.Name = "Object Data Source 1";
+            parameter1.Name = "dataIni";
+            parameter1.Type = typeof(DevExpress.DataAccess.Expression);
+            parameter1.Value = new DevExpress.DataAccess.Expression("?parDashDataIni", typeof(System.DateTime));
+            parameter2.Name = "dataFim";
+            parameter2.Type = typeof(DevExpress.DataAccess.Expression);
+            parameter2.Value = new DevExpress.DataAccess.Expression("?parDashDataFim", typeof(System.DateTime));
+            this.dashboardObjectDataSource1.Parameters.AddRange(new DevExpress.DataAccess.ObjectBinding.Parameter[] {
+            parameter1,
+            parameter2});
             // 
             // comboBoxDashboardItem2
             // 
@@ -183,10 +194,12 @@
             dashboardParameter1.Name = "parDashDataIni";
             dashboardParameter1.Type = typeof(System.DateTime);
             dashboardParameter1.Value = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
+            dashboardParameter1.Visible = false;
             dashboardParameter2.Description = "Data Final";
             dashboardParameter2.Name = "parDashDataFim";
             dashboardParameter2.Type = typeof(System.DateTime);
             dashboardParameter2.Value = new System.DateTime(2999, 1, 1, 0, 0, 0, 0);
+            dashboardParameter2.Visible = false;
             this.Parameters.AddRange(new DevExpress.DashboardCommon.DashboardParameter[] {
             dashboardParameter1,
             dashboardParameter2});
