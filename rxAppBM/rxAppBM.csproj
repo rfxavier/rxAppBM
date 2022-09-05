@@ -51,11 +51,9 @@
     <Reference Include="DevExpress.Dashboard.v21.1.Core, Version=21.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Dashboard.v21.1.Web, Version=21.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      
     </Reference>
     <Reference Include="DevExpress.Dashboard.v21.1.Web.WebForms, Version=21.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      
     </Reference>
     <Reference Include="DevExpress.Data.v21.1, Version=21.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.DataAccess.v21.1, Version=21.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
@@ -291,6 +289,7 @@
     <Content Include="frmAgyliti\BlueMetering\cnCadastros\cnGridValvulaCorte.aspx" />
     <Content Include="frmAgyliti\BlueMetering\cnDashboards\cnDashboardConsumoDiarioMedia.aspx" />
     <Content Include="frmAgyliti\BlueMetering\cnDashboards\cnDashboardConsumoMensal.aspx" />
+    <Content Include="frmAgyliti\BlueMetering\cnDashboards\cnDashboardLastSeen.aspx" />
     <Content Include="frmAgyliti\BlueMetering\cnGridMain\cnGridMain.aspx" />
     <Content Include="frmAgyliti\BlueMetering\cnUsuarios\cnPerfis.aspx" />
     <Content Include="frmAgyliti\BlueMetering\cnUsuarios\cnUsuarios.aspx" />
@@ -566,7 +565,14 @@
     <Compile Include="dashClasses\dashCnConsumoMensal.Designer.cs">
       <DependentUpon>dashCnConsumoMensal.cs</DependentUpon>
     </Compile>
+    <Compile Include="dashClasses\dashCnLastSeen.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="dashClasses\dashCnLastSeen.Designer.cs">
+      <DependentUpon>dashCnLastSeen.cs</DependentUpon>
+    </Compile>
     <Compile Include="dataObjClasses\dsConsumo.cs" />
+    <Compile Include="dataObjClasses\dsLastSeen.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -672,6 +678,13 @@
     </Compile>
     <Compile Include="frmAgyliti\BlueMetering\cnDashboards\cnDashboardConsumoMensal.aspx.designer.cs">
       <DependentUpon>cnDashboardConsumoMensal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmAgyliti\BlueMetering\cnDashboards\cnDashboardLastSeen.aspx.cs">
+      <DependentUpon>cnDashboardLastSeen.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmAgyliti\BlueMetering\cnDashboards\cnDashboardLastSeen.aspx.designer.cs">
+      <DependentUpon>cnDashboardLastSeen.aspx</DependentUpon>
     </Compile>
     <Compile Include="frmAgyliti\BlueMetering\cnGridMain\cnGridMain.aspx.cs">
       <DependentUpon>cnGridMain.aspx</DependentUpon>
@@ -931,6 +944,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="dashClasses\dashCnConsumoMensal.resx">
       <DependentUpon>dashCnConsumoMensal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dashClasses\dashCnLastSeen.resx">
+      <DependentUpon>dashCnLastSeen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202205082345067_InitialCreate.resx">
       <DependentUpon>202205082345067_InitialCreate.cs</DependentUpon>
