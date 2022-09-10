@@ -15,19 +15,19 @@
     <div style="position: absolute; left:0; right:0; top:90px; bottom:0;">
         <dx:ASPxFormLayout ID="ASPxFormLayout1" runat="server" ColCount="5" ColumnCount="5" Width="100%" Height="100%">
             <Items>
-                <dx:LayoutItem ShowCaption="False" ColSpan="1">
+                <dx:LayoutItem ShowCaption="False" ColSpan="1" Visible="False">
                     <LayoutItemNestedControlCollection>
                         <dx:LayoutItemNestedControlContainer runat="server">
                         </dx:LayoutItemNestedControlContainer>
                     </LayoutItemNestedControlCollection>
                 </dx:LayoutItem>
-                <dx:LayoutItem ShowCaption="False" ColSpan="1">
+                <dx:LayoutItem ShowCaption="False" ColSpan="1" Visible="False">
                     <LayoutItemNestedControlCollection>
                         <dx:LayoutItemNestedControlContainer runat="server">
                         </dx:LayoutItemNestedControlContainer>
                     </LayoutItemNestedControlCollection>
                 </dx:LayoutItem>
-                <dx:LayoutItem Caption="Data inicial" ColSpan="1" Width="16%" HorizontalAlign="Right">
+                <dx:LayoutItem Caption="Data inicial" ColSpan="1" Width="16%" HorizontalAlign="Right" Visible="False">
                     <LayoutItemNestedControlCollection>
                         <dx:LayoutItemNestedControlContainer runat="server">
                             <dx:ASPxDateEdit ID="deStart" ClientInstanceName="deStart" DisplayFormatString="dd/MM/yyyy" EditFormatString="dd/MM/yyyy" Width="90" runat="server">
@@ -40,7 +40,7 @@
                     <CaptionSettings HorizontalAlign="Right" VerticalAlign="Middle"></CaptionSettings>
                     <CaptionStyle Font-Bold="False" Font-Names="Tahoma, Geneva, sans-serif"></CaptionStyle>
                 </dx:LayoutItem>
-                <dx:LayoutItem Caption="Data final" ColSpan="1" Width="16%" HorizontalAlign="Right">
+                <dx:LayoutItem Caption="Data final" ColSpan="1" Width="16%" HorizontalAlign="Right" Visible="False">
                     <LayoutItemNestedControlCollection>
                         <dx:LayoutItemNestedControlContainer runat="server">
                             <dx:ASPxDateEdit ID="deEnd" ClientInstanceName="deEnd" DisplayFormatString="dd/MM/yyyy" EditFormatString="dd/MM/yyyy" Width="90" runat="server">
@@ -54,7 +54,7 @@
                     <CaptionSettings HorizontalAlign="Right" VerticalAlign="Middle"></CaptionSettings>
                     <CaptionStyle Font-Bold="False" Font-Names="Tahoma, Geneva, sans-serif"></CaptionStyle>
                 </dx:LayoutItem>
-                <dx:LayoutItem ShowCaption="False" ColSpan="1" Width="10%" HorizontalAlign="Center">
+                <dx:LayoutItem ShowCaption="False" ColSpan="1" Width="10%" HorizontalAlign="Center" Visible="False">
                     <LayoutItemNestedControlCollection>
                         <dx:LayoutItemNestedControlContainer runat="server">
                             <dx:ASPxButton ID="ASPxButton1" runat="server" Text="Aplicar filtro" OnClick="ASPxButton1_Click"></dx:ASPxButton>

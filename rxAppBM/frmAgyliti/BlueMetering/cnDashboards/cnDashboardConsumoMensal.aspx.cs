@@ -26,7 +26,18 @@ namespace rxAppBM.frmAgyliti.BlueMetering.cnDashboards
 
         protected void ASPxDashboard1_DataLoading(object sender, DevExpress.DashboardWeb.DataLoadingWebEventArgs e)
         {
-            e.Data = dsConsumo.GetConsumoPorDia(deStart.Date, deEnd.Date);
+            //e.Data = dsConsumo.GetConsumoPorDia(deStart.Date, deEnd.Date);
+
+            var parDashDataIni = new DateTime(DateTime.Now.Date.Year, DateTime.Now.Date.Month, DateTime.Now.Date.Day, 0, 0, 0).AddMonths(-5);
+            var parDashDataFim = new DateTime(DateTime.Now.Date.Year, DateTime.Now.Date.Month, DateTime.Now.Date.Day, 0, 0, 0);
+
+            foreach (var parameter in e.Parameters)
+            {
+                if (parameter.Name == "parDashDataIni") parDashDataIni = Convert.ToDateTime(parameter.Value);
+                if (parameter.Name == "parDashDataFim") parDashDataFim = Convert.ToDateTime(parameter.Value);
+            }
+
+            e.Data = dsConsumo.GetConsumoPorDia(parDashDataIni, parDashDataFim);
         }
 
         protected void ASPxDashboard1_ConfigureDataReloadingTimeout(object sender, DevExpress.DashboardWeb.ConfigureDataReloadingTimeoutWebEventArgs e)
@@ -38,8 +49,11 @@ namespace rxAppBM.frmAgyliti.BlueMetering.cnDashboards
         {
             DashboardState dashboardState = new DashboardState();
 
-            DashboardParameterState parameterStateDataIni = new DashboardParameterState("parDashDataIni", "2022-01-01T00:00:00", typeof(string));
-            DashboardParameterState parameterStateDataFim = new DashboardParameterState("parDashDataFim", "2099-12-31T00:00:00", typeof(string));
+            var dateEnd = DateTime.Now.ToString("yyyy-MM-ddT00:00:00");
+            var dateStart = DateTime.Now.AddMonths(-5).ToString("yyyy-MM-ddT00:00:00");
+
+            DashboardParameterState parameterStateDataIni = new DashboardParameterState("parDashDataIni", dateStart, typeof(string));
+            DashboardParameterState parameterStateDataFim = new DashboardParameterState("parDashDataFim", dateEnd, typeof(string));
 
             dashboardState.Parameters.Add(parameterStateDataIni);
             dashboardState.Parameters.Add(parameterStateDataFim);
