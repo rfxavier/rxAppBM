@@ -279,6 +279,7 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="frmAgyliti\BlueMetering\cnCadastros\cnGridCliente.aspx" />
     <Content Include="frmAgyliti\BlueMetering\cnCadastros\cnGridConsumidor.aspx" />
     <Content Include="frmAgyliti\BlueMetering\cnCadastros\cnGridConsumidorTipo.aspx" />
     <Content Include="frmAgyliti\BlueMetering\cnCadastros\cnGridHidrometro.aspx" />
@@ -289,6 +290,7 @@
     <Content Include="frmAgyliti\BlueMetering\cnCadastros\cnGridValvulaCorte.aspx" />
     <Content Include="frmAgyliti\BlueMetering\cnDashboards\cnDashboardConsumoDiarioMedia.aspx" />
     <Content Include="frmAgyliti\BlueMetering\cnDashboards\cnDashboardConsumoMensal.aspx" />
+    <Content Include="frmAgyliti\BlueMetering\cnDashboards\cnDashboardSLALeituras.aspx" />
     <Content Include="frmAgyliti\BlueMetering\cnDashboards\cnDashboardLastSeen.aspx" />
     <Content Include="frmAgyliti\BlueMetering\cnGridMain\cnGridMain.aspx" />
     <Content Include="frmAgyliti\BlueMetering\cnUsuarios\cnPerfis.aspx" />
@@ -571,6 +573,12 @@
     <Compile Include="dashClasses\dashCnLastSeen.Designer.cs">
       <DependentUpon>dashCnLastSeen.cs</DependentUpon>
     </Compile>
+    <Compile Include="dashClasses\dashCnSLALeituras.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="dashClasses\dashCnSLALeituras.Designer.cs">
+      <DependentUpon>dashCnSLALeituras.cs</DependentUpon>
+    </Compile>
     <Compile Include="dataObjClasses\dsConsumo.cs" />
     <Compile Include="dataObjClasses\dsLastSeen.cs" />
     <Compile Include="Default.aspx.cs">
@@ -581,6 +589,8 @@
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="Domain\Entities\ApplicationUserConfig.cs" />
+    <Compile Include="Domain\Entities\BlueMeteringCliente.cs" />
+    <Compile Include="Domain\Entities\BlueMeteringClienteConfig.cs" />
     <Compile Include="Domain\Entities\BlueMeteringConsumidorConfig.cs" />
     <Compile Include="Domain\Entities\BlueMeteringConsumidor.cs" />
     <Compile Include="Domain\Entities\BlueMeteringAlarm.cs" />
@@ -609,6 +619,13 @@
     <Compile Include="Domain\Entities\BlueMeteringValvulaCorteConfig.cs" />
     <Compile Include="Domain\Entities\Company.cs" />
     <Compile Include="Domain\Entity.cs" />
+    <Compile Include="frmAgyliti\BlueMetering\cnCadastros\cnGridCliente.aspx.cs">
+      <DependentUpon>cnGridCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmAgyliti\BlueMetering\cnCadastros\cnGridCliente.aspx.designer.cs">
+      <DependentUpon>cnGridCliente.aspx</DependentUpon>
+    </Compile>
     <Compile Include="frmAgyliti\BlueMetering\cnCadastros\cnGridConsumidor.aspx.cs">
       <DependentUpon>cnGridConsumidor.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -678,6 +695,13 @@
     </Compile>
     <Compile Include="frmAgyliti\BlueMetering\cnDashboards\cnDashboardConsumoMensal.aspx.designer.cs">
       <DependentUpon>cnDashboardConsumoMensal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmAgyliti\BlueMetering\cnDashboards\cnDashboardSLALeituras.aspx.cs">
+      <DependentUpon>cnDashboardSLALeituras.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmAgyliti\BlueMetering\cnDashboards\cnDashboardSLALeituras.aspx.designer.cs">
+      <DependentUpon>cnDashboardSLALeituras.aspx</DependentUpon>
     </Compile>
     <Compile Include="frmAgyliti\BlueMetering\cnDashboards\cnDashboardLastSeen.aspx.cs">
       <DependentUpon>cnDashboardLastSeen.aspx</DependentUpon>
@@ -885,6 +909,10 @@
     <Compile Include="Migrations\202208271939331_v30.Designer.cs">
       <DependentUpon>202208271939331_v30.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202209112110007_v31.cs" />
+    <Compile Include="Migrations\202209112110007_v31.Designer.cs">
+      <DependentUpon>202209112110007_v31.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -947,6 +975,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="dashClasses\dashCnLastSeen.resx">
       <DependentUpon>dashCnLastSeen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dashClasses\dashCnSLALeituras.resx">
+      <DependentUpon>dashCnSLALeituras.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202205082345067_InitialCreate.resx">
       <DependentUpon>202205082345067_InitialCreate.cs</DependentUpon>
@@ -1052,6 +1083,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202208271939331_v30.resx">
       <DependentUpon>202208271939331_v30.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202209112110007_v31.resx">
+      <DependentUpon>202209112110007_v31.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
   </ItemGroup>

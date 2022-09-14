@@ -25,6 +25,20 @@ namespace rxAppBM.dataObjClasses
             public string commStatusCode { get; set; }
         }
 
+        public class DeviceCommsPerDay
+        {
+            public string PayloadId { get; set; }
+            public Nullable<System.DateTime> CommDate { get; set; }
+            public int? CommMessages  { get; set; }
+        }
+
+        public class DeviceCommsSLAStatus
+        {
+            public int Order { get; set; }
+            public string SLAStatus { get; set; }
+            public int NumberOfDevices { get; set; }
+        }
+
         public static List<DeviceDiffComm> GetDeviceCommStatus()
         {
             using (var ctx = new ApplicationDbContext())
@@ -76,5 +90,125 @@ namespace rxAppBM.dataObjClasses
                 return deviceCommList;
             }
         }
+
+        public static List<DeviceCommsSLAStatus> GetDeviceCommSLAStatus()
+        {
+            var mockedReturn = new List<DeviceCommsSLAStatus>()
+            {
+                new DeviceCommsSLAStatus()
+                {
+                    Order = 1,
+                    SLAStatus = "Todas as leituras recebidas",
+                    NumberOfDevices = 64597
+                },
+                new DeviceCommsSLAStatus()
+                {
+                    Order = 2,
+                    SLAStatus = "Sem leitura por 1 dia",
+                    NumberOfDevices = 2762
+                },
+                new DeviceCommsSLAStatus()
+                {
+                    Order = 3,
+                    SLAStatus = "Sem leitura por 7 dias",
+                    NumberOfDevices = 31500
+                },
+                new DeviceCommsSLAStatus()
+                {
+                    Order = 4,
+                    SLAStatus = "Sem leitura por 30 dias",
+                    NumberOfDevices = 1000
+                },
+                new DeviceCommsSLAStatus()
+                {
+                    Order = 5,
+                    SLAStatus = "Total de medidores ativos",
+                    NumberOfDevices = 99859
+                }
+            };
+
+            var commsPerDayList = GetDeviceCommsPerDay();
+
+            return commsPerDayList;
+        }
+
+        private static List<DeviceCommsSLAStatus> GetDeviceCommsPerDay()
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var deviceCommsPerDayList = ctx.Database.SqlQuery<DeviceCommsPerDay>(
+                    "SELECT PayloadId, DATEADD(dd, 0, DATEDIFF(dd, 0, ParamsRadioTimeDateTime)) CommDate, count(*) CommMessages FROM BlueMeteringMessage WHERE DATEADD(dd, 0, DATEDIFF(dd, 0, ParamsRadioTimeDateTime)) >= DATEADD(dd, -30, GETDATE()) group by PayloadId, DATEADD(dd, 0, DATEDIFF(dd, 0, ParamsRadioTimeDateTime))");
+
+                var commDateGroup = deviceCommsPerDayList.ToList().GroupBy(d => d.CommDate).ToList();
+
+                var commPayloadGroup = deviceCommsPerDayList.ToList().GroupBy(d => d.PayloadId).Select(g => new {PayloadId = g.Key, PayloadCount = g.Count()}).ToList();
+
+                var returnList = new List<DeviceCommsSLAStatus>();
+
+                var allReadings = 0;
+                var allButOneDayReadings = 0;
+                var allButSevenDaysReadings = 0;
+                var allButThirtyDaysReadings = 0;
+
+                foreach (var groupedPayload in commPayloadGroup)
+                {
+                    if (groupedPayload.PayloadCount == commDateGroup.Count()) // Todas as leituras recebidas
+                    {
+                        allReadings += 1;
+                    }
+                    else if (groupedPayload.PayloadCount == commDateGroup.Count() - 1) // Sem leitura por 1 dia
+                    {
+                        allButOneDayReadings += 1;
+                    }
+                    else if (groupedPayload.PayloadCount == commDateGroup.Count() - 7) // Sem leitura por 7 dias
+                    {
+                        allButSevenDaysReadings += 1;
+                    }
+                    else // Sem leitura por 30 dias
+                    {
+                        allButThirtyDaysReadings += 1;
+                    }
+                }
+
+                returnList.Add(new DeviceCommsSLAStatus()
+                {
+                    Order = 1,
+                    SLAStatus = "Todas as leituras recebidas",
+                    NumberOfDevices = allReadings
+                });
+
+                returnList.Add(new DeviceCommsSLAStatus()
+                {
+                    Order = 2,
+                    SLAStatus = "Sem leitura por 1 dia",
+                    NumberOfDevices = allButOneDayReadings
+                });
+
+                returnList.Add(new DeviceCommsSLAStatus()
+                {
+                    Order = 3,
+                    SLAStatus = "Sem leitura por 7 dias",
+                    NumberOfDevices = allButSevenDaysReadings
+                });
+
+                returnList.Add(new DeviceCommsSLAStatus()
+                {
+                    Order = 4,
+                    SLAStatus = "Sem leitura por 30 dias",
+                    NumberOfDevices = allButThirtyDaysReadings
+                });
+
+                returnList.Add(new DeviceCommsSLAStatus()
+                {
+                    Order = 5,
+                    SLAStatus = "Total de medidores ativos",
+                    NumberOfDevices = allReadings + allButOneDayReadings + allButSevenDaysReadings + allButThirtyDaysReadings
+                });
+
+                return returnList;
+            }
+        }
+
+
     }
 }
