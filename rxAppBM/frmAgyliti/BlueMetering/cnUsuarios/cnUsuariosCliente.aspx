@@ -1,10 +1,10 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Main.master" AutoEventWireup="true" CodeBehind="cnUsuarios.aspx.cs" Inherits="rxAppBM.frmAgyliti.GetLock.cnUsuarios.cnUsuarios" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Main.master" AutoEventWireup="true" CodeBehind="cnUsuariosCliente.aspx.cs" Inherits="rxApp.frmAgyliti.GetLock.cnUsuarios.cnUsuariosCliente" %>
 
 <%@ Register Assembly="DevExpress.Web.v21.1, Version=21.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web" TagPrefix="dx" %>
 <asp:Content ID="HeaderContent" ContentPlaceHolderID="HeadContentPlaceHolderMain" runat="server">
 </asp:Content>
 <asp:Content ID="MainContent" ContentPlaceHolderID="MainContentPlaceHolderMain" runat="server">
-    <dx:ASPxGridView ID="GridUsers" runat="server" Width="100%" KeyFieldName="Id" AutoGenerateColumns="False" OnDataBinding="GridUsers_DataBinding" OnRowDeleting="GridUsers_RowDeleting" OnRowInserting="GridUsers_RowInserting" OnRowUpdating="GridUsers_RowUpdating" OnStartRowEditing="GridUsers_StartRowEditing">
+    <dx:ASPxGridView ID="GridUsers" runat="server" Width="100%" KeyFieldName="Id" AutoGenerateColumns="False" OnDataBinding="GridUsers_DataBinding" OnRowDeleting="GridUsers_RowDeleting" OnRowInserting="GridUsers_RowInserting" OnRowUpdating="GridUsers_RowUpdating" OnStartRowEditing="GridUsers_StartRowEditing" OnRowValidating="GridUsers_RowValidating">
         <Columns>
             <dx:GridViewCommandColumn ShowEditButton="true" ShowDeleteButton="true" ShowNewButtonInHeader="true" VisibleIndex="0">
             </dx:GridViewCommandColumn>
@@ -19,11 +19,13 @@
                 <EditItemTemplate>
                     <dx:ASPxTextBox ID="pswtextbox" runat="server" Text='<%# Bind("PasswordHash") %>'
                         Visible='<%# GridUsers.IsNewRowEditing %>' Password="True">
-                        <ClientSideEvents Validation="function(s,e){e.isValid = s.GetText()>5;}" />
                     </dx:ASPxTextBox>
                     <asp:LinkButton ID="LinkButton1" runat="server" OnClientClick="popup.ShowAtElement(this); return false;" Visible='<%#!GridUsers.IsNewRowEditing%>'>Editar senha</asp:LinkButton>
                 </EditItemTemplate>
             </dx:GridViewDataTextColumn>
+            <dx:GridViewDataComboBoxColumn FieldName="BlueMeteringClienteId" Caption="Cliente" VisibleIndex="4">
+                <PropertiesComboBox TextField="nome" IncrementalFilteringMode="Contains" ValueField="BlueMeteringClienteId"></PropertiesComboBox>
+            </dx:GridViewDataComboBoxColumn>
         </Columns>
     </dx:ASPxGridView>
     <dx:ASPxPopupControl ID="ASPxPopupControl1" runat="server" HeaderText="Editar senha" Width="307px" ClientInstanceName="popup">

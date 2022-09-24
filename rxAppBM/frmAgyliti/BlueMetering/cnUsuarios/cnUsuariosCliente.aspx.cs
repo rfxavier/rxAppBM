@@ -2,26 +2,37 @@
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
+using rxAppBM;
 using rxAppBM.Models;
 using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Web;
 
-namespace rxAppBM.frmAgyliti.GetLock.cnUsuarios
+namespace rxApp.frmAgyliti.GetLock.cnUsuarios
 {
-    public partial class cnUsuarios : System.Web.UI.Page
+    public partial class cnUsuariosCliente : System.Web.UI.Page
     {
         private ApplicationUserManager userManager;
         private ApplicationDbContext db;
 
-        public cnUsuarios()
+        public cnUsuariosCliente()
         {
             userManager = Context.GetOwinContext().GetUserManager<ApplicationUserManager>();
         }
         protected void Page_Load(object sender, EventArgs e)
         {
             db = new ApplicationDbContext();
+
+            var comboColumn = ((GridViewDataComboBoxColumn)GridUsers.Columns["BlueMeteringClienteId"]);
+
+            var dsCombo = db.BlueMeteringClientes.ToList();
+
+            comboColumn.PropertiesComboBox.DataSource = dsCombo;
+            comboColumn.PropertiesComboBox.TextField = "NomeFantasia";
+            comboColumn.PropertiesComboBox.ValueField = "BlueMeteringClienteId";
+            comboColumn.PropertiesComboBox.ValueType = typeof(string);
 
             GridUsers.DataBind();
         }
@@ -30,10 +41,11 @@ namespace rxAppBM.frmAgyliti.GetLock.cnUsuarios
         {
             var roleManager = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(db));
 
-            //Get admin role
-            var adminRole = roleManager.FindByName("AdmPortal");
+            //Get user role
+            var clientRole = roleManager.FindByName("UserClient");
 
-            GridUsers.DataSource = userManager.Users.Where(x => x.Roles.Any(role => role.RoleId == adminRole.Id)).ToList();
+
+            GridUsers.DataSource = userManager.Users.Where(x => x.Roles.Any(role=> role.RoleId == clientRole.Id)).ToList();
         }
 
         protected void confirmButton_Click(object sender, EventArgs e)
@@ -59,12 +71,12 @@ namespace rxAppBM.frmAgyliti.GetLock.cnUsuarios
             var manager = Context.GetOwinContext().GetUserManager<ApplicationUserManager>();
 
             var user = new ApplicationUser() { UserName = e.NewValues["UserName"].ToString(), Email = e.NewValues["UserName"].ToString() };
-            //user.GetLockLojaId = Convert.ToInt64(e.NewValues["GetLockLojaId"]);
+            user.BlueMeteringClienteId = new Guid(e.NewValues["BlueMeteringClienteId"].ToString());
             IdentityResult result = manager.Create(user, e.NewValues["PasswordHash"].ToString());
             if (result.Succeeded)
             {
 
-                manager.AddToRole(user.Id, "User");
+                manager.AddToRole(user.Id, "UserClient");
 
                 e.Cancel = true;
                 gridView.CancelEdit();
@@ -86,7 +98,7 @@ namespace rxAppBM.frmAgyliti.GetLock.cnUsuarios
             var manager = Context.GetOwinContext().GetUserManager<ApplicationUserManager>();
 
             var user = manager.FindById(e.Keys[0].ToString());
-            //user.GetLockLojaId = Convert.ToInt64(e.NewValues["GetLockLojaId"]);
+            user.BlueMeteringClienteId = new Guid(e.NewValues["BlueMeteringClienteId"].ToString());
             manager.Update(user);
 
             if (!((dt.Rows[0]["CurrPwd"].ToString() == "" && dt.Rows[0]["NewPwd"].ToString() == "")))
@@ -143,6 +155,42 @@ namespace rxAppBM.frmAgyliti.GetLock.cnUsuarios
                 dt = Session["data"] as DataTable;
                 dt.Rows[0]["CurrPwd"] = "";
                 dt.Rows[0]["NewPwd"] = "";
+            }
+        }
+
+        protected void GridUsers_RowValidating(object sender, DevExpress.Web.Data.ASPxDataValidationEventArgs e)
+        {
+            if (e.NewValues["UserName"] != null &&
+                !IsValidEmail(e.NewValues["UserName"].ToString()))
+            {
+                AddError(e.Errors, GridUsers.Columns["UserName"],
+                    "Usuário precisa ter formato de um email válido");
+            }
+            if (string.IsNullOrEmpty(e.RowError) && e.Errors.Count > 0)
+                e.RowError = "Corrija todos os erros";
+        }
+        void AddError(Dictionary<GridViewColumn, string> errors,
+            GridViewColumn column, string errorText)
+        {
+            if (errors.ContainsKey(column)) return;
+            errors[column] = errorText;
+        }
+        bool IsValidEmail(string email)
+        {
+            var trimmedEmail = email.Trim();
+
+            if (trimmedEmail.EndsWith("."))
+            {
+                return false; // suggested by @TK-421
+            }
+            try
+            {
+                var addr = new System.Net.Mail.MailAddress(email);
+                return addr.Address == trimmedEmail;
+            }
+            catch
+            {
+                return false;
             }
         }
     }

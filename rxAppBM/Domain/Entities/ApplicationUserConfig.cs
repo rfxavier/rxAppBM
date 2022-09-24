@@ -10,6 +10,10 @@ namespace rxAppBM.Domain.Entities
             HasOptional(u => u.Company)
                 .WithMany(c => c.ApplicationUsers)
                 .HasForeignKey(u => u.CompanyId);
-        }        
+
+            HasOptional(u => u.BlueMeteringCliente)
+                .WithMany(l => l.ApplicationUsers)
+                .HasForeignKey(u => u.BlueMeteringClienteId);
+        }
     }
 }

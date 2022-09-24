@@ -7,7 +7,8 @@
       <siteMapNode url="~/frmAdmMasterCadastro/frmAdmMaster/WebSiteMapAdmin.aspx" title="Site Map" description="Site Map" roles="AdmMaster" />
     </siteMapNode>
     <siteMapNode url="" title="Admin" description="Admin" roles="AdmMaster,AdmPortal">
-      <siteMapNode url="~/frmAgyliti/BlueMetering/cnUsuarios/cnUsuarios.aspx" title="Usuários" description="AdminUsuarios" roles="AdmMaster,AdmPortal" />
+      <siteMapNode url="~/frmAgyliti/BlueMetering/cnUsuarios/cnUsuarios.aspx" title="Usuários Admin" description="AdminUsuarios" roles="AdmMaster,AdmPortal" />
+      <siteMapNode url="~/frmAgyliti/BlueMetering/cnUsuarios/cnUsuariosCliente.aspx" title="Usuários Cliente" description="ClienteUsuarios" roles="AdmMaster,AdmPortal" />
       <siteMapNode url="~/frmAgyliti/BlueMetering/cnUsuarios/cnPerfis.aspx" title="Perfis" description="AdminPerfis" roles="AdmMaster,AdmPortal" />
       <siteMapNode url="~/frmAgyliti/BlueMetering/cnUsuarios/cnUsuariosPerfis.aspx" title="Usuários Perfis" description="UsuariosPerfis" roles="AdmMaster,AdmPortal" />
     </siteMapNode>

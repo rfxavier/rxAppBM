@@ -15,6 +15,7 @@ namespace rxAppBM.Domain.Entities
         public string DeviceId { get; set; }
         public string IdLigacao { get; set; }
         public string IdValvulaCorte { get; set; }
+        public string IdCliente { get; set; }
 
     }
 }

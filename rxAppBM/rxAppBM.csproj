@@ -295,6 +295,7 @@
     <Content Include="frmAgyliti\BlueMetering\cnGridMain\cnGridMain.aspx" />
     <Content Include="frmAgyliti\BlueMetering\cnUsuarios\cnPerfis.aspx" />
     <Content Include="frmAgyliti\BlueMetering\cnUsuarios\cnUsuarios.aspx" />
+    <Content Include="frmAgyliti\BlueMetering\cnUsuarios\cnUsuariosCliente.aspx" />
     <Content Include="frmAgyliti\BlueMetering\cnUsuarios\cnUsuariosPerfis.aspx" />
     <Content Include="Global.asax" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -731,6 +732,13 @@
     <Compile Include="frmAgyliti\BlueMetering\cnUsuarios\cnUsuarios.aspx.designer.cs">
       <DependentUpon>cnUsuarios.aspx</DependentUpon>
     </Compile>
+    <Compile Include="frmAgyliti\BlueMetering\cnUsuarios\cnUsuariosCliente.aspx.cs">
+      <DependentUpon>cnUsuariosCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmAgyliti\BlueMetering\cnUsuarios\cnUsuariosCliente.aspx.designer.cs">
+      <DependentUpon>cnUsuariosCliente.aspx</DependentUpon>
+    </Compile>
     <Compile Include="frmAgyliti\BlueMetering\cnUsuarios\cnUsuariosPerfis.aspx.cs">
       <DependentUpon>cnUsuariosPerfis.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -913,6 +921,18 @@
     <Compile Include="Migrations\202209112110007_v31.Designer.cs">
       <DependentUpon>202209112110007_v31.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202209190029033_v32.cs" />
+    <Compile Include="Migrations\202209190029033_v32.Designer.cs">
+      <DependentUpon>202209190029033_v32.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202209240048547_v33.cs" />
+    <Compile Include="Migrations\202209240048547_v33.Designer.cs">
+      <DependentUpon>202209240048547_v33.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202209240113330_v34.cs" />
+    <Compile Include="Migrations\202209240113330_v34.Designer.cs">
+      <DependentUpon>202209240113330_v34.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -1086,6 +1106,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202209112110007_v31.resx">
       <DependentUpon>202209112110007_v31.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202209190029033_v32.resx">
+      <DependentUpon>202209190029033_v32.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202209240048547_v33.resx">
+      <DependentUpon>202209240048547_v33.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202209240113330_v34.resx">
+      <DependentUpon>202209240113330_v34.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
   </ItemGroup>

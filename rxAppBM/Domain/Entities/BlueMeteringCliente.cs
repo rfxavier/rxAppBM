@@ -1,4 +1,6 @@
-﻿using System;
+﻿using rxAppBM.Models;
+using System;
+using System.Collections.Generic;
 
 namespace rxAppBM.Domain.Entities
 {
@@ -17,5 +19,6 @@ namespace rxAppBM.Domain.Entities
         public string Telefone { get; set; }
         public DateTime? trackLastWriteTime { get; set; }
         public DateTime? trackCreationTime { get; set; }
+        public ICollection<ApplicationUser> ApplicationUsers { get; set; }
     }
 }

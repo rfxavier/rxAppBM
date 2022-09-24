@@ -28,6 +28,9 @@ namespace rxAppBM.Models
 
         public Guid? CompanyId { get; set; }
         public Company Company { get; set; }
+        public Guid? BlueMeteringClienteId { get; set; }
+        public BlueMeteringCliente BlueMeteringCliente { get; set; }
+
     }
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>

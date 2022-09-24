@@ -43,6 +43,15 @@ namespace rxAppBM.frmAgyliti.BlueMetering.cnCadastros
             comboColumn3.PropertiesComboBox.ValueField = "IdValvulaCorte";
             comboColumn3.PropertiesComboBox.ValueType = typeof(string);
 
+            var comboColumn4 = ((GridViewDataComboBoxColumn)ASPxGridView1.Columns["IdCliente"]);
+
+            var dsCombo4 = db.BlueMeteringClientes.ToList();
+
+            comboColumn4.PropertiesComboBox.DataSource = dsCombo4;
+            comboColumn4.PropertiesComboBox.TextField = "NomeFantasia";
+            comboColumn4.PropertiesComboBox.ValueField = "IdCliente";
+            comboColumn4.PropertiesComboBox.ValueType = typeof(string);
+
             ASPxGridView1.DataBind();
         }
         protected void ASPxGridView1_DataBinding(object sender, EventArgs e)
@@ -63,6 +72,7 @@ namespace rxAppBM.frmAgyliti.BlueMetering.cnCadastros
             newHidrometro.DeviceId = e.NewValues["DeviceId"]?.ToString();
             newHidrometro.IdLigacao = e.NewValues["IdLigacao"]?.ToString();
             newHidrometro.IdValvulaCorte = e.NewValues["IdValvulaCorte"]?.ToString();
+            newHidrometro.IdCliente = e.NewValues["IdCliente"]?.ToString();
 
             db.BlueMeteringHidrometros.Add(newHidrometro);
             db.SaveChanges();
@@ -87,6 +97,7 @@ namespace rxAppBM.frmAgyliti.BlueMetering.cnCadastros
                 hidrometro.DeviceId = e.NewValues["DeviceId"]?.ToString();
                 hidrometro.IdLigacao = e.NewValues["IdLigacao"]?.ToString();
                 hidrometro.IdValvulaCorte = e.NewValues["IdValvulaCorte"]?.ToString();
+                hidrometro.IdCliente = e.NewValues["IdCliente"]?.ToString();
 
                 db.SaveChanges();
             }

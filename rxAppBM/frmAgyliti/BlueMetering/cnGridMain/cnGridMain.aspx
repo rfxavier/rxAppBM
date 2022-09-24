@@ -51,18 +51,27 @@
                     <dx:GridViewDataTextColumn FieldName="HidrometroTipoDescricao" Caption="Tipo Hidrômetro" VisibleIndex="23"></dx:GridViewDataTextColumn>
                     <dx:GridViewDataTextColumn FieldName="HidrometroNumeroSerieRelojoaria" Caption="Número Série Relojoaria Hidrômetro" VisibleIndex="24"></dx:GridViewDataTextColumn>
                     <dx:GridViewDataTextColumn FieldName="HidrometroMarcacaoInicial" Caption="Marcação Inicial Hidrômetro" VisibleIndex="25"></dx:GridViewDataTextColumn>
-                    <dx:GridViewDataTextColumn FieldName="ValvulaCorteIdValvulaCorte" Caption="Id Válvula Corte" VisibleIndex="26"></dx:GridViewDataTextColumn>
-                    <dx:GridViewDataTextColumn FieldName="ValvulaCorteNumeroSerie" Caption="Número Série Válvula Corte" VisibleIndex="27"></dx:GridViewDataTextColumn>
-                    <dx:GridViewDataTextColumn FieldName="UnidadeNegocioIdUnidadeNegocio" Caption="Id Unidade Negócio" VisibleIndex="28"></dx:GridViewDataTextColumn>
-                    <dx:GridViewDataTextColumn FieldName="UnidadeNegocioNome" Caption="Nome Unidade Negócio" VisibleIndex="29"></dx:GridViewDataTextColumn>
-                    <dx:GridViewDataTextColumn FieldName="UnidadeNegocioEndereco" Caption="Endereço Unidade Negócio" VisibleIndex="30"></dx:GridViewDataTextColumn>
-                    <dx:GridViewDataTextColumn FieldName="UnidadeNegocioLatitude" Caption="Latitude Unidade Negócio" VisibleIndex="31"></dx:GridViewDataTextColumn>
-                    <dx:GridViewDataTextColumn FieldName="UnidadeNegocioLongitude" Caption="Longitude Unidade Negócio" VisibleIndex="32"></dx:GridViewDataTextColumn>
-                    <dx:GridViewDataTextColumn FieldName="UnidadeGerenciamentoRegionalIdUnidadeGerenciamentoRegional" Caption="Id UGR" VisibleIndex="33"></dx:GridViewDataTextColumn>
-                    <dx:GridViewDataTextColumn FieldName="UnidadeGerenciamentoRegionalNome" Caption="Nome UGR" VisibleIndex="34"></dx:GridViewDataTextColumn>
-                    <dx:GridViewDataTextColumn FieldName="UnidadeGerenciamentoRegionalEndereco" Caption="Endereço UGR" VisibleIndex="35"></dx:GridViewDataTextColumn>
-                    <dx:GridViewDataTextColumn FieldName="UnidadeGerenciamentoRegionalLatitude" Caption="Latitude UGR" VisibleIndex="36"></dx:GridViewDataTextColumn>
-                    <dx:GridViewDataTextColumn FieldName="UnidadeGerenciamentoRegionalLongitude" Caption="Longitude UGR" VisibleIndex="37"></dx:GridViewDataTextColumn>
+                    <dx:GridViewDataTextColumn FieldName="ClienteIdCliente" Caption="Id Cliente" VisibleIndex="26"></dx:GridViewDataTextColumn>
+                    <dx:GridViewDataTextColumn FieldName="ClienteNomeFantasia" Caption="Nome Cliente" VisibleIndex="27"></dx:GridViewDataTextColumn>
+                    <dx:GridViewDataTextColumn FieldName="ClienteCNPJ" Caption="CNPJ Cliente" VisibleIndex="28"></dx:GridViewDataTextColumn>
+                    <dx:GridViewDataTextColumn FieldName="ClienteEndereco" Caption="Endereço Cliente" VisibleIndex="29"></dx:GridViewDataTextColumn>
+                    <dx:GridViewDataTextColumn FieldName="ClienteLatitude" Caption="Latitude Cliente" VisibleIndex="30"></dx:GridViewDataTextColumn>
+                    <dx:GridViewDataTextColumn FieldName="ClienteLongitude" Caption="Longitude Cliente" VisibleIndex="31"></dx:GridViewDataTextColumn>
+                    <dx:GridViewDataTextColumn FieldName="ClientePessoaContato" Caption="Pessoa Contato Cliente" VisibleIndex="32"></dx:GridViewDataTextColumn>
+                    <dx:GridViewDataTextColumn FieldName="ClienteEmail" Caption="Email Cliente" VisibleIndex="33"></dx:GridViewDataTextColumn>
+                    <dx:GridViewDataTextColumn FieldName="ClienteTelefone" Caption="Telefone Cliente" VisibleIndex="34"></dx:GridViewDataTextColumn>
+                    <dx:GridViewDataTextColumn FieldName="ValvulaCorteIdValvulaCorte" Caption="Id Válvula Corte" VisibleIndex="35"></dx:GridViewDataTextColumn>
+                    <dx:GridViewDataTextColumn FieldName="ValvulaCorteNumeroSerie" Caption="Número Série Válvula Corte" VisibleIndex="36"></dx:GridViewDataTextColumn>
+                    <dx:GridViewDataTextColumn FieldName="UnidadeNegocioIdUnidadeNegocio" Caption="Id Unidade Negócio" VisibleIndex="37"></dx:GridViewDataTextColumn>
+                    <dx:GridViewDataTextColumn FieldName="UnidadeNegocioNome" Caption="Nome Unidade Negócio" VisibleIndex="38"></dx:GridViewDataTextColumn>
+                    <dx:GridViewDataTextColumn FieldName="UnidadeNegocioEndereco" Caption="Endereço Unidade Negócio" VisibleIndex="39"></dx:GridViewDataTextColumn>
+                    <dx:GridViewDataTextColumn FieldName="UnidadeNegocioLatitude" Caption="Latitude Unidade Negócio" VisibleIndex="40"></dx:GridViewDataTextColumn>
+                    <dx:GridViewDataTextColumn FieldName="UnidadeNegocioLongitude" Caption="Longitude Unidade Negócio" VisibleIndex="41"></dx:GridViewDataTextColumn>
+                    <dx:GridViewDataTextColumn FieldName="UnidadeGerenciamentoRegionalIdUnidadeGerenciamentoRegional" Caption="Id UGR" VisibleIndex="42"></dx:GridViewDataTextColumn>
+                    <dx:GridViewDataTextColumn FieldName="UnidadeGerenciamentoRegionalNome" Caption="Nome UGR" VisibleIndex="43"></dx:GridViewDataTextColumn>
+                    <dx:GridViewDataTextColumn FieldName="UnidadeGerenciamentoRegionalEndereco" Caption="Endereço UGR" VisibleIndex="44"></dx:GridViewDataTextColumn>
+                    <dx:GridViewDataTextColumn FieldName="UnidadeGerenciamentoRegionalLatitude" Caption="Latitude UGR" VisibleIndex="45"></dx:GridViewDataTextColumn>
+                    <dx:GridViewDataTextColumn FieldName="UnidadeGerenciamentoRegionalLongitude" Caption="Longitude UGR" VisibleIndex="46"></dx:GridViewDataTextColumn>
                 </Columns>
                 <Toolbars>
                     <dx:GridViewToolbar>
