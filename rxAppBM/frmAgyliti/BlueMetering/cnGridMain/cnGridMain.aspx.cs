@@ -1,6 +1,7 @@
 ﻿using DevExpress.Data.Filtering;
 using DevExpress.Data.Linq;
 using DevExpress.Web;
+using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using rxAppBM.Models;
 using System;
@@ -72,15 +73,14 @@ namespace rxAppBM.frmAgyliti.BlueMetering.cnGridMain
 
             e.KeyExpression = "blueMeteringMessageId";
 
-            if (User.IsInRole("User"))
+            if (User.IsInRole("UserClient"))
             {
-                //var user = userManager.FindById(User.Identity.GetUserId());
-                //var loja = db.GetLockLojas.FirstOrDefault(l => l.id == user.GetLockLojaId);
+                var user = userManager.FindById(User.Identity.GetUserId());
+                var cliente = db.BlueMeteringClientes.FirstOrDefault(c => c.BlueMeteringClienteId == user.BlueMeteringClienteId);
 
-                //var idLoja = loja?.id;
+                var idCliente = cliente?.IdCliente;
 
-                //e.QueryableSource = db.BlueMeteringMessageViews.Where(g => g.id_loja == idLoja);
-                e.QueryableSource = db.BlueMeteringMessageViews;
+                e.QueryableSource = db.BlueMeteringMessageViews.Where(g => g.ClienteIdCliente == idCliente);
             }
             else
             {
