@@ -90,7 +90,7 @@ namespace rxAppBM.frmAgyliti.BlueMetering.cnUsuarios
 
             foreach (var identityRole in roles)
             {
-                if (!(identityRole.Name == "AdmMaster" || identityRole.Name == "AdmPortal" || identityRole.Name == "User"))
+                if (!(identityRole.Name == "AdmMaster" || identityRole.Name == "AdmPortal" || identityRole.Name == "User" || identityRole.Name == "UserClient"))
                 {
                     returnRoleList.Add(identityRole);
                 }                
