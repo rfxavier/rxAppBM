@@ -1,14 +1,25 @@
 ﻿using DevExpress.DashboardCommon;
 using DevExpress.DashboardWeb;
+using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.Owin;
 using rxAppBM.dashClasses;
 using rxAppBM.dataObjClasses;
+using rxAppBM.Models;
 using System;
+using System.Linq;
 using System.Web;
 
 namespace rxAppBM.frmAgyliti.BlueMetering.cnDashboards
 {
     public partial class cnDashboardConsumoMensal : System.Web.UI.Page
     {
+        private ApplicationUserManager userManager;
+
+        public cnDashboardConsumoMensal()
+        {
+            userManager = Context.GetOwinContext().GetUserManager<ApplicationUserManager>();
+        }
+
         protected void Page_Load(object sender, EventArgs e)
         {
             ASPxDashboard1.DashboardType = typeof(dashCnConsumoMensal);
@@ -37,7 +48,21 @@ namespace rxAppBM.frmAgyliti.BlueMetering.cnDashboards
                 if (parameter.Name == "parDashDataFim") parDashDataFim = Convert.ToDateTime(parameter.Value);
             }
 
-            e.Data = dsConsumo.GetConsumoPorDia(parDashDataIni, parDashDataFim);
+            if (User.IsInRole("UserClient"))
+            {
+                var db = new ApplicationDbContext();
+
+                var user = userManager.FindById(User.Identity.GetUserId());
+                var cliente = db.BlueMeteringClientes.FirstOrDefault(c => c.BlueMeteringClienteId == user.BlueMeteringClienteId);
+
+                var idCliente = cliente?.IdCliente;
+
+                e.Data = dsConsumo.GetConsumoPorDiaPorCliente(DateTime.Now.AddDays(-7), DateTime.Now, idCliente);
+            }
+            else
+            {
+                e.Data = dsConsumo.GetConsumoPorDia(parDashDataIni, parDashDataFim);
+            }
         }
 
         protected void ASPxDashboard1_ConfigureDataReloadingTimeout(object sender, DevExpress.DashboardWeb.ConfigureDataReloadingTimeoutWebEventArgs e)

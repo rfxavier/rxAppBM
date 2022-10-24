@@ -26,8 +26,8 @@
       <siteMapNode url="~/frmAgyliti/BlueMetering/cnCadastros/cnGridUnidadeNegocio.aspx" title="Unidade Negócio" description="Unidade Negócio" roles="AdmMaster,AdmPortal" />
       <siteMapNode url="~/frmAgyliti/BlueMetering/cnCadastros/cnGridCliente.aspx" title="Cliente" description="Cliente" roles="AdmMaster,AdmPortal" />
     </siteMapNode>
-    <siteMapNode url="" title="Dashboards" description="Dashboards" roles="AdmMaster,AdmPortal">
-      <siteMapNode url="~/frmAgyliti/BlueMetering/cnDashboards/cnDashboardConsumoMensal.aspx" title="Consumo Mensal" description="Consumo Mensal" roles="AdmMaster,AdmPortal" />
+    <siteMapNode url="" title="Dashboards" description="Dashboards" roles="AdmMaster,AdmPortal,UserClient">
+      <siteMapNode url="~/frmAgyliti/BlueMetering/cnDashboards/cnDashboardConsumoMensal.aspx" title="Consumo Mensal" description="Consumo Mensal" roles="AdmMaster,AdmPortal,UserClient" />
       <siteMapNode url="~/frmAgyliti/BlueMetering/cnDashboards/cnDashboardConsumoDiarioMedia.aspx" title="Consumo Diário Média" description="Consumo Diário Média" roles="AdmMaster,UserClient" />
       <siteMapNode url="~/frmAgyliti/BlueMetering/cnDashboards/cnDashboardLastSeen.aspx" title="Status comunicação" description="Status comunicação" roles="AdmMaster,UserClient" />
       <siteMapNode url="~/frmAgyliti/BlueMetering/cnDashboards/cnDashboardSLALeituras.aspx" title="SLA Leituras" description="SLA Leituras" roles="AdmMaster,UserClient" />

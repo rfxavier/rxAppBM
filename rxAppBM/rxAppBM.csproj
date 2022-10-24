@@ -428,7 +428,9 @@
     </Content>
     <Content Include="Bundle.config" />
     <Content Include="Site.Mobile.Master" />
-    <Content Include="web.sitemap" />
+    <Content Include="web.sitemap">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Account\AddPhoneNumber.aspx.cs">
@@ -945,6 +947,10 @@
     <Compile Include="Migrations\202209241446005_v37.Designer.cs">
       <DependentUpon>202209241446005_v37.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202210232306580_v38.cs" />
+    <Compile Include="Migrations\202210232306580_v38.Designer.cs">
+      <DependentUpon>202210232306580_v38.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -1136,6 +1142,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202209241446005_v37.resx">
       <DependentUpon>202209241446005_v37.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202210232306580_v38.resx">
+      <DependentUpon>202210232306580_v38.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
   </ItemGroup>
