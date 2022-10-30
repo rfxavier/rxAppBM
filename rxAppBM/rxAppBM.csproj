@@ -288,8 +288,10 @@
     <Content Include="frmAgyliti\BlueMetering\cnCadastros\cnGridUnidadeGerenciamentoRegional.aspx" />
     <Content Include="frmAgyliti\BlueMetering\cnCadastros\cnGridUnidadeNegocio.aspx" />
     <Content Include="frmAgyliti\BlueMetering\cnCadastros\cnGridValvulaCorte.aspx" />
+    <Content Include="frmAgyliti\BlueMetering\cnDashboards\cnDashboardConsumoAnual.aspx" />
     <Content Include="frmAgyliti\BlueMetering\cnDashboards\cnDashboardConsumoDiarioMedia.aspx" />
     <Content Include="frmAgyliti\BlueMetering\cnDashboards\cnDashboardConsumoMensal.aspx" />
+    <Content Include="frmAgyliti\BlueMetering\cnDashboards\cnDashboardConsumoSemanal.aspx" />
     <Content Include="frmAgyliti\BlueMetering\cnDashboards\cnDashboardSLALeituras.aspx" />
     <Content Include="frmAgyliti\BlueMetering\cnDashboards\cnDashboardLastSeen.aspx" />
     <Content Include="frmAgyliti\BlueMetering\cnDashboards\cnDashboardSLALeiturasConsumoMensal.aspx" />
@@ -559,6 +561,12 @@
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
+    <Compile Include="dashClasses\dashCnConsumoAnual.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="dashClasses\dashCnConsumoAnual.Designer.cs">
+      <DependentUpon>dashCnConsumoAnual.cs</DependentUpon>
+    </Compile>
     <Compile Include="dashClasses\dashCnConsumoDiarioMedia.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -570,6 +578,12 @@
     </Compile>
     <Compile Include="dashClasses\dashCnConsumoMensal.Designer.cs">
       <DependentUpon>dashCnConsumoMensal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dashClasses\dashCnConsumoSemanal.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="dashClasses\dashCnConsumoSemanal.Designer.cs">
+      <DependentUpon>dashCnConsumoSemanal.cs</DependentUpon>
     </Compile>
     <Compile Include="dashClasses\dashCnLastSeen.cs">
       <SubType>Component</SubType>
@@ -692,6 +706,13 @@
     <Compile Include="frmAgyliti\BlueMetering\cnCadastros\cnGridValvulaCorte.aspx.designer.cs">
       <DependentUpon>cnGridValvulaCorte.aspx</DependentUpon>
     </Compile>
+    <Compile Include="frmAgyliti\BlueMetering\cnDashboards\cnDashboardConsumoAnual.aspx.cs">
+      <DependentUpon>cnDashboardConsumoAnual.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmAgyliti\BlueMetering\cnDashboards\cnDashboardConsumoAnual.aspx.designer.cs">
+      <DependentUpon>cnDashboardConsumoAnual.aspx</DependentUpon>
+    </Compile>
     <Compile Include="frmAgyliti\BlueMetering\cnDashboards\cnDashboardConsumoDiarioMedia.aspx.cs">
       <DependentUpon>cnDashboardConsumoDiarioMedia.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -705,6 +726,13 @@
     </Compile>
     <Compile Include="frmAgyliti\BlueMetering\cnDashboards\cnDashboardConsumoMensal.aspx.designer.cs">
       <DependentUpon>cnDashboardConsumoMensal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmAgyliti\BlueMetering\cnDashboards\cnDashboardConsumoSemanal.aspx.cs">
+      <DependentUpon>cnDashboardConsumoSemanal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmAgyliti\BlueMetering\cnDashboards\cnDashboardConsumoSemanal.aspx.designer.cs">
+      <DependentUpon>cnDashboardConsumoSemanal.aspx</DependentUpon>
     </Compile>
     <Compile Include="frmAgyliti\BlueMetering\cnDashboards\cnDashboardSLALeituras.aspx.cs">
       <DependentUpon>cnDashboardSLALeituras.aspx</DependentUpon>
@@ -1019,11 +1047,17 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="dashClasses\dashCnConsumoAnual.resx">
+      <DependentUpon>dashCnConsumoAnual.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="dashClasses\dashCnConsumoDiarioMedia.resx">
       <DependentUpon>dashCnConsumoDiarioMedia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="dashClasses\dashCnConsumoMensal.resx">
       <DependentUpon>dashCnConsumoMensal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dashClasses\dashCnConsumoSemanal.resx">
+      <DependentUpon>dashCnConsumoSemanal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="dashClasses\dashCnLastSeen.resx">
       <DependentUpon>dashCnLastSeen.cs</DependentUpon>
