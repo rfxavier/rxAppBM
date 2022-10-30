@@ -57,7 +57,7 @@ namespace rxAppBM.frmAgyliti.BlueMetering.cnDashboards
 
                 var idCliente = cliente?.IdCliente;
 
-                e.Data = dsConsumo.GetConsumoPorDiaPorCliente(DateTime.Now.AddDays(-7), DateTime.Now, idCliente);
+                e.Data = dsConsumo.GetConsumoPorDiaPorCliente(parDashDataIni, parDashDataFim, idCliente);
             }
             else
             {

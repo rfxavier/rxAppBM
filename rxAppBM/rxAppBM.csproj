@@ -292,6 +292,7 @@
     <Content Include="frmAgyliti\BlueMetering\cnDashboards\cnDashboardConsumoMensal.aspx" />
     <Content Include="frmAgyliti\BlueMetering\cnDashboards\cnDashboardSLALeituras.aspx" />
     <Content Include="frmAgyliti\BlueMetering\cnDashboards\cnDashboardLastSeen.aspx" />
+    <Content Include="frmAgyliti\BlueMetering\cnDashboards\cnDashboardSLALeiturasConsumoMensal.aspx" />
     <Content Include="frmAgyliti\BlueMetering\cnGridMain\cnGridMain.aspx" />
     <Content Include="frmAgyliti\BlueMetering\cnUsuarios\cnPerfis.aspx" />
     <Content Include="frmAgyliti\BlueMetering\cnUsuarios\cnUsuarios.aspx" />
@@ -582,6 +583,12 @@
     <Compile Include="dashClasses\dashCnSLALeituras.Designer.cs">
       <DependentUpon>dashCnSLALeituras.cs</DependentUpon>
     </Compile>
+    <Compile Include="dashClasses\dashCnSLALeiturasCnConsumoMensal.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="dashClasses\dashCnSLALeiturasCnConsumoMensal.Designer.cs">
+      <DependentUpon>dashCnSLALeiturasCnConsumoMensal.cs</DependentUpon>
+    </Compile>
     <Compile Include="dataObjClasses\dsConsumo.cs" />
     <Compile Include="dataObjClasses\dsLastSeen.cs" />
     <Compile Include="Default.aspx.cs">
@@ -712,6 +719,13 @@
     </Compile>
     <Compile Include="frmAgyliti\BlueMetering\cnDashboards\cnDashboardLastSeen.aspx.designer.cs">
       <DependentUpon>cnDashboardLastSeen.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmAgyliti\BlueMetering\cnDashboards\cnDashboardSLALeiturasConsumoMensal.aspx.cs">
+      <DependentUpon>cnDashboardSLALeiturasConsumoMensal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmAgyliti\BlueMetering\cnDashboards\cnDashboardSLALeiturasConsumoMensal.aspx.designer.cs">
+      <DependentUpon>cnDashboardSLALeiturasConsumoMensal.aspx</DependentUpon>
     </Compile>
     <Compile Include="frmAgyliti\BlueMetering\cnGridMain\cnGridMain.aspx.cs">
       <DependentUpon>cnGridMain.aspx</DependentUpon>
@@ -1016,6 +1030,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="dashClasses\dashCnSLALeituras.resx">
       <DependentUpon>dashCnSLALeituras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dashClasses\dashCnSLALeiturasCnConsumoMensal.resx">
+      <DependentUpon>dashCnSLALeiturasCnConsumoMensal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202205082345067_InitialCreate.resx">
       <DependentUpon>202205082345067_InitialCreate.cs</DependentUpon>

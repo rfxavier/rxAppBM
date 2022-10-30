@@ -42,6 +42,15 @@ namespace rxAppBM
                         message == "RemovePhoneNumberSuccess" ? "Phone number was removed" : string.Empty;
                     SuccessMessagePlaceHolder.Visible = !string.IsNullOrEmpty(SuccessMessage);
                 }
+                //if (Page.User.IsInRole("AdmPortal"))
+                //{
+                if (System.Web.HttpContext.Current.User.Identity.IsAuthenticated)
+                    Response.Redirect("~/frmAgyliti/BlueMetering/cnDashboards/cnDashboardSLALeiturasConsumoMensal.aspx");
+                //}
+                //else if (Page.User.IsInRole("UserClient"))
+                //{
+                //    Response.Redirect("~/frmAgyliti/GetLock/cnCofrePorCliente/cnCofrePorCliente.aspx");
+                //}
             }
         }
     }

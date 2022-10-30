@@ -31,6 +31,7 @@
       <siteMapNode url="~/frmAgyliti/BlueMetering/cnDashboards/cnDashboardConsumoDiarioMedia.aspx" title="Consumo Diário Média" description="Consumo Diário Média" roles="AdmMaster,UserClient" />
       <siteMapNode url="~/frmAgyliti/BlueMetering/cnDashboards/cnDashboardLastSeen.aspx" title="Status comunicação" description="Status comunicação" roles="AdmMaster,UserClient" />
       <siteMapNode url="~/frmAgyliti/BlueMetering/cnDashboards/cnDashboardSLALeituras.aspx" title="SLA Leituras" description="SLA Leituras" roles="AdmMaster,UserClient" />
+      <siteMapNode url="~/frmAgyliti/BlueMetering/cnDashboards/cnDashboardSLALeiturasConsumoMensal.aspx" title="Consumo Mensal SLA Leituras" description="Consumo Mensal SLA Leituras" roles="AdmMaster,UserClient" />
     </siteMapNode>
   </siteMapNode>
 </siteMap>
