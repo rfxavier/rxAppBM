@@ -18,8 +18,8 @@
             <dx:GridViewDataColumn FieldName="Endereco" Caption="Endereço" />
             <dx:GridViewDataColumn FieldName="latitude" Caption="Latitude" />
             <dx:GridViewDataColumn FieldName="longitude" Caption="Longitude" />
-            <dx:GridViewDataComboBoxColumn FieldName="IdUnidadeGerenciamentoRegional" Caption="UGR">
-                <PropertiesComboBox TextField="Nome" IncrementalFilteringMode="Contains" ValueField="IdUnidadeGerenciamentoRegional"></PropertiesComboBox>
+            <dx:GridViewDataComboBoxColumn FieldName="BlueMeteringUnidadeGerenciamentoRegionalId" Caption="UGR">
+                <PropertiesComboBox TextField="Nome" IncrementalFilteringMode="Contains" ValueField="BlueMeteringUnidadeGerenciamentoRegionalId"></PropertiesComboBox>
             </dx:GridViewDataComboBoxColumn>
         </Columns>
         <SettingsPopup>

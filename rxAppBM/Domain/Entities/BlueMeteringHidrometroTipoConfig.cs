@@ -7,6 +7,10 @@ namespace rxAppBM.Domain.Entities
         public BlueMeteringHidrometroTipoConfig()
         {
             this.HasKey(t => t.BlueMeteringHidrometroTipoId);
-        }        
+
+            HasRequired(u => u.BlueMeteringCliente)
+                .WithMany(l => l.BlueMeteringHidrometroTipos)
+                .HasForeignKey(u => u.BlueMeteringClienteId);
+        }
     }
 }

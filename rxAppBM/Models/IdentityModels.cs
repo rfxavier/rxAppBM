@@ -26,8 +26,6 @@ namespace rxAppBM.Models
             return Task.FromResult(GenerateUserIdentity(manager));
         }
 
-        public Guid? CompanyId { get; set; }
-        public Company Company { get; set; }
         public Guid? BlueMeteringClienteId { get; set; }
         public BlueMeteringCliente BlueMeteringCliente { get; set; }
 

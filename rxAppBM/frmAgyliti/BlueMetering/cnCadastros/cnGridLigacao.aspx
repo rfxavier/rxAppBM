@@ -20,11 +20,11 @@
             <dx:GridViewDataColumn FieldName="Endereco" Caption="Endereço" />
             <dx:GridViewDataColumn FieldName="latitude" Caption="Latitude" />
             <dx:GridViewDataColumn FieldName="longitude" Caption="Longitude" />
-            <dx:GridViewDataComboBoxColumn FieldName="IdConsumidor" Caption="Consumidor">
-                <PropertiesComboBox TextField="NomeCompleto" IncrementalFilteringMode="Contains" ValueField="IdConsumidor"></PropertiesComboBox>
+            <dx:GridViewDataComboBoxColumn FieldName="BlueMeteringConsumidorId" Caption="Consumidor">
+                <PropertiesComboBox TextField="NomeCompleto" IncrementalFilteringMode="Contains" ValueField="BlueMeteringConsumidorId"></PropertiesComboBox>
             </dx:GridViewDataComboBoxColumn>
-            <dx:GridViewDataComboBoxColumn FieldName="IdUnidadeNegocio" Caption="Unidade Negócio">
-                <PropertiesComboBox TextField="Nome" IncrementalFilteringMode="Contains" ValueField="IdUnidadeNegocio"></PropertiesComboBox>
+            <dx:GridViewDataComboBoxColumn FieldName="BlueMeteringUnidadeNegocioId" Caption="Unidade Negócio">
+                <PropertiesComboBox TextField="Nome" IncrementalFilteringMode="Contains" ValueField="BlueMeteringUnidadeNegocioId"></PropertiesComboBox>
             </dx:GridViewDataComboBoxColumn>
         </Columns>
         <SettingsPopup>

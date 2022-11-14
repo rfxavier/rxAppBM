@@ -55,7 +55,7 @@ namespace rxAppBM.frmAgyliti.BlueMetering.cnDashboards
                 var user = userManager.FindById(User.Identity.GetUserId());
                 var cliente = db.BlueMeteringClientes.FirstOrDefault(c => c.BlueMeteringClienteId == user.BlueMeteringClienteId);
 
-                var idCliente = cliente?.IdCliente;
+                var idCliente = cliente?.BlueMeteringClienteId;
 
                 e.Data = dsConsumo.GetConsumoPorDiaPorCliente(parDashDataIni, parDashDataFim, idCliente);
             }

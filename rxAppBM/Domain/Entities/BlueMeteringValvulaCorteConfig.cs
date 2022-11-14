@@ -7,6 +7,10 @@ namespace rxAppBM.Domain.Entities
         public BlueMeteringValvulaCorteConfig()
         {
             this.HasKey(v => v.BlueMeteringValvulaCorteId);
+
+            HasRequired(u => u.BlueMeteringCliente)
+                .WithMany(l => l.BlueMeteringValvulasCorte)
+                .HasForeignKey(u => u.BlueMeteringClienteId);
         }
     }
 }

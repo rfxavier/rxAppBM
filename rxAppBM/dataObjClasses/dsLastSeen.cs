@@ -209,15 +209,15 @@ namespace rxAppBM.dataObjClasses
             }
         }
 
-        public static List<DeviceDiffComm> GetDeviceCommStatusPorCliente(string idCliente)
+        public static List<DeviceDiffComm> GetDeviceCommStatusPorCliente(Guid? idCliente)
         {
             using (var ctx = new ApplicationDbContext())
             {
                 var deviceList = ctx.Database.SqlQuery<DeviceDiffComm>(
-                    $"SELECT RedeIotId PayloadId, NumeroSerie HidrometroNumeroSerie FROM BlueMeteringHidrometro WHERE idCliente = '{idCliente}'");
+                    $"SELECT RedeIotId PayloadId, NumeroSerie HidrometroNumeroSerie FROM BlueMeteringHidrometro WHERE BlueMeteringClienteId = '{idCliente.ToString()}'");
 
                 var deviceCommList = ctx.Database.SqlQuery<DeviceDiffComm>(
-                    $"SELECT PayloadId, MAX(LigacaoId) LigacaoId, MAX(ConsumidorIdConsumidor) ConsumidorId, MAX(ConsumidorNomeCompleto) ConsumidorNome, MAX(HidrometroRedeIotId) HidrometroRedeIotId, MAX(HidrometroNumeroSerie) HidrometroNumeroSerie, MAX(UnidadeNegocioIdUnidadeNegocio) UnidadeNegocioId, MAX(UnidadeNegocioNome) UnidadeNegocioNome, MAX(UnidadeGerenciamentoRegionalIdUnidadeGerenciamentoRegional) UnidadeGerenciamentoRegionalId, MAX(UnidadeGerenciamentoRegionalNome) UnidadeGerenciamentoRegionalNome, MAX(ParamsRxTimeDateTime) CommDate, DATEDIFF(SECOND, MAX(ParamsRxTimeDateTime), GETDATE()) secDiff, CAST(DATEDIFF(MINUTE, MAX(ParamsRxTimeDateTime), GETDATE()) / 60 / 24 AS VARCHAR(50)) + +'d ' + +CAST((DATEDIFF(MINUTE, MAX(ParamsRxTimeDateTime), GETDATE()) / 60) - ((DATEDIFF(MINUTE, MAX(ParamsRxTimeDateTime), GETDATE()) / 60 / 24) * 24) AS VARCHAR(50)) + +'h ' + +CAST((DATEDIFF(MINUTE, MAX(ParamsRxTimeDateTime), GETDATE())) - (DATEDIFF(HOUR, MAX(ParamsRxTimeDateTime), GETDATE()) * 60) AS VARCHAR(50)) + +'m' commRemark FROM message_view WHERE ClienteIdCliente = '{idCliente}' GROUP BY PayloadId").ToList();
+                    $"SELECT PayloadId, MAX(LigacaoId) LigacaoId, MAX(ConsumidorIdConsumidor) ConsumidorId, MAX(ConsumidorNomeCompleto) ConsumidorNome, MAX(HidrometroRedeIotId) HidrometroRedeIotId, MAX(HidrometroNumeroSerie) HidrometroNumeroSerie, MAX(UnidadeNegocioIdUnidadeNegocio) UnidadeNegocioId, MAX(UnidadeNegocioNome) UnidadeNegocioNome, MAX(UnidadeGerenciamentoRegionalIdUnidadeGerenciamentoRegional) UnidadeGerenciamentoRegionalId, MAX(UnidadeGerenciamentoRegionalNome) UnidadeGerenciamentoRegionalNome, MAX(ParamsRxTimeDateTime) CommDate, DATEDIFF(SECOND, MAX(ParamsRxTimeDateTime), GETDATE()) secDiff, CAST(DATEDIFF(MINUTE, MAX(ParamsRxTimeDateTime), GETDATE()) / 60 / 24 AS VARCHAR(50)) + +'d ' + +CAST((DATEDIFF(MINUTE, MAX(ParamsRxTimeDateTime), GETDATE()) / 60) - ((DATEDIFF(MINUTE, MAX(ParamsRxTimeDateTime), GETDATE()) / 60 / 24) * 24) AS VARCHAR(50)) + +'h ' + +CAST((DATEDIFF(MINUTE, MAX(ParamsRxTimeDateTime), GETDATE())) - (DATEDIFF(HOUR, MAX(ParamsRxTimeDateTime), GETDATE()) * 60) AS VARCHAR(50)) + +'m' commRemark FROM message_view WHERE ClienteIdCliente = '{idCliente.ToString()}' GROUP BY PayloadId").ToList();
 
                 foreach (var cofreComm in deviceCommList)
                 {
@@ -261,19 +261,19 @@ namespace rxAppBM.dataObjClasses
             }
         }
 
-        public static List<DeviceCommsSLAStatus> GetDeviceCommSLAStatusPorCliente(string idCliente)
+        public static List<DeviceCommsSLAStatus> GetDeviceCommSLAStatusPorCliente(Guid? idCliente)
         {
             var commsPerDayList = GetDeviceCommsPerDayPorCliente(idCliente);
 
             return commsPerDayList;
         }
 
-        private static List<DeviceCommsSLAStatus> GetDeviceCommsPerDayPorCliente(string idCliente)
+        private static List<DeviceCommsSLAStatus> GetDeviceCommsPerDayPorCliente(Guid? idCliente)
         {
             using (var ctx = new ApplicationDbContext())
             {
                 var deviceCommsPerDayList = ctx.Database.SqlQuery<DeviceCommsPerDay>(
-                    $"SELECT PayloadId, DATEADD(dd, 0, DATEDIFF(dd, 0, ParamsRadioTimeDateTime)) CommDate, count(*) CommMessages FROM message_view WHERE DATEADD(dd, 0, DATEDIFF(dd, 0, ParamsRadioTimeDateTime)) >= DATEADD(dd, -30, GETDATE()) and ClienteIdCliente = '{idCliente}' group by PayloadId, DATEADD(dd, 0, DATEDIFF(dd, 0, ParamsRadioTimeDateTime))");
+                    $"SELECT PayloadId, DATEADD(dd, 0, DATEDIFF(dd, 0, ParamsRadioTimeDateTime)) CommDate, count(*) CommMessages FROM message_view WHERE DATEADD(dd, 0, DATEDIFF(dd, 0, ParamsRadioTimeDateTime)) >= DATEADD(dd, -30, GETDATE()) and ClienteIdCliente = '{idCliente.ToString()}' group by PayloadId, DATEADD(dd, 0, DATEDIFF(dd, 0, ParamsRadioTimeDateTime))");
 
                 var commDateGroup = deviceCommsPerDayList.ToList().GroupBy(d => d.CommDate).ToList();
 

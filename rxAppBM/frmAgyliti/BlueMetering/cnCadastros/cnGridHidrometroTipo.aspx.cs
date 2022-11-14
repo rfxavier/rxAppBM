@@ -1,17 +1,26 @@
-﻿using rxAppBM.Domain.Entities;
+﻿using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.Owin;
+using rxAppBM.Domain.Entities;
 using rxAppBM.Models;
 using System;
 using System.Linq;
+using System.Web;
 
 namespace rxAppBM.frmAgyliti.BlueMetering.cnCadastros
 {
     public partial class cnGridHidrometroTipo : System.Web.UI.Page
     {
+        private ApplicationUserManager userManager;
         private ApplicationDbContext db;
+        private BlueMeteringCliente cliente;
 
         public cnGridHidrometroTipo()
         {
             db = new ApplicationDbContext();
+            userManager = Context.GetOwinContext().GetUserManager<ApplicationUserManager>();
+
+            var user = userManager.FindById(User.Identity.GetUserId());
+            cliente = db.BlueMeteringClientes.FirstOrDefault(c => c.BlueMeteringClienteId == user.BlueMeteringClienteId);
         }
 
         protected void Page_Load(object sender, EventArgs e)
@@ -20,7 +29,7 @@ namespace rxAppBM.frmAgyliti.BlueMetering.cnCadastros
         }
         protected void ASPxGridView1_DataBinding(object sender, EventArgs e)
         {
-            ASPxGridView1.DataSource = db.BlueMeteringHidrometroTipos.ToList();
+            ASPxGridView1.DataSource = db.BlueMeteringHidrometroTipos.Where(ht => ht.BlueMeteringClienteId == cliente.BlueMeteringClienteId).ToList();
         }
         protected void ASPxGridView1_RowInserting(object sender, DevExpress.Web.Data.ASPxDataInsertingEventArgs e)
         {
@@ -28,6 +37,7 @@ namespace rxAppBM.frmAgyliti.BlueMetering.cnCadastros
             newHidrometroTipo.BlueMeteringHidrometroTipoId = Guid.NewGuid();
             newHidrometroTipo.IdHidrometroTipo = e.NewValues["IdHidrometroTipo"]?.ToString();
             newHidrometroTipo.Descricao = e.NewValues["Descricao"]?.ToString();
+            newHidrometroTipo.BlueMeteringClienteId = cliente.BlueMeteringClienteId;
 
             db.BlueMeteringHidrometroTipos.Add(newHidrometroTipo);
             db.SaveChanges();

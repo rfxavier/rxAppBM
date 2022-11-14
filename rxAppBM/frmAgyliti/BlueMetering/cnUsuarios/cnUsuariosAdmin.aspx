@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Main.master" AutoEventWireup="true" CodeBehind="cnUsuarios.aspx.cs" Inherits="rxAppBM.frmAgyliti.GetLock.cnUsuarios.cnUsuarios" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Main.master" AutoEventWireup="true" CodeBehind="cnUsuariosAdmin.aspx.cs" Inherits="rxAppBM.frmAgyliti.GetLock.cnUsuarios.cnUsuariosAdmin" %>
 
 <%@ Register Assembly="DevExpress.Web.v21.1, Version=21.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web" TagPrefix="dx" %>
 <asp:Content ID="HeaderContent" ContentPlaceHolderID="HeadContentPlaceHolderMain" runat="server">
@@ -30,16 +30,6 @@
         <ContentCollection>
             <dx:PopupControlContentControl ID="Popupcontrolcontentcontrol1" runat="server">
                 <table>
-                    <tr>
-                        <td>Senha atual:</td>
-                        <td>
-                            <dx:ASPxTextBox ID="cpsw" runat="server" Password="True" ClientInstanceName="cpsw">
-                                <ClientSideEvents Validation="function(s, e) {e.isValid = (s.GetText().length&gt;5)}" />
-                                <ValidationSettings ErrorDisplayMode="ImageWithTooltip" ErrorText="The password length should be more that 6 symbols">
-                                </ValidationSettings>
-                            </dx:ASPxTextBox>
-                        </td>
-                    </tr>
                     <tr>
                         <td>Nova senha:</td>
                         <td>

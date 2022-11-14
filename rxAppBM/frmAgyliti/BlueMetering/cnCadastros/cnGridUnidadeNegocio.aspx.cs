@@ -1,29 +1,38 @@
 ﻿using DevExpress.Web;
+using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.Owin;
 using rxAppBM.Domain.Entities;
 using rxAppBM.Models;
 using System;
 using System.Linq;
+using System.Web;
 
 namespace rxAppBM.frmAgyliti.BlueMetering.cnCadastros
 {
     public partial class cnGridUnidadeNegocio : System.Web.UI.Page
     {
+        private ApplicationUserManager userManager;
         private ApplicationDbContext db;
+        private BlueMeteringCliente cliente;
 
         public cnGridUnidadeNegocio()
         {
             db = new ApplicationDbContext();
+            userManager = Context.GetOwinContext().GetUserManager<ApplicationUserManager>();
+
+            var user = userManager.FindById(User.Identity.GetUserId());
+            cliente = db.BlueMeteringClientes.FirstOrDefault(c => c.BlueMeteringClienteId == user.BlueMeteringClienteId);
         }
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            var comboColumn = ((GridViewDataComboBoxColumn)ASPxGridView1.Columns["IdUnidadeGerenciamentoRegional"]);
+            var comboColumn = ((GridViewDataComboBoxColumn)ASPxGridView1.Columns["BlueMeteringUnidadeGerenciamentoRegionalId"]);
 
-            var dsCombo = db.BlueMeteringUnidadeGerenciamentoRegionais.ToList();
+            var dsCombo = db.BlueMeteringUnidadeGerenciamentoRegionais.Where(ugr => ugr.BlueMeteringClienteId == cliente.BlueMeteringClienteId).ToList();
 
             comboColumn.PropertiesComboBox.DataSource = dsCombo;
             comboColumn.PropertiesComboBox.TextField = "Nome";
-            comboColumn.PropertiesComboBox.ValueField = "IdUnidadeGerenciamentoRegional";
+            comboColumn.PropertiesComboBox.ValueField = "BlueMeteringUnidadeGerenciamentoRegionalId";
             comboColumn.PropertiesComboBox.ValueType = typeof(string);
 
             ASPxGridView1.DataBind();
@@ -31,7 +40,7 @@ namespace rxAppBM.frmAgyliti.BlueMetering.cnCadastros
         }
         protected void ASPxGridView1_DataBinding(object sender, EventArgs e)
         {
-            ASPxGridView1.DataSource = db.BlueMeteringUnidadeNegocios.ToList();
+            ASPxGridView1.DataSource = db.BlueMeteringUnidadeNegocios.Where(un => un.BlueMeteringClienteId == cliente.BlueMeteringClienteId).ToList();
         }
         protected void ASPxGridView1_RowInserting(object sender, DevExpress.Web.Data.ASPxDataInsertingEventArgs e)
         {
@@ -42,7 +51,8 @@ namespace rxAppBM.frmAgyliti.BlueMetering.cnCadastros
             newUnidadeNegocio.Endereco = e.NewValues["Endereco"]?.ToString();
             newUnidadeNegocio.latitude = e.NewValues["latitude"] == null ? 0 : Convert.ToDecimal(e.NewValues["latitude"]);
             newUnidadeNegocio.longitude = e.NewValues["longitude"] == null ? 0 : Convert.ToDecimal(e.NewValues["longitude"]);
-            newUnidadeNegocio.IdUnidadeGerenciamentoRegional = e.NewValues["IdUnidadeGerenciamentoRegional"]?.ToString();
+            newUnidadeNegocio.BlueMeteringUnidadeGerenciamentoRegionalId = new Guid(e.NewValues["BlueMeteringUnidadeGerenciamentoRegionalId"]?.ToString());
+            newUnidadeNegocio.BlueMeteringClienteId = cliente.BlueMeteringClienteId;
 
             db.BlueMeteringUnidadeNegocios.Add(newUnidadeNegocio);
             db.SaveChanges();
@@ -62,7 +72,7 @@ namespace rxAppBM.frmAgyliti.BlueMetering.cnCadastros
                 unidadeNegocio.Endereco = e.NewValues["Endereco"]?.ToString();
                 unidadeNegocio.latitude = e.NewValues["latitude"] == null ? 0 : Convert.ToDecimal(e.NewValues["latitude"]);
                 unidadeNegocio.longitude = e.NewValues["longitude"] == null ? 0 : Convert.ToDecimal(e.NewValues["longitude"]);
-                unidadeNegocio.IdUnidadeGerenciamentoRegional = e.NewValues["IdUnidadeGerenciamentoRegional"]?.ToString();
+                unidadeNegocio.BlueMeteringUnidadeGerenciamentoRegionalId = new Guid(e.NewValues["BlueMeteringUnidadeGerenciamentoRegionalId"]?.ToString());
 
                 db.SaveChanges();
             }

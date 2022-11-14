@@ -20,8 +20,8 @@
             <dx:GridViewDataColumn FieldName="NomeCompleto" Caption="Nome Completo" />
             <dx:GridViewDataColumn FieldName="CPF" Caption="CPF" />
             <dx:GridViewDataColumn FieldName="RG" Caption="RG" />
-            <dx:GridViewDataComboBoxColumn FieldName="IdConsumidorTipo" Caption="Tipo">
-                <PropertiesComboBox TextField="Descricao" IncrementalFilteringMode="Contains" ValueField="IdConsumidorTipo"></PropertiesComboBox>
+            <dx:GridViewDataComboBoxColumn FieldName="BlueMeteringConsumidorTipoId" Caption="Tipo">
+                <PropertiesComboBox TextField="Descricao" IncrementalFilteringMode="Contains" ValueField="BlueMeteringConsumidorTipoId"></PropertiesComboBox>
             </dx:GridViewDataComboBoxColumn>
         </Columns>
         <SettingsPopup>

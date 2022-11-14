@@ -7,29 +7,31 @@
       <siteMapNode url="~/frmAdmMasterCadastro/frmAdmMaster/WebSiteMapAdmin.aspx" title="Site Map" description="Site Map" roles="AdmMaster" />
     </siteMapNode>
     <siteMapNode url="" title="Admin" description="Admin" roles="AdmMaster,AdmPortal">
-      <siteMapNode url="~/frmAgyliti/BlueMetering/cnUsuarios/cnUsuarios.aspx" title="Usuários Admin" description="AdminUsuarios" roles="AdmMaster,AdmPortal" />
+      <siteMapNode url="~/frmAgyliti/BlueMetering/cnUsuarios/cnUsuariosAdmin.aspx" title="Usuários Admin" description="AdminUsuarios" roles="AdmMaster,AdmPortal" />
       <siteMapNode url="~/frmAgyliti/BlueMetering/cnUsuarios/cnUsuariosCliente.aspx" title="Usuários Cliente" description="ClienteUsuarios" roles="AdmMaster,AdmPortal" />
       <!--<siteMapNode url="~/frmAgyliti/BlueMetering/cnUsuarios/cnPerfis.aspx" title="Perfis" description="AdminPerfis" roles="AdmMaster,AdmPortal" />-->
       <!--<siteMapNode url="~/frmAgyliti/BlueMetering/cnUsuarios/cnUsuariosPerfis.aspx" title="Usuários Perfis" description="UsuariosPerfis" roles="AdmMaster,AdmPortal" />-->
     </siteMapNode>
-    <siteMapNode url="" title="Operações" description="Operações" roles="AdmMaster,AdmPortal,User,UserClient">
-      <siteMapNode url="~/frmAgyliti/BlueMetering/cnGridMain/cnGridMain.aspx" title="Ocorrências" description="Ocorrências" roles="AdmMaster,AdmPortal,User,UserClient" />
+    <siteMapNode url="" title="Operações" description="Operações" roles="AdmMaster,AdmPortal,UserClient">
+      <siteMapNode url="~/frmAgyliti/BlueMetering/cnGridMain/cnGridMain.aspx" title="Ocorrências" description="Ocorrências" roles="AdmMaster,AdmPortal,UserClient" />
     </siteMapNode>
     <siteMapNode url="" title="Cadastros" description="Cadastros" roles="AdmMaster,AdmPortal">
-      <siteMapNode url="~/frmAgyliti/BlueMetering/cnCadastros/cnGridLigacao.aspx" title="Ligação" description="Cadastro Ligação" roles="AdmMaster,AdmPortal" />
-      <siteMapNode url="~/frmAgyliti/BlueMetering/cnCadastros/cnGridConsumidorTipo.aspx" title="Tipo de Consumidor" description="Tipo de Consumidor" roles="AdmMaster,AdmPortal" />
-      <siteMapNode url="~/frmAgyliti/BlueMetering/cnCadastros/cnGridConsumidor.aspx" title="Consumidor" description="Cadastro Ligação" roles="AdmMaster,AdmPortal" />
-      <siteMapNode url="~/frmAgyliti/BlueMetering/cnCadastros/cnGridHidrometroTipo.aspx" title="Tipo de Hidrômetro" description="Tipo de Hidrômetro" roles="AdmMaster,AdmPortal" />
-      <siteMapNode url="~/frmAgyliti/BlueMetering/cnCadastros/cnGridHidrometro.aspx" title="Hidrômetro" description="Tipo de Hidrômetro" roles="AdmMaster,AdmPortal" />
-      <siteMapNode url="~/frmAgyliti/BlueMetering/cnCadastros/cnGridValvulaCorte.aspx" title="Válvula Corte" description="Válvula Corte" roles="AdmMaster,AdmPortal" />
-      <siteMapNode url="~/frmAgyliti/BlueMetering/cnCadastros/cnGridUnidadeGerenciamentoRegional.aspx" title="UGR" description="UGR" roles="AdmMaster,AdmPortal" />
-      <siteMapNode url="~/frmAgyliti/BlueMetering/cnCadastros/cnGridUnidadeNegocio.aspx" title="Unidade Negócio" description="Unidade Negócio" roles="AdmMaster,AdmPortal" />
       <siteMapNode url="~/frmAgyliti/BlueMetering/cnCadastros/cnGridCliente.aspx" title="Cliente" description="Cliente" roles="AdmMaster,AdmPortal" />
     </siteMapNode>
-    <siteMapNode url="" title="Dashboards" description="Dashboards" roles="AdmMaster,AdmPortal,UserClient">
-      <siteMapNode url="~/frmAgyliti/BlueMetering/cnDashboards/cnDashboardConsumoSemanal.aspx" title="Consumo Semanal" description="Consumo Semanal" roles="AdmMaster,AdmPortal,UserClient" />
-      <siteMapNode url="~/frmAgyliti/BlueMetering/cnDashboards/cnDashboardConsumoMensal.aspx" title="Consumo Mensal" description="Consumo Mensal" roles="AdmMaster,AdmPortal,UserClient" />
-      <siteMapNode url="~/frmAgyliti/BlueMetering/cnDashboards/cnDashboardConsumoAnual.aspx" title="Consumo Anual" description="Consumo Anual" roles="AdmMaster,AdmPortal,UserClient" />
+    <siteMapNode url="" title="Cadastros" description="Cadastros" roles="AdmMaster,UserClient">
+      <siteMapNode url="~/frmAgyliti/BlueMetering/cnCadastros/cnGridLigacao.aspx" title="Ligação" description="Cadastro Ligação" roles="AdmMaster,UserClient" />
+      <siteMapNode url="~/frmAgyliti/BlueMetering/cnCadastros/cnGridConsumidorTipo.aspx" title="Tipo de Consumidor" description="Tipo de Consumidor" roles="AdmMaster,UserClient" />
+      <siteMapNode url="~/frmAgyliti/BlueMetering/cnCadastros/cnGridConsumidor.aspx" title="Consumidor" description="Cadastro Ligação" roles="AdmMaster,UserClient" />
+      <siteMapNode url="~/frmAgyliti/BlueMetering/cnCadastros/cnGridHidrometroTipo.aspx" title="Tipo de Hidrômetro" description="Tipo de Hidrômetro" roles="AdmMaster,UserClient" />
+      <siteMapNode url="~/frmAgyliti/BlueMetering/cnCadastros/cnGridHidrometro.aspx" title="Hidrômetro" description="Tipo de Hidrômetro" roles="AdmMaster,UserClient" />
+      <siteMapNode url="~/frmAgyliti/BlueMetering/cnCadastros/cnGridValvulaCorte.aspx" title="Válvula Corte" description="Válvula Corte" roles="AdmMaster,UserClient" />
+      <siteMapNode url="~/frmAgyliti/BlueMetering/cnCadastros/cnGridUnidadeGerenciamentoRegional.aspx" title="UGR" description="UGR" roles="AdmMaster,UserClient" />
+      <siteMapNode url="~/frmAgyliti/BlueMetering/cnCadastros/cnGridUnidadeNegocio.aspx" title="Unidade Negócio" description="Unidade Negócio" roles="AdmMaster,UserClient" />
+    </siteMapNode>
+    <siteMapNode url="" title="Dashboards" description="Dashboards" roles="AdmMaster,UserClient">
+      <siteMapNode url="~/frmAgyliti/BlueMetering/cnDashboards/cnDashboardConsumoSemanal.aspx" title="Consumo Semanal" description="Consumo Semanal" roles="AdmMaster,UserClient" />
+      <siteMapNode url="~/frmAgyliti/BlueMetering/cnDashboards/cnDashboardConsumoMensal.aspx" title="Consumo Mensal" description="Consumo Mensal" roles="AdmMaster,UserClient" />
+      <siteMapNode url="~/frmAgyliti/BlueMetering/cnDashboards/cnDashboardConsumoAnual.aspx" title="Consumo Anual" description="Consumo Anual" roles="AdmMaster,UserClient" />
       <siteMapNode url="~/frmAgyliti/BlueMetering/cnDashboards/cnDashboardConsumoDiarioMedia.aspx" title="Consumo Diário Média" description="Consumo Diário Média" roles="AdmMaster,UserClient" />
       <siteMapNode url="~/frmAgyliti/BlueMetering/cnDashboards/cnDashboardLastSeen.aspx" title="Status comunicação" description="Status comunicação" roles="AdmMaster,UserClient" />
       <siteMapNode url="~/frmAgyliti/BlueMetering/cnDashboards/cnDashboardSLALeituras.aspx" title="SLA Leituras" description="SLA Leituras" roles="AdmMaster,UserClient" />

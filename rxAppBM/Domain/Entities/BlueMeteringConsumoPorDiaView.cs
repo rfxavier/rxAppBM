@@ -30,7 +30,7 @@ namespace rxAppBM.Domain.Entities
         public Nullable<decimal> HidrometroCapacidade { get; set; }
         public string HidrometroNumeroSerieRelojoaria { get; set; }
         public Nullable<decimal> HidrometroMarcacaoInicial { get; set; }
-        public string ClienteId { get; set; }
+        public Nullable<Guid> ClienteId { get; set; }
         public string ClienteNome { get; set; }
         public string ClienteCNPJ { get; set; }
         public string ClienteEndereco { get; set; }

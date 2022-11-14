@@ -10,7 +10,7 @@
 namespace rxAppBM.frmAgyliti.GetLock.cnUsuarios {
     
     
-    public partial class cnUsuarios {
+    public partial class cnUsuariosAdmin {
         
         /// <summary>
         /// GridUsers control.
@@ -38,15 +38,6 @@ namespace rxAppBM.frmAgyliti.GetLock.cnUsuarios {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::DevExpress.Web.PopupControlContentControl Popupcontrolcontentcontrol1;
-        
-        /// <summary>
-        /// cpsw control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::DevExpress.Web.ASPxTextBox cpsw;
         
         /// <summary>
         /// npsw control.

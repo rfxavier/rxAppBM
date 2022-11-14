@@ -20,5 +20,13 @@ namespace rxAppBM.Domain.Entities
         public DateTime? trackLastWriteTime { get; set; }
         public DateTime? trackCreationTime { get; set; }
         public ICollection<ApplicationUser> ApplicationUsers { get; set; }
+        public ICollection<BlueMeteringHidrometro> BlueMeteringHidrometros { get; set; }
+        public ICollection<BlueMeteringHidrometroTipo> BlueMeteringHidrometroTipos { get; set; }
+        public ICollection<BlueMeteringLigacao> BlueMeteringLigacoes { get; set; }
+        public ICollection<BlueMeteringValvulaCorte> BlueMeteringValvulasCorte { get; set; }
+        public ICollection<BlueMeteringConsumidor> BlueMeteringConsumidores { get; set; }
+        public ICollection<BlueMeteringConsumidorTipo> BlueMeteringConsumidorTipos { get; set; }
+        public ICollection<BlueMeteringUnidadeNegocio> BlueMeteringUnidadeNegocios { get; set; }
+        public ICollection<BlueMeteringUnidadeGerenciamentoRegional> BlueMeteringUnidadeGerenciamentoRegionais { get; set; }
     }
 }

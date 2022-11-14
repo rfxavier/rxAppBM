@@ -1,38 +1,47 @@
 ﻿using DevExpress.Web;
+using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.Owin;
 using rxAppBM.Domain.Entities;
 using rxAppBM.Models;
 using System;
 using System.Linq;
+using System.Web;
 using System.Web.UI.WebControls;
 
 namespace rxAppBM.frmAgyliti.BlueMetering.cnCadastros
 {
     public partial class cnGridLigacao : System.Web.UI.Page
     {
+        private ApplicationUserManager userManager;
         private ApplicationDbContext db;
+        private BlueMeteringCliente cliente;
 
         public cnGridLigacao()
         {
             db = new ApplicationDbContext();
+            userManager = Context.GetOwinContext().GetUserManager<ApplicationUserManager>();
+
+            var user = userManager.FindById(User.Identity.GetUserId());
+            cliente = db.BlueMeteringClientes.FirstOrDefault(c => c.BlueMeteringClienteId == user.BlueMeteringClienteId);
         }
         protected void Page_Load(object sender, EventArgs e)
         {
-            var comboColumn = ((GridViewDataComboBoxColumn)ASPxGridView1.Columns["IdConsumidor"]);
+            var comboColumn = ((GridViewDataComboBoxColumn)ASPxGridView1.Columns["BlueMeteringConsumidorId"]);
 
             var dsCombo = db.BlueMeteringConsumidores.ToList();
 
             comboColumn.PropertiesComboBox.DataSource = dsCombo;
             comboColumn.PropertiesComboBox.TextField = "NomeCompleto";
-            comboColumn.PropertiesComboBox.ValueField = "IdConsumidor";
+            comboColumn.PropertiesComboBox.ValueField = "BlueMeteringConsumidorId";
             comboColumn.PropertiesComboBox.ValueType = typeof(string);
 
-            var comboColumn2 = ((GridViewDataComboBoxColumn)ASPxGridView1.Columns["IdUnidadeNegocio"]);
+            var comboColumn2 = ((GridViewDataComboBoxColumn)ASPxGridView1.Columns["BlueMeteringUnidadeNegocioId"]);
 
-            var dsCombo2 = db.BlueMeteringUnidadeNegocios.ToList();
+            var dsCombo2 = db.BlueMeteringUnidadeNegocios.Where(un => un.BlueMeteringClienteId == cliente.BlueMeteringClienteId).ToList();
 
             comboColumn2.PropertiesComboBox.DataSource = dsCombo2;
             comboColumn2.PropertiesComboBox.TextField = "Nome";
-            comboColumn2.PropertiesComboBox.ValueField = "IdUnidadeNegocio";
+            comboColumn2.PropertiesComboBox.ValueField = "BlueMeteringUnidadeNegocioId";
             comboColumn2.PropertiesComboBox.ValueType = typeof(string);
 
 
@@ -41,7 +50,7 @@ namespace rxAppBM.frmAgyliti.BlueMetering.cnCadastros
 
         protected void ASPxGridView1_DataBinding(object sender, EventArgs e)
         {
-            ASPxGridView1.DataSource = db.BlueMeteringLigacoes.ToList();
+            ASPxGridView1.DataSource = db.BlueMeteringLigacoes.Where(l => l.BlueMeteringClienteId == cliente.BlueMeteringClienteId).ToList();
         }
         protected void ASPxGridView1_RowInserting(object sender, DevExpress.Web.Data.ASPxDataInsertingEventArgs e)
         {
@@ -52,8 +61,9 @@ namespace rxAppBM.frmAgyliti.BlueMetering.cnCadastros
             newLigacao.Endereco = e.NewValues["Endereco"]?.ToString();
             newLigacao.latitude = e.NewValues["latitude"] == null ? 0 : Convert.ToDecimal(e.NewValues["latitude"]);
             newLigacao.longitude = e.NewValues["longitude"] == null ? 0 : Convert.ToDecimal(e.NewValues["longitude"]);
-            newLigacao.IdConsumidor = e.NewValues["IdConsumidor"]?.ToString();
-            newLigacao.IdUnidadeNegocio = e.NewValues["IdUnidadeNegocio"]?.ToString();
+            newLigacao.BlueMeteringConsumidorId = new Guid(e.NewValues["BlueMeteringConsumidorId"]?.ToString());
+            newLigacao.BlueMeteringUnidadeNegocioId = new Guid(e.NewValues["BlueMeteringUnidadeNegocioId"]?.ToString());
+            newLigacao.BlueMeteringClienteId = cliente.BlueMeteringClienteId;
 
             db.BlueMeteringLigacoes.Add(newLigacao);
             db.SaveChanges();
@@ -73,8 +83,8 @@ namespace rxAppBM.frmAgyliti.BlueMetering.cnCadastros
                 ligacao.Endereco = e.NewValues["Endereco"]?.ToString();
                 ligacao.latitude = e.NewValues["latitude"] == null ? 0 : Convert.ToDecimal(e.NewValues["latitude"]);
                 ligacao.longitude = e.NewValues["longitude"] == null ? 0 : Convert.ToDecimal(e.NewValues["longitude"]);
-                ligacao.IdConsumidor = e.NewValues["IdConsumidor"]?.ToString();
-                ligacao.IdUnidadeNegocio = e.NewValues["IdUnidadeNegocio"]?.ToString();
+                ligacao.BlueMeteringConsumidorId = new Guid(e.NewValues["BlueMeteringConsumidorId"]?.ToString());
+                ligacao.BlueMeteringUnidadeNegocioId = new Guid(e.NewValues["BlueMeteringUnidadeNegocioId"]?.ToString());
 
                 db.SaveChanges();
             }

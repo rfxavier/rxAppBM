@@ -18,21 +18,18 @@
             <dx:GridViewDataColumn FieldName="IdHidrometro" Caption="Id Hidrômetro" />
             <dx:GridViewDataColumn FieldName="RedeIotId" Caption="Id Rede Iot" />
             <dx:GridViewDataColumn FieldName="NumeroSerie" Caption="Número Série" />
-            <dx:GridViewDataComboBoxColumn FieldName="IdHidrometroTipo" Caption="Tipo">
-                <PropertiesComboBox TextField="Descricao" IncrementalFilteringMode="Contains" ValueField="IdConsumidorTipo"></PropertiesComboBox>
+            <dx:GridViewDataComboBoxColumn FieldName="BlueMeteringHidrometroTipoId" Caption="Tipo">
+                <PropertiesComboBox TextField="Descricao" IncrementalFilteringMode="Contains" ValueField="BlueMeteringHidrometroTipoId"></PropertiesComboBox>
             </dx:GridViewDataComboBoxColumn>
             <dx:GridViewDataColumn FieldName="Capacidade" Caption="Capacidade" />
             <dx:GridViewDataColumn FieldName="NumeroSerieRelojoaria" Caption="Número Série Relojoaria" />
             <dx:GridViewDataColumn FieldName="MarcacaoInicial" Caption="Marcação Inicial" />
             <dx:GridViewDataColumn FieldName="DeviceId" Caption="ID Device" />
-            <dx:GridViewDataComboBoxColumn FieldName="IdLigacao" Caption="Ligação">
-                <PropertiesComboBox TextField="IdLigacao" IncrementalFilteringMode="Contains" ValueField="IdLigacao"></PropertiesComboBox>
+            <dx:GridViewDataComboBoxColumn FieldName="BlueMeteringLigacaoId" Caption="Ligação">
+                <PropertiesComboBox TextField="BlueMeteringLigacaoId" IncrementalFilteringMode="Contains" ValueField="BlueMeteringLigacaoId"></PropertiesComboBox>
             </dx:GridViewDataComboBoxColumn>
-            <dx:GridViewDataComboBoxColumn FieldName="IdValvulaCorte" Caption="Válvula Corte">
-                <PropertiesComboBox TextField="NumeroSerie" IncrementalFilteringMode="Contains" ValueField="IdValvulaCorte"></PropertiesComboBox>
-            </dx:GridViewDataComboBoxColumn>
-            <dx:GridViewDataComboBoxColumn FieldName="IdCliente" Caption="Cliente">
-                <PropertiesComboBox TextField="NomeFantasia" IncrementalFilteringMode="Contains" ValueField="IdCliente"></PropertiesComboBox>
+            <dx:GridViewDataComboBoxColumn FieldName="BlueMeteringValvulaCorteId" Caption="Válvula Corte">
+                <PropertiesComboBox TextField="NumeroSerie" IncrementalFilteringMode="Contains" ValueField="BlueMeteringValvulaCorteId"></PropertiesComboBox>
             </dx:GridViewDataComboBoxColumn>
         </Columns>
         <SettingsPopup>

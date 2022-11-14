@@ -42,7 +42,7 @@ namespace rxAppBM.frmAgyliti.BlueMetering.cnDashboards
                 var user = userManager.FindById(User.Identity.GetUserId());
                 var cliente = db.BlueMeteringClientes.FirstOrDefault(c => c.BlueMeteringClienteId == user.BlueMeteringClienteId);
 
-                var idCliente = cliente?.IdCliente;
+                var idCliente = cliente?.BlueMeteringClienteId;
 
                 if (e.DataSourceName == "Object Data Source 2")
                     e.Data = dsConsumo.GetConsumoPorDiaPorCliente(parDashDataIni, parDashDataFim, idCliente);
@@ -71,7 +71,7 @@ namespace rxAppBM.frmAgyliti.BlueMetering.cnDashboards
                 var user = userManager.FindById(User.Identity.GetUserId());
                 var cliente = db.BlueMeteringClientes.FirstOrDefault(c => c.BlueMeteringClienteId == user.BlueMeteringClienteId);
 
-                var idCliente = cliente?.IdCliente;
+                var idCliente = cliente?.BlueMeteringClienteId;
 
                 e.Data = dsConsumo.GetConsumoPorDiaPorCliente(DateTime.Now.AddDays(-7), DateTime.Now, idCliente);
             }

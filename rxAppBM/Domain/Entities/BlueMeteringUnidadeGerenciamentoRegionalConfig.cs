@@ -7,6 +7,10 @@ namespace rxAppBM.Domain.Entities
         public BlueMeteringUnidadeGerenciamentoRegionalConfig()
         {
             this.HasKey(t => t.BlueMeteringUnidadeGerenciamentoRegionalId);
+
+            HasRequired(u => u.BlueMeteringCliente)
+                .WithMany(l => l.BlueMeteringUnidadeGerenciamentoRegionais)
+                .HasForeignKey(u => u.BlueMeteringClienteId);
         }
     }
 }

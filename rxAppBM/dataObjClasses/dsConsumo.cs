@@ -16,7 +16,7 @@ namespace rxAppBM.dataObjClasses
             return ret;
         }
 
-        public static List<BlueMeteringConsumoPorDiaView> GetConsumoPorDiaPorCliente(DateTime dataIni, DateTime dataFim, string clienteId)
+        public static List<BlueMeteringConsumoPorDiaView> GetConsumoPorDiaPorCliente(DateTime dataIni, DateTime dataFim, Guid? clienteId)
         {
             var db = new ApplicationDbContext();
 

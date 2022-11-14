@@ -7,6 +7,10 @@ namespace rxAppBM.Domain.Entities
         public BlueMeteringConsumidorTipoConfig()
         {
             this.HasKey(t => t.BlueMeteringConsumidorTipoId);
+
+            HasRequired(u => u.BlueMeteringCliente)
+                .WithMany(l => l.BlueMeteringConsumidorTipos)
+                .HasForeignKey(u => u.BlueMeteringClienteId);
         }
     }
 }
