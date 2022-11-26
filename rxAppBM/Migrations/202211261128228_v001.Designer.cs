@@ -7,13 +7,13 @@ namespace rxAppBM.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class v35 : IMigrationMetadata
+    public sealed partial class v001 : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(v35));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(v001));
         
         string IMigrationMetadata.Id
         {
-            get { return "202209241304395_v35"; }
+            get { return "202211261128228_v001"; }
         }
         
         string IMigrationMetadata.Source

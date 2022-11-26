@@ -3,7 +3,7 @@ namespace rxAppBM.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class v37 : DbMigration
+    public partial class v001 : DbMigration
     {
         public override void Up()
         {

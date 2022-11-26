@@ -78,54 +78,15 @@ namespace rxAppBM.frmAgyliti.BlueMetering.cnGridMain
                 var user = userManager.FindById(User.Identity.GetUserId());
                 var cliente = db.BlueMeteringClientes.FirstOrDefault(c => c.BlueMeteringClienteId == user.BlueMeteringClienteId);
 
-                var idCliente = cliente?.IdCliente;
+                var idCliente = cliente?.BlueMeteringClienteId;
 
                 e.QueryableSource = db.BlueMeteringMessageViews.Where(g => g.ClienteIdCliente == idCliente);
+                //var db2 = db.BlueMeteringMessageViews.Where(g => g.ClienteIdCliente == idCliente).ToList();
             }
             else
             {
                 e.QueryableSource = db.BlueMeteringMessageViews;
                 //var db1 = db.BlueMeteringMessageViews.ToList();
-
-                //if (Session["selectedLojas"] != null && (Session["dateStart"] != null) && (Session["dateEnd"] != null))
-                //{
-                //    var selectedLojas = (List<long>)Session["selectedLojas"];
-                //    var dateStart = (DateTime)Session["dateStart"];
-                //    var dateEnd = (DateTime)Session["dateEnd"];
-                //    e.QueryableSource = db.GetLockMessageViews.Where(g => selectedLojas.Contains(g.id_loja) && g.trackCreationTime >= dateStart && g.trackCreationTime <= dateEnd);
-                //}
-                //else if (Session["selectedLojas"] != null && (Session["dateStart"] != null) && (Session["dateEnd"] == null))
-                //{
-                //    var selectedLojas = (List<long>)Session["selectedLojas"];
-                //    var dateStart = (DateTime)Session["dateStart"];
-                //    e.QueryableSource = db.GetLockMessageViews.Where(g => selectedLojas.Contains(g.id_loja) && g.trackCreationTime >= dateStart);
-                //}
-                //else if (Session["selectedLojas"] != null && (Session["dateStart"] == null) && (Session["dateEnd"] != null))
-                //{
-                //    var selectedLojas = (List<long>)Session["selectedLojas"];
-                //    var dateEnd = (DateTime)Session["dateEnd"];
-                //    e.QueryableSource = db.GetLockMessageViews.Where(g => selectedLojas.Contains(g.id_loja) && g.trackCreationTime <= dateEnd);
-                //}
-                //else if (Session["selectedLojas"] == null && (Session["dateStart"] != null) && (Session["dateEnd"] != null))
-                //{
-                //    var dateStart = (DateTime)Session["dateStart"];
-                //    var dateEnd = (DateTime)Session["dateEnd"];
-                //    e.QueryableSource = db.GetLockMessageViews.Where(g => g.trackCreationTime >= dateStart && g.trackCreationTime <= dateEnd);
-                //}
-                //else if (Session["selectedLojas"] == null && (Session["dateStart"] != null) && (Session["dateEnd"] == null))
-                //{
-                //    var dateStart = (DateTime)Session["dateStart"];
-                //    e.QueryableSource = db.GetLockMessageViews.Where(g => g.trackCreationTime >= dateStart);
-                //}
-                //else if (Session["selectedLojas"] == null && (Session["dateStart"] == null) && (Session["dateEnd"] != null))
-                //{
-                //    var dateEnd = (DateTime)Session["dateEnd"];
-                //    e.QueryableSource = db.GetLockMessageViews.Where(g => g.trackCreationTime <= dateEnd);
-                //}
-                //else
-                //{
-                //    e.QueryableSource = db.GetLockMessageViews.Where(g => g.trackCreationTime >= new DateTime(DateTime.Now.Date.Year, DateTime.Now.Date.Month, DateTime.Now.Date.Day, 0, 0, 0) && g.trackCreationTime <= new DateTime(DateTime.Now.Date.Year, DateTime.Now.Date.Month, DateTime.Now.Date.Day, 23, 59, 59));
-                //}
             }
         }
         protected void UpdatePanel(object sender, EventArgs e)
