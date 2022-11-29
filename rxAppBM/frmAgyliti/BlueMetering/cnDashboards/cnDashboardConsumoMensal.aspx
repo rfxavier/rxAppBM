@@ -8,7 +8,63 @@
         .dxflGroup {  
             height:100%;  
         }  
-    </style>  
+    </style>
+	<script>
+        var host = location.protocol + '//' + location.host + '/';
+
+		function onItemClick(s, args) {
+            console.log(args.ItemName);
+            console.log(host);
+            //console.log(args.GetData());
+            //console.log(args.GetData().GetAxisNames());
+            //console.log(args.GetData().GetAxisNames()[0]);
+            //console.log(args.GetAxisPoint(args.GetData().GetAxisNames()[0])) //axisPoint;
+            //console.log(args.GetDimensions(args.GetData().GetAxisNames()[0])[0]); //dimension
+            //console.log(args.GetDimensions(args.GetData().GetAxisNames()[0])[0].Id); //dimension.Id
+            console.log(args.GetAxisPoint(args.GetData().GetAxisNames()[0]).GetDimensionValue(args.GetDimensions(args.GetData().GetAxisNames()[0])[0].Id).GetDisplayText()); //axisPoint.GetDimensionValue(dimension.Id);
+            //console.log(args.GetData().GetDimensions());
+            //console.log(args.GetData().GetMeasures());
+
+            if (args.ItemName == 'gridDashboardItem1') {
+                $.ajax({
+                    url: host + "api/BlueMeteringHidrometros/" + args.GetAxisPoint(args.GetData().GetAxisNames()[0]).GetDimensionValue(args.GetDimensions(args.GetData().GetAxisNames()[0])[0].Id).GetDisplayText(),
+                    type: "GET",
+                    success: function (result) {
+                        console.log(result);
+                        const popupContentTemplate = function () {
+                            return $('<div>').append(
+                                $(`<p><b>Id: </b></p>`),
+                                $(`<p><span>${result.RedeIotId}</span></p>`),
+                                $(`<p><b>Número série relojoaria: </b></p>`),
+                                $(`<p><span>${result.NumeroSerieRelojoaria}</span>`),
+                                $(`<p><b>Capacidade: </b></p>`),
+                                $(`<p><span>${result.Capacidade}</span>`),
+                                $(`<p><b>Device Id: </b></p>`),
+                                $(`<p><span>${result.DeviceId}</span>`)
+                            );
+                        }
+                        $popupContent = popup.content();
+                        $popupContent.empty();
+                        $popupContent.append(popupContentTemplate);
+                        popup.show();
+                    }
+                });
+
+            }
+        }
+        var popup;
+
+        function initPopup() {
+            console.log("init popup");
+            popup = $("#myPopup").dxPopup({
+                width: 300, height: 300,
+                title: "Dados do medidor",
+                showCloseButton: true,
+                closeOnOutsideClick: true
+            }).dxPopup('instance');
+            console.log(popup);
+        }
+    </script>
 </asp:Content>
 <asp:Content ID="MainContent" ContentPlaceHolderID="MainContentPlaceHolderMain" runat="server">
 
@@ -64,9 +120,12 @@
                 <dx:LayoutItem ShowCaption="False" ColSpan="5" ColumnSpan="5" Height="100%">
                     <LayoutItemNestedControlCollection>
                         <dx:LayoutItemNestedControlContainer runat="server">
+                            <div id="myPopup"></div>
                             <dx:ASPxDashboard runat="server" ID="ASPxDashboard1" WorkingMode="ViewerOnly" Width="100%" Height="100%" OnDataLoading="ASPxDashboard1_DataLoading" OnCustomParameters="ASPxDashboard1_CustomParameters" OnConfigureDataReloadingTimeout="ASPxDashboard1_ConfigureDataReloadingTimeout" OnSetInitialDashboardState="ASPxDashboard1_SetInitialDashboardState">
+				                <ClientSideEvents
+					                ItemClick="onItemClick"
+					                Init="function(s, e) { initPopup(); }" />
                             </dx:ASPxDashboard>
-
                         </dx:LayoutItemNestedControlContainer>
                     </LayoutItemNestedControlCollection>
                 </dx:LayoutItem>

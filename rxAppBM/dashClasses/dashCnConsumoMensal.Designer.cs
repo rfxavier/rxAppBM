@@ -48,6 +48,10 @@
             DevExpress.DashboardCommon.FlowDateTimePeriodLimit flowDateTimePeriodLimit5 = new DevExpress.DashboardCommon.FlowDateTimePeriodLimit();
             DevExpress.DashboardCommon.FlowDateTimePeriodLimit flowDateTimePeriodLimit6 = new DevExpress.DashboardCommon.FlowDateTimePeriodLimit();
             DevExpress.DashboardCommon.SimpleSeries simpleSeries2 = new DevExpress.DashboardCommon.SimpleSeries();
+            DevExpress.DashboardCommon.Dimension dimension7 = new DevExpress.DashboardCommon.Dimension();
+            DevExpress.DashboardCommon.Measure measure3 = new DevExpress.DashboardCommon.Measure();
+            DevExpress.DashboardCommon.GridDimensionColumn gridDimensionColumn1 = new DevExpress.DashboardCommon.GridDimensionColumn();
+            DevExpress.DashboardCommon.GridMeasureColumn gridMeasureColumn1 = new DevExpress.DashboardCommon.GridMeasureColumn();
             DevExpress.DashboardCommon.CalculatedField calculatedField1 = new DevExpress.DashboardCommon.CalculatedField();
             DevExpress.DataAccess.ObjectBinding.Parameter parameter1 = new DevExpress.DataAccess.ObjectBinding.Parameter();
             DevExpress.DataAccess.ObjectBinding.Parameter parameter2 = new DevExpress.DataAccess.ObjectBinding.Parameter();
@@ -60,6 +64,7 @@
             DevExpress.DashboardCommon.DashboardLayoutGroup dashboardLayoutGroup3 = new DevExpress.DashboardCommon.DashboardLayoutGroup();
             DevExpress.DashboardCommon.DashboardLayoutItem dashboardLayoutItem4 = new DevExpress.DashboardCommon.DashboardLayoutItem();
             DevExpress.DashboardCommon.DashboardLayoutItem dashboardLayoutItem5 = new DevExpress.DashboardCommon.DashboardLayoutItem();
+            DevExpress.DashboardCommon.DashboardLayoutItem dashboardLayoutItem6 = new DevExpress.DashboardCommon.DashboardLayoutItem();
             DevExpress.DashboardCommon.DashboardParameter dashboardParameter1 = new DevExpress.DashboardCommon.DashboardParameter();
             DevExpress.DashboardCommon.DashboardParameter dashboardParameter2 = new DevExpress.DashboardCommon.DashboardParameter();
             this.chartDashboardItem1 = new DevExpress.DashboardCommon.ChartDashboardItem();
@@ -67,6 +72,7 @@
             this.comboBoxDashboardItem2 = new DevExpress.DashboardCommon.ComboBoxDashboardItem();
             this.comboBoxDashboardItem3 = new DevExpress.DashboardCommon.ComboBoxDashboardItem();
             this.rangeFilterDashboardItem1 = new DevExpress.DashboardCommon.RangeFilterDashboardItem();
+            this.gridDashboardItem1 = new DevExpress.DashboardCommon.GridDashboardItem();
             this.dashboardObjectDataSource1 = new DevExpress.DashboardCommon.DashboardObjectDataSource();
             ((System.ComponentModel.ISupportInitialize)(this.chartDashboardItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(dimension1)).BeginInit();
@@ -81,6 +87,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.rangeFilterDashboardItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(dimension6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(measure2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridDashboardItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(dimension7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(measure3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dashboardObjectDataSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
@@ -106,6 +115,7 @@
             this.chartDashboardItem1.DataItemRepository.Add(dimension2, "DataItem2");
             this.chartDashboardItem1.DataSource = this.dashboardObjectDataSource1;
             this.chartDashboardItem1.InteractivityOptions.IgnoreMasterFilters = false;
+            this.chartDashboardItem1.InteractivityOptions.MasterFilterMode = DevExpress.DashboardCommon.DashboardItemMasterFilterMode.Multiple;
             this.chartDashboardItem1.Legend.Visible = false;
             this.chartDashboardItem1.Name = "Chart 1";
             chartPane1.Name = "Pane 1";
@@ -211,6 +221,34 @@
             simpleSeries2});
             this.rangeFilterDashboardItem1.ShowCaption = false;
             // 
+            // gridDashboardItem1
+            // 
+            dimension7.DataMember = "PayloadId";
+            dimension7.Name = "Medidor";
+            measure3.DataMember = "PayloadVolLitersDelta";
+            measure3.Name = "Litros";
+            measure3.NumericFormat.FormatType = DevExpress.DashboardCommon.DataItemNumericFormatType.Number;
+            measure3.NumericFormat.IncludeGroupSeparator = true;
+            measure3.NumericFormat.Precision = 0;
+            measure3.NumericFormat.Unit = DevExpress.DashboardCommon.DataItemNumericUnit.Ones;
+            dimension7.SortByMeasure = measure3;
+            dimension7.SortOrder = DevExpress.DashboardCommon.DimensionSortOrder.Descending;
+            gridDimensionColumn1.WidthType = DevExpress.DashboardCommon.GridColumnFixedWidthType.Weight;
+            gridDimensionColumn1.AddDataItem("Dimension", dimension7);
+            gridMeasureColumn1.WidthType = DevExpress.DashboardCommon.GridColumnFixedWidthType.Weight;
+            gridMeasureColumn1.AddDataItem("Measure", measure3);
+            this.gridDashboardItem1.Columns.AddRange(new DevExpress.DashboardCommon.GridColumnBase[] {
+            gridDimensionColumn1,
+            gridMeasureColumn1});
+            this.gridDashboardItem1.ComponentName = "gridDashboardItem1";
+            this.gridDashboardItem1.DataItemRepository.Clear();
+            this.gridDashboardItem1.DataItemRepository.Add(dimension7, "DataItem0");
+            this.gridDashboardItem1.DataItemRepository.Add(measure3, "DataItem1");
+            this.gridDashboardItem1.DataSource = this.dashboardObjectDataSource1;
+            this.gridDashboardItem1.InteractivityOptions.IgnoreMasterFilters = false;
+            this.gridDashboardItem1.Name = "Grid 1";
+            this.gridDashboardItem1.ShowCaption = false;
+            // 
             // dashboardObjectDataSource1
             // 
             calculatedField1.Expression = "1";
@@ -246,32 +284,36 @@
             this.comboBoxDashboardItem1,
             this.comboBoxDashboardItem2,
             this.comboBoxDashboardItem3,
-            this.rangeFilterDashboardItem1});
+            this.rangeFilterDashboardItem1,
+            this.gridDashboardItem1});
             dashboardLayoutItem1.DashboardItem = this.comboBoxDashboardItem1;
-            dashboardLayoutItem1.Weight = 31.771894093686356D;
+            dashboardLayoutItem1.Weight = 31.672597864768683D;
             dashboardLayoutItem2.DashboardItem = this.comboBoxDashboardItem2;
-            dashboardLayoutItem2.Weight = 35.913102511880517D;
+            dashboardLayoutItem2.Weight = 35.854092526690394D;
             dashboardLayoutItem3.DashboardItem = this.comboBoxDashboardItem3;
-            dashboardLayoutItem3.Weight = 32.315003394433127D;
+            dashboardLayoutItem3.Weight = 32.473309608540923D;
             dashboardLayoutGroup2.ChildNodes.AddRange(new DevExpress.DashboardCommon.DashboardLayoutNode[] {
             dashboardLayoutItem1,
             dashboardLayoutItem2,
             dashboardLayoutItem3});
             dashboardLayoutGroup2.DashboardItem = null;
-            dashboardLayoutGroup2.Weight = 7.3619631901840492D;
+            dashboardLayoutGroup2.Weight = 10.152284263959391D;
             dashboardLayoutItem4.DashboardItem = this.chartDashboardItem1;
-            dashboardLayoutItem4.Weight = 82.78145695364239D;
-            dashboardLayoutItem5.DashboardItem = this.rangeFilterDashboardItem1;
-            dashboardLayoutItem5.Weight = 17.218543046357617D;
+            dashboardLayoutItem4.Weight = 64.72019464720195D;
+            dashboardLayoutItem5.DashboardItem = this.gridDashboardItem1;
+            dashboardLayoutItem5.Weight = 35.279805352798057D;
             dashboardLayoutGroup3.ChildNodes.AddRange(new DevExpress.DashboardCommon.DashboardLayoutNode[] {
             dashboardLayoutItem4,
             dashboardLayoutItem5});
             dashboardLayoutGroup3.DashboardItem = null;
             dashboardLayoutGroup3.Orientation = DevExpress.DashboardCommon.DashboardLayoutGroupOrientation.Vertical;
-            dashboardLayoutGroup3.Weight = 92.638036809815958D;
+            dashboardLayoutGroup3.Weight = 69.543147208121823D;
+            dashboardLayoutItem6.DashboardItem = this.rangeFilterDashboardItem1;
+            dashboardLayoutItem6.Weight = 20.304568527918782D;
             dashboardLayoutGroup1.ChildNodes.AddRange(new DevExpress.DashboardCommon.DashboardLayoutNode[] {
             dashboardLayoutGroup2,
-            dashboardLayoutGroup3});
+            dashboardLayoutGroup3,
+            dashboardLayoutItem6});
             dashboardLayoutGroup1.DashboardItem = null;
             dashboardLayoutGroup1.Orientation = DevExpress.DashboardCommon.DashboardLayoutGroupOrientation.Vertical;
             dashboardLayoutGroup1.Weight = 100D;
@@ -301,6 +343,9 @@
             ((System.ComponentModel.ISupportInitialize)(dimension6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(measure2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rangeFilterDashboardItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(measure3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(dimension7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridDashboardItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dashboardObjectDataSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
@@ -314,5 +359,6 @@
         private DevExpress.DashboardCommon.ComboBoxDashboardItem comboBoxDashboardItem2;
         private DevExpress.DashboardCommon.ComboBoxDashboardItem comboBoxDashboardItem3;
         private DevExpress.DashboardCommon.RangeFilterDashboardItem rangeFilterDashboardItem1;
+        private DevExpress.DashboardCommon.GridDashboardItem gridDashboardItem1;
     }
 }
